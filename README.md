@@ -8,7 +8,7 @@
 
 **Mou652 个税模拟器（Geshui Simulator）**是面向 **iPhone / iOS** 的个人所得税 App 界面演示工具。可联系获取安装包，自由设置演示姓名、任职单位、年度收入和月份范围，再查询收入纳税明细，完成页面截图与连续屏幕录制。
 
-项目维护：[@Mou652](https://github.com/Mou652) · [中文介绍页](https://mou652.github.io/geshui-simulator/) · [项目资料与功能说明](docs/project-overview.md)
+项目维护：[@Mou652](https://github.com/Mou652) · [中文官网与教程](https://mou652.github.io/geshui-simulator/) · [项目资料与功能说明](docs/project-overview.md)
 
 [界面预览](#界面预览) · [功能亮点](#功能亮点) · [快速开始](#快速开始) · [使用教程](#使用教程) · [常见问题](#常见问题) · [联系 QQ](#联系交流)
 
@@ -60,17 +60,19 @@
 3. **查询收入纳税明细**：从首页或“办&查”进入收入纳税明细，选择已保存数据的年度与所得类型，再点击查询。
 4. **截图或连续录屏**：通过 iPhone 系统截图、控制中心的屏幕录制功能，记录查询条件、月度列表和页面切换。
 
-资料入口与保存规则见 [演示资料设置教程](docs/guides/configure-demo-data.md)；录屏操作与分镜见 [iPhone 截图录屏教程](docs/guides/screenshot-and-recording.md)。
+资料入口与保存规则见 [演示资料设置教程](https://mou652.github.io/geshui-simulator/guides/configure-demo-data.html)；录屏操作与分镜见 [iPhone 截图录屏教程](https://mou652.github.io/geshui-simulator/guides/screenshot-and-recording.html)。
 
 ## 使用教程
+
+[安装包获取与首次使用指南](https://mou652.github.io/geshui-simulator/guides/getting-started.html) · [全部中文教程](https://mou652.github.io/geshui-simulator/#guides)
 
 第一次准备演示素材，可以先配置资料，再查询明细，最后录制操作过程。已经准备好资料时，可直接从截图与录屏教程开始。
 
 | 你遇到的问题 | 教程 | 可以完成什么 |
 | --- | --- | --- |
-| 个税模拟器怎么截图、怎么录屏？ | [个税模拟器截图与录屏教程：iPhone / iOS](docs/guides/screenshot-and-recording.md) | 完成系统截图、连续录屏，并参考约 60 秒的演示脚本 |
-| 收入纳税明细怎么查询？ | [个税模拟器收入纳税明细查询教程](docs/guides/income-details-demo.md) | 从首页选择年度与所得类型，核对收入汇总与月度工资薪金 |
-| 演示资料、年度收入和任职单位怎么设置？ | [个税模拟器资料设置教程](docs/guides/configure-demo-data.md) | 配置虚构资料与月份范围，预览、保存并核对演示数据 |
+| 个税模拟器怎么截图、怎么录屏？ | [个税模拟器截图与录屏教程：iPhone / iOS](https://mou652.github.io/geshui-simulator/guides/screenshot-and-recording.html) | 完成系统截图、连续录屏，并参考约 60 秒的演示脚本 |
+| 收入纳税明细怎么查询？ | [个税模拟器收入纳税明细查询教程](https://mou652.github.io/geshui-simulator/guides/income-details-demo.html) | 从首页选择年度与所得类型，核对收入汇总与月度工资薪金 |
+| 演示资料、年度收入和任职单位怎么设置？ | [个税模拟器资料设置教程](https://mou652.github.io/geshui-simulator/guides/configure-demo-data.html) | 配置虚构资料与月份范围，预览、保存并核对演示数据 |
 
 ## 首页与个人中心
 
@@ -99,7 +101,7 @@
 2. 使用系统截图记录单个页面，或开启系统屏幕录制后连续操作。
 3. 对外分享时注明“个税模拟器 / 模拟演示”，避免观众将画面理解为真实税务记录。
 
-具体操作、录屏分镜和常见问题见 [截图与录屏教程](docs/guides/screenshot-and-recording.md)。
+具体操作、录屏分镜和常见问题见 [截图与录屏教程](https://mou652.github.io/geshui-simulator/guides/screenshot-and-recording.html)。
 
 ## 常见问题
 
@@ -113,7 +115,7 @@
 
 ### 可以自由设置哪些演示资料？
 
-支持设置演示姓名、任职单位、收入年度、月份范围和月收入等内容，并配置个人中心展示的家庭成员、银行卡数量。年度收入可按场景选择是否包含年终奖；保存后到明细页核对。具体入口见 [资料设置教程](docs/guides/configure-demo-data.md)。
+支持设置演示姓名、任职单位、收入年度、月份范围和月收入等内容，并配置个人中心展示的家庭成员、银行卡数量。年度收入可按场景选择是否包含年终奖；保存后到明细页核对。具体入口见 [资料设置教程](https://mou652.github.io/geshui-simulator/guides/configure-demo-data.html)。
 
 ### 支持苹果 iPhone 和 iOS 吗？
 
@@ -121,11 +123,11 @@
 
 ### 个税模拟器可以截图和连续录屏吗？
 
-可以。通过手机系统截图保存单个页面，通过屏幕录制记录年度筛选、明细浏览和页面切换。录屏使用 iPhone 控制中心的录制控件；操作步骤、旁白设置与约 60 秒的演示脚本见 [截图与录屏教程](docs/guides/screenshot-and-recording.md)。
+可以。通过手机系统截图保存单个页面，通过屏幕录制记录年度筛选、明细浏览和页面切换。录屏使用 iPhone 控制中心的录制控件；操作步骤、旁白设置与约 60 秒的演示脚本见 [截图与录屏教程](https://mou652.github.io/geshui-simulator/guides/screenshot-and-recording.html)。
 
 ### 收入纳税明细查询不到数据怎么办？
 
-先确认年度收入配置已经保存，再检查查询年度、所得类型、月份范围和关联单位是否一致。工资记录应选中“工资薪金”；修改后退出旧结果页并重新查询。逐项排查见 [收入纳税明细查询教程](docs/guides/income-details-demo.md)。
+先确认年度收入配置已经保存，再检查查询年度、所得类型、月份范围和关联单位是否一致。工资记录应选中“工资薪金”；修改后退出旧结果页并重新查询。逐项排查见 [收入纳税明细查询教程](https://mou652.github.io/geshui-simulator/guides/income-details-demo.html)。
 
 ### 个人所得税模拟器和个税计算器有什么区别？
 

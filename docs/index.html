@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mou652 个税模拟器｜演示资料自由设置、收入明细与截图录屏</title>
+  <title>个税模拟器｜安装包获取、资料自由设置与截图录屏 - Mou652</title>
   <meta name="description" content="Mou652 维护的个税模拟器（个人所得税模拟器，Geshui Simulator），面向苹果 iPhone / iOS，支持演示资料自由设置、收入纳税明细查询、截图与连续录屏。安装包获取与使用交流 QQ：2430239942。非官方界面演示工具。">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://mou652.github.io/geshui-simulator/">
@@ -13,42 +13,12 @@
   <meta property="og:description" content="面向 iPhone / iOS 的个人所得税界面演示工具。安装包获取与使用交流 QQ：2430239942。">
   <meta property="og:url" content="https://mou652.github.io/geshui-simulator/">
   <meta property="og:image" content="https://mou652.github.io/geshui-simulator/images/demo-income.png">
-  <style>
-    :root { color-scheme: light; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; color: #172842; background: #f5f7fc; line-height: 1.75; }
-    * { box-sizing: border-box; }
-    body { margin: 0; }
-    a { color: #145ac5; text-underline-offset: .2em; }
-    a:focus-visible { outline: 3px solid #ec9d17; outline-offset: 4px; }
-    header, main, footer { width: min(1040px, calc(100% - 40px)); margin: auto; }
-    header { padding: 24px 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
-    header strong { font-size: 18px; }
-    nav { display: flex; flex-wrap: wrap; gap: 20px; }
-    section { background: #fff; border: 1px solid #dce4ef; border-radius: 20px; padding: 28px; margin-bottom: 24px; }
-    h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.3; margin: 10px 0 20px; letter-spacing: -.025em; }
-    h2 { font-size: 25px; line-height: 1.4; margin: 0 0 16px; }
-    h3 { font-size: 19px; margin: 24px 0 8px; }
-    p { margin: 12px 0; }
-    .eyebrow { color: #145ac5; font-weight: 700; }
-    .contact { display: block; padding: 18px 22px; margin: 20px 0; border: 2px solid #145ac5; border-radius: 14px; background: #edf4ff; }
-    .contact strong { display: block; font-size: clamp(25px, 4vw, 36px); color: #123f88; font-variant-numeric: tabular-nums; user-select: all; }
-    .contact span { display: block; }
-    .note { color: #4b5d75; padding-left: 15px; border-left: 3px solid #a8bad4; }
-    .screens { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; max-width: 700px; margin: 20px auto 0; }
-    figure { margin: 0; min-width: 0; }
-    figure img { display: block; max-width: 100%; height: auto; width: 280px; margin: 12px auto; border: 1px solid #dce4ef; border-radius: 12px; }
-    figcaption { text-align: center; font-weight: 700; }
-    dl { margin: 0; }
-    dl div { display: grid; grid-template-columns: 130px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid #e4eaf2; }
-    dt { font-weight: 700; }
-    dd { margin: 0; overflow-wrap: anywhere; }
-    li { margin: 8px 0; }
-    footer { color: #4b5d75; padding: 8px 0 36px; font-size: 14px; }
-    @media (max-width: 580px) { header, main, footer { width: min(100% - 24px, 1040px); } section { padding: 20px 16px; border-radius: 14px; } .screens { gap: 12px; } dl div { grid-template-columns: 1fr; gap: 4px; } nav { gap: 14px; } }
-  </style>
+  <link rel="stylesheet" href="assets/site.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
+      {"@type":"WebSite","@id":"https://mou652.github.io/geshui-simulator/#website","url":"https://mou652.github.io/geshui-simulator/","name":"Mou652 个税模拟器","inLanguage":"zh-CN"},
       {
         "@type": "WebPage",
         "@id": "https://mou652.github.io/geshui-simulator/#page",
@@ -56,6 +26,7 @@
         "name": "Mou652 个税模拟器：项目资料与截图录屏演示",
         "inLanguage": "zh-CN",
         "dateModified": "2026-11-02",
+        "isPartOf": {"@id": "https://mou652.github.io/geshui-simulator/#website"},
         "about": {"@id": "https://mou652.github.io/geshui-simulator/#app"}
       },
       {
@@ -86,12 +57,12 @@
 <body>
   <header>
     <strong>Mou652 · 个税模拟器</strong>
-    <nav aria-label="页面导航"><a href="#preview">界面预览</a><a href="#features">功能说明</a><a href="#faq">常见问题</a><a href="https://github.com/Mou652/geshui-simulator">GitHub 项目</a></nav>
+    <nav aria-label="页面导航"><a href="#preview">界面预览</a><a href="#guides">使用教程</a><a href="#features">功能说明</a><a href="#faq">常见问题</a><a href="https://github.com/Mou652/geshui-simulator">GitHub 项目</a></nav>
   </header>
   <main>
     <section aria-labelledby="title">
       <div class="eyebrow">个人所得税界面演示 · iPhone / iOS</div>
-      <h1 id="title">个税模拟器：资料自由设置，截图与录屏演示</h1>
+      <h1 id="title">个税模拟器：安装包获取、资料自由设置与截图录屏</h1>
       <div class="contact"><span>安装包获取与使用交流</span><strong>QQ：2430239942</strong><span>联系时说明设备与 iOS 版本，确认适用版本与获取方式</span></div>
       <p><strong>Mou652 个税模拟器（Geshui Simulator，也称个人所得税模拟器）</strong>是面向苹果 iPhone / iOS 的个税 App 界面演示工具。可设置虚构的演示资料，查询年度收入纳税明细，并配合手机系统截图和屏幕录制制作教学、操作讲解与产品展示素材。</p>
       <p class="note">个人维护的非官方演示项目，与税务机关及官方 App 无关联。页面资料和金额用于模拟演示，不代表真实申报记录或纳税凭证。</p>
@@ -100,6 +71,10 @@
         <figure><figcaption>年度查询 · 模拟演示</figcaption><img src="images/demo-query.png" width="1320" height="2868" alt="个税模拟器的纳税年度选择与所得类型筛选" decoding="async"></figure>
       </div>
     </section>
+    <section id="guides" aria-labelledby="guides-title"><h2 id="guides-title">个税模拟器中文使用教程</h2><p>从获取安装包到完成一段演示，按需要选择下面的教程。</p><div class="guide-grid"><div><h3><a href="guides/getting-started.html">个税模拟器安装包怎么获取？</a></h3><p>联系 QQ 2430239942，确认 iPhone / iOS 对应版本，再按首次使用指南准备演示。</p></div>
+<div><h3><a href="guides/configure-demo-data.html">演示姓名、单位和收入怎么设置？</a></h3><p>查看资料入口，配置年度、月薪与月份范围，了解预览和保存规则。</p></div>
+<div><h3><a href="guides/income-details-demo.html">收入纳税明细怎么查询？</a></h3><p>选择年度和所得类型，浏览收入合计、预扣税额及月度工资薪金记录。</p></div>
+<div><h3><a href="guides/screenshot-and-recording.html">个税模拟器怎么截图、怎么录屏？</a></h3><p>用 iPhone 系统功能保存画面，参考约 60 秒的演示脚本完成连续录制。</p></div></div></section>
     <section id="features" aria-labelledby="features-title">
       <h2 id="features-title">可以用个税模拟器演示什么？</h2>
       <h3>演示资料自由设置</h3>
@@ -109,9 +84,9 @@
       <h3>页面截图与连续录屏</h3>
       <p>用系统截图呈现单页，用屏幕录制串联“资料设置 → 年度查询 → 明细浏览”的操作过程。适合个税 App 操作教学、收入纳税明细讲解与界面展示。</p>
       <ul>
-        <li><a href="https://github.com/Mou652/geshui-simulator/blob/main/docs/guides/configure-demo-data.md">演示资料设置教程</a></li>
-        <li><a href="https://github.com/Mou652/geshui-simulator/blob/main/docs/guides/income-details-demo.md">收入纳税明细查询教程</a></li>
-        <li><a href="https://github.com/Mou652/geshui-simulator/blob/main/docs/guides/screenshot-and-recording.md">iPhone 截图与录屏教程</a></li>
+        <li><a href="guides/configure-demo-data.html">演示资料设置教程</a></li>
+        <li><a href="guides/income-details-demo.html">收入纳税明细查询教程</a></li>
+        <li><a href="guides/screenshot-and-recording.html">iPhone 截图与录屏教程</a></li>
       </ul>
     </section>
     <section aria-labelledby="facts-title">
@@ -125,12 +100,12 @@
         <div><dt>公开仓库内容</dt><dd>项目介绍、界面截图与使用教程，不包含可构建的 App 源码</dd></div>
         <div><dt>资料更新</dt><dd><time datetime="2026-11-02">2026 年 11 月 2 日</time>（本页资料更新日期）</dd></div>
       </dl>
-      <p><a href="https://github.com/Mou652/geshui-simulator/blob/main/docs/project-overview.md">查看完整项目资料与功能说明</a></p>
+      <p><a href="guides/getting-started.html">安装包获取与首次使用</a> · <a href="https://github.com/Mou652/geshui-simulator/blob/main/docs/project-overview.md">查看完整项目资料与功能说明</a></p>
     </section>
     <section id="faq" aria-labelledby="faq-title">
       <h2 id="faq-title">常见问题</h2>
       <h3>个税模拟器安装包怎么获取？</h3>
-      <p>联系维护者 <strong>QQ：2430239942</strong>，说明使用设备与 iOS 版本，获取安装包及对应版本说明。</p>
+      <p>联系维护者 <strong>QQ：2430239942</strong>，说明使用设备与 iOS 版本，获取安装包及对应版本说明。<a href="guides/getting-started.html">查看安装包获取与首次使用指南</a>。</p>
       <h3>可以自由设置哪些演示资料？</h3>
       <p>可设置演示姓名、任职单位、收入年度、每月收入、月份范围，以及个人中心展示的家庭成员和银行卡数量。年度收入可选择是否包含年终奖，具体字段以对应版本为准。</p>
       <h3>可以在 iPhone 上截图和连续录屏吗？</h3>
@@ -141,6 +116,6 @@
       <p>本项目侧重界面、资料与操作流程展示。演示金额不作为真实报税计算或纳税判断的依据。</p>
     </section>
   </main>
-  <footer><p>项目维护：<a href="https://github.com/Mou652">Mou652</a> · QQ：2430239942 · <a href="https://github.com/Mou652/geshui-simulator/issues">问题反馈</a></p><p>对外展示时注明“个税模拟器 / 模拟演示”。请勿将模拟画面用于真实收入、纳税或身份材料。</p></footer>
+  <footer><p>项目维护：<a href="https://github.com/Mou652">Mou652</a> · QQ：2430239942 · <a href="sitemap.xml">站点地图</a> · <a href="https://github.com/Mou652/geshui-simulator/issues">问题反馈</a></p><p>对外展示时注明“个税模拟器 / 模拟演示”。请勿将模拟画面用于真实收入、纳税或身份材料。</p></footer>
 </body>
 </html>
