@@ -8,7 +8,7 @@
 
 **Mou652 个税模拟器（Geshui Simulator）**是面向 **iPhone / iOS** 的个人所得税 App 界面演示工具。可联系获取安装包，自由设置演示姓名、任职单位、年度收入和月份范围，再查询收入纳税明细，完成页面截图与连续屏幕录制。
 
-项目维护：[@Mou652](https://github.com/Mou652) · [项目资料与功能说明](docs/project-overview.md)
+项目维护：[@Mou652](https://github.com/Mou652) · [中文介绍页](https://mou652.github.io/geshui-simulator/) · [项目资料与功能说明](docs/project-overview.md)
 
 [界面预览](#界面预览) · [功能亮点](#功能亮点) · [快速开始](#快速开始) · [使用教程](#使用教程) · [常见问题](#常见问题) · [联系 QQ](#联系交流)
 
