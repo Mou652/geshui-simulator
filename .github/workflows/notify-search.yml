@@ -1,0 +1,84 @@
+name: Notify search engines
+
+on:
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types: [completed]
+
+permissions:
+  contents: read
+  pages: read
+
+jobs:
+  notify:
+    if: >-
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.head_branch == 'main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Notify IndexNow after Pages deployment
+        env:
+          SITE_URL: https://geshui.moujc.cn/
+          KEY_FILE: 390bb38ec7674351b4e40ea01642a953.txt
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          import time
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+          from urllib.error import URLError
+          from urllib.parse import urlsplit
+          from urllib.request import Request, urlopen
+
+          site = os.environ['SITE_URL']
+          key_location = site + os.environ['KEY_FILE']
+          host = urlsplit(site).netloc
+          headers = {'User-Agent': 'Mou652-Website-Update/1.0'}
+
+          pages_request = Request(
+              'https://api.github.com/repos/' + os.environ['GITHUB_REPOSITORY'] + '/pages',
+              headers={**headers, 'Authorization': 'Bearer ' + os.environ['GH_TOKEN'], 'Accept': 'application/vnd.github+json'},
+          )
+          with urlopen(pages_request, timeout=30) as response:
+              pages = json.load(response)
+          print(json.dumps({name: pages.get(name) for name in ('cname', 'https_enforced', 'https_certificate')}))
+
+          for attempt in range(10):
+              try:
+                  with urlopen(Request(key_location, headers=headers), timeout=20) as response:
+                      key = response.read().decode('utf-8').strip()
+                  break
+              except URLError:
+                  if attempt == 9:
+                      print(json.dumps({'engine': 'IndexNow', 'result': 'not submitted; HTTPS or ownership file not ready'}))
+                      with Path(os.environ['GITHUB_STEP_SUMMARY']).open('a') as summary:
+                          summary.write('IndexNow was not submitted because HTTPS or the ownership file is not ready.\n')
+                      raise SystemExit(0)
+                  time.sleep(30)
+          assert key + '.txt' == os.environ['KEY_FILE'], 'Ownership file does not match'
+          with urlopen(Request(site + 'sitemap.xml', headers=headers), timeout=30) as response:
+              sitemap = ET.fromstring(response.read())
+          urls = [item.text for item in sitemap.findall('.//{*}loc')]
+          assert 0 < len(urls) <= 10000, 'Unexpected sitemap size'
+          assert len(urls) == len(set(urls)), 'Duplicate sitemap URLs'
+          assert all(urlsplit(url).scheme == 'https' and urlsplit(url).netloc == host for url in urls)
+
+          payload = {'host': host, 'key': key, 'keyLocation': key_location, 'urlList': urls}
+          request = Request(
+              'https://api.indexnow.org/indexnow',
+              data=json.dumps(payload).encode('utf-8'),
+              headers={**headers, 'Content-Type': 'application/json; charset=utf-8'},
+              method='POST',
+          )
+          with urlopen(request, timeout=30) as response:
+              status = response.status
+              response.read()
+          assert status in (200, 202), f'Unexpected response: {status}'
+          result = 'received' if status == 200 else 'received; key validation pending'
+          print(json.dumps({'engine': 'IndexNow', 'http_status': status, 'url_count': len(urls), 'result': result}))
+          with Path(os.environ['GITHUB_STEP_SUMMARY']).open('a') as summary:
+              summary.write(f'IndexNow received {len(urls)} URLs (HTTP {status}). This confirms submission, not indexing or ranking.\n')
+          PY
