@@ -2,12 +2,16 @@ name: Notify search engines
 
 on:
   workflow_run:
-    workflows: ["pages build and deployment"]
+    workflows: ["pages-build-deployment"]
     types: [completed]
 
 permissions:
   contents: read
   pages: read
+
+concurrency:
+  group: notify-search-engines
+  cancel-in-progress: true
 
 jobs:
   notify:

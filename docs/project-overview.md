@@ -13,7 +13,7 @@
 | 项目名称 | 个税模拟器 / 个人所得税模拟器 |
 | 英文名称 | Geshui Simulator |
 | 维护者 | [Mou652](https://github.com/Mou652) |
-| 中文介绍页 | [mou652.github.io/geshui-simulator](https://mou652.github.io/geshui-simulator/) |
+| 中文介绍页 | [geshui.moujc.cn](https://geshui.moujc.cn/) |
 | 公开项目地址 | [github.com/Mou652/geshui-simulator](https://github.com/Mou652/geshui-simulator) |
 | 当前教程对应平台 | 苹果 iPhone / iOS |
 | 安装包获取 | 联系维护者 QQ：2430239942，说明设备与系统版本 |
