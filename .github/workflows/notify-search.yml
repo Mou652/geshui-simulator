@@ -1,13 +1,17 @@
 name: Notify search engines
 
 on:
-  workflow_run:
-    workflows: ["pages-build-deployment"]
-    types: [completed]
+  push:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - ".github/workflows/notify-search.yml"
+  workflow_dispatch:
 
 permissions:
   contents: read
   pages: read
+  actions: read
 
 concurrency:
   group: notify-search-engines
@@ -15,11 +19,9 @@ concurrency:
 
 jobs:
   notify:
-    if: >-
-      github.event.workflow_run.conclusion == 'success' &&
-      github.event.workflow_run.head_branch == 'main'
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 12
     steps:
       - name: Notify IndexNow after Pages deployment
         env:
@@ -49,6 +51,23 @@ jobs:
           with urlopen(pages_request, timeout=30) as response:
               pages = json.load(response)
           print(json.dumps({name: pages.get(name) for name in ('cname', 'https_enforced', 'https_certificate')}))
+
+          for attempt in range(20):
+              builds_request = Request(
+                  'https://api.github.com/repos/' + os.environ['GITHUB_REPOSITORY']
+                  + '/actions/runs?head_sha=' + os.environ['GITHUB_SHA'] + '&per_page=30',
+                  headers={**headers, 'Authorization': 'Bearer ' + os.environ['GH_TOKEN'], 'Accept': 'application/vnd.github+json'},
+              )
+              with urlopen(builds_request, timeout=30) as response:
+                  runs = json.load(response)['workflow_runs']
+              builds = [run for run in runs if run['name'] == 'pages build and deployment']
+              if builds and builds[0]['status'] == 'completed':
+                  if builds[0]['conclusion'] != 'success':
+                      raise RuntimeError('Pages deployment did not succeed; URLs were not submitted')
+                  break
+              if attempt == 19:
+                  raise RuntimeError('Pages deployment is still pending; URLs were not submitted')
+              time.sleep(15)
 
           for attempt in range(10):
               try:
