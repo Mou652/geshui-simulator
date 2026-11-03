@@ -13,9 +13,11 @@ h2 { font-size: 25px; line-height: 1.4; margin: 0 0 16px; }
 h3 { font-size: 19px; margin: 24px 0 8px; }
 p { margin: 12px 0; }
 .eyebrow { color: #145ac5; font-weight: 700; }
-.contact { display: block; padding: 18px 22px; margin: 20px 0; border: 2px solid #145ac5; border-radius: 14px; background: #edf4ff; }
-.contact strong { display: block; font-size: clamp(25px, 4vw, 36px); color: #123f88; font-variant-numeric: tabular-nums; user-select: all; }
+.contact { display: block; padding: 14px 18px; margin: 18px 0; border: 2px solid #145ac5; border-radius: 14px; background: #edf4ff; }
+.contact strong { display: block; font-size: clamp(24px, 3vw, 30px); color: #123f88; font-variant-numeric: tabular-nums; user-select: all; }
 .contact span { display: block; }
+.contact span:first-child { font-weight: 700; color: #123f88; }
+.contact span:last-child { font-size: 14px; }
 .note, .byline, .breadcrumb { color: #4b5d75; }
 .note { padding-left: 15px; border-left: 3px solid #a8bad4; }
 .screens { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; max-width: 700px; margin: 20px auto 0; }

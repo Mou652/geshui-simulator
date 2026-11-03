@@ -1,14 +1,16 @@
 <div align="center">
 
-# 个税模拟器（个人所得税模拟器）｜截图与录屏
+# 个税模拟器｜iPhone 非官方界面教学演示
 
-## 联系 QQ：`2430239942`
+**非官方教学项目 · 本机虚构示例 · 完整中文教程**
 
-**安装包获取与使用交流 · 演示资料自由设置 · 支持截图与录屏**
+## 演示版本与使用咨询：QQ `2430239942`
 
-**Mou652 个税模拟器（Geshui Simulator）**是面向 **iPhone / iOS** 的个人所得税 App 界面演示工具。可联系获取安装包，自由设置演示姓名、任职单位、年度收入和月份范围，再查询收入纳税明细，完成页面截图与连续屏幕录制。
+咨询适用设备、虚构示例配置与教学录屏；联系时说明 iOS 版本和演示目标。
 
-项目维护：[@Mou652](https://github.com/Mou652) · [中文官网与教程](https://geshui.moujc.cn/) · [项目资料与功能说明](docs/project-overview.md)
+**Mou652 个税模拟器（Geshui Simulator）**是面向 **iPhone / iOS** 的非官方个人所得税界面教学演示工具。可向维护者咨询演示版本，配置虚构示例姓名、演示单位、年度和月份，再浏览本机演示记录，完成页面截图与连续屏幕录制。
+
+项目维护：[@Mou652](https://github.com/Mou652) · [中文项目页与教程](https://geshui.moujc.cn/) · [项目说明与使用边界](https://geshui.moujc.cn/about.html) · [功能资料](docs/project-overview.md)
 
 [界面预览](#界面预览) · [功能亮点](#功能亮点) · [快速开始](#快速开始) · [使用教程](#使用教程) · [常见问题](#常见问题) · [联系 QQ](#联系交流)
 
@@ -37,13 +39,13 @@
 
 | 你想展示什么 | 模拟器可以做什么 |
 | --- | --- |
-| 演示资料自由设置 | 设置演示姓名、任职单位、年度收入与月份范围，准备不同讲解素材 |
+| 虚构示例数据配置 | 设置演示姓名、任职单位、年度收入与月份范围，准备不同讲解素材 |
 | 多年度收入纳税明细 | 展示收入合计、预扣税额合计，以及按月份排列的工资薪金记录 |
 | 年度与所得类型查询 | 切换纳税年度、选择所得类型，演示从筛选到结果的浏览路径 |
 | 个人中心界面 | 展示个人信息、任职受雇、家庭成员与银行卡数量等界面 |
 | 截图与视频素材 | 使用手机系统截图、屏幕录制功能，记录页面切换与操作过程 |
 
-当前教程和截图以苹果 iPhone / iOS 版本为准。本仓库公开使用指南与展示资料；安装包可通过上方 QQ 联系维护者获取。
+当前教程和截图以苹果 iPhone / iOS 版本为准。本仓库公开完整使用指南与展示资料；演示版本的适用设备可向维护者咨询。
 
 适合准备以下演示内容：
 
@@ -53,25 +55,25 @@
 
 ## 快速开始
 
-第一次使用个税模拟器，可以按“获取安装包 → 设置演示资料 → 查询明细 → 截图录屏”的顺序准备。
+第一次使用个税模拟器，可以按“确认版本 → 配置虚构示例 → 浏览本机演示明细 → 录制教学素材”的顺序准备。
 
-1. **联系获取安装包**：通过 QQ **2430239942** 说明使用设备与系统版本，确认对应版本的获取方式。
-2. **自由设置演示资料**：进入“我的”，持续长按“帮助中心”约 2 秒，设置虚构姓名、任职单位、年度收入和月份范围，预览后保存。
-3. **查询收入纳税明细**：从首页或“办&查”进入收入纳税明细，选择已保存数据的年度与所得类型，再点击查询。
+1. **确认适用演示版本**：通过 QQ **2430239942** 说明使用设备与系统版本，确认对应版本的获取方式。
+2. **配置虚构示例数据**：进入“我的”，持续长按“帮助中心”约 2 秒，设置虚构姓名、任职单位、年度收入和月份范围，预览后保存。
+3. **浏览本机演示明细**：从首页或“办&查”进入收入纳税明细，选择已保存数据的年度与所得类型，再点击查询。
 4. **截图或连续录屏**：通过 iPhone 系统截图、控制中心的屏幕录制功能，记录查询条件、月度列表和页面切换。
 
 资料入口与保存规则见 [演示资料设置教程](https://geshui.moujc.cn/guides/configure-demo-data.html)；录屏操作与分镜见 [iPhone 截图录屏教程](https://geshui.moujc.cn/guides/screenshot-and-recording.html)。
 
 ## 使用教程
 
-[安装包获取与首次使用指南](https://geshui.moujc.cn/guides/getting-started.html) · [全部中文教程](https://geshui.moujc.cn/#guides)
+[首次使用与版本说明指南](https://geshui.moujc.cn/guides/getting-started.html) · [全部中文教程](https://geshui.moujc.cn/#guides)
 
 第一次准备演示素材，可以先配置资料，再查询明细，最后录制操作过程。已经准备好资料时，可直接从截图与录屏教程开始。
 
 | 你遇到的问题 | 教程 | 可以完成什么 |
 | --- | --- | --- |
 | 个税模拟器怎么截图、怎么录屏？ | [个税模拟器截图与录屏教程：iPhone / iOS](https://geshui.moujc.cn/guides/screenshot-and-recording.html) | 完成系统截图、连续录屏，并参考约 60 秒的演示脚本 |
-| 收入纳税明细怎么查询？ | [个税模拟器收入纳税明细查询教程](https://geshui.moujc.cn/guides/income-details-demo.html) | 从首页选择年度与所得类型，核对收入汇总与月度工资薪金 |
+| 收入纳税明细怎么查询？ | [个税模拟器演示收入明细浏览教程](https://geshui.moujc.cn/guides/income-details-demo.html) | 从首页选择年度与所得类型，核对收入汇总与月度工资薪金 |
 | 演示资料、年度收入和任职单位怎么设置？ | [个税模拟器资料设置教程](https://geshui.moujc.cn/guides/configure-demo-data.html) | 配置虚构资料与月份范围，预览、保存并核对演示数据 |
 
 ## 首页与个人中心
@@ -107,19 +109,19 @@
 
 ### 如何确认是 Mou652 维护的个税模拟器？
 
-本项目的公开仓库是 [Mou652/geshui-simulator](https://github.com/Mou652/geshui-simulator)，维护者为 [Mou652](https://github.com/Mou652)，安装包与使用交流 QQ 为 **2430239942**。完整的项目名称、功能范围与教程入口见 [项目资料](docs/project-overview.md)。
+本项目的公开仓库是 [Mou652/geshui-simulator](https://github.com/Mou652/geshui-simulator)，维护者为 [Mou652](https://github.com/Mou652)，项目交流与版本咨询 QQ 为 **2430239942**。完整的项目名称、功能范围与教程入口见 [项目资料](docs/project-overview.md)。
 
-### 个税模拟器安装包怎么获取？
+### 首次使用前如何确认演示版本？
 
-可以通过 QQ **2430239942** 联系维护者获取安装包及对应版本说明。请先说明设备与系统版本；本仓库提供项目介绍、使用教程和界面截图。
+可以通过 QQ **2430239942** 联系维护者确认演示版本、适用设备与获取方式。请先说明设备与系统版本；本仓库提供项目介绍、使用教程和界面截图。
 
-### 可以自由设置哪些演示资料？
+### 可以配置哪些虚构示例？
 
 支持设置演示姓名、任职单位、收入年度、月份范围和月收入等内容，并配置个人中心展示的家庭成员、银行卡数量。年度收入可按场景选择是否包含年终奖；保存后到明细页核对。具体入口见 [资料设置教程](https://geshui.moujc.cn/guides/configure-demo-data.html)。
 
 ### 支持苹果 iPhone 和 iOS 吗？
 
-当前公开截图和操作教程均面向 iPhone / iOS。获取安装包前可提供系统版本，确认适用版本与操作入口；其他平台适配情况请联系维护者确认。
+当前公开截图和操作教程均面向 iPhone / iOS。使用演示版本前可提供系统版本，确认适用版本与操作入口；其他平台适配情况请联系维护者确认。
 
 ### 个税模拟器可以截图和连续录屏吗？
 
@@ -127,7 +129,7 @@
 
 ### 收入纳税明细查询不到数据怎么办？
 
-先确认年度收入配置已经保存，再检查查询年度、所得类型、月份范围和关联单位是否一致。工资记录应选中“工资薪金”；修改后退出旧结果页并重新查询。逐项排查见 [收入纳税明细查询教程](https://geshui.moujc.cn/guides/income-details-demo.html)。
+先确认年度收入配置已经保存，再检查查询年度、所得类型、月份范围和关联单位是否一致。工资记录应选中“工资薪金”；修改后退出旧结果页并重新查询。逐项排查见 [演示收入明细浏览教程](https://geshui.moujc.cn/guides/income-details-demo.html)。
 
 ### 个人所得税模拟器和个税计算器有什么区别？
 
@@ -139,18 +141,18 @@
 
 ## English overview
 
-**Geshui Simulator** is a personal income tax UI simulator for iPhone and iOS. Configure demo profiles, employers, income years and monthly records, then demonstrate the income tax detail query. Use iPhone screenshots and screen recording to create walkthroughs and product demos.
+**Geshui Simulator** is a personal income tax UI simulator for iPhone and iOS. Configure fictional sample profiles, demo employers, years and monthly records stored on the device, then demonstrate the interface with those samples. Use iPhone screenshots and screen recording to create walkthroughs and product demos.
 
-An app installation package is available by contacting the maintainer via **QQ: 2430239942**. This repository contains Chinese user guides and interface screenshots. The simulator is an independent, unofficial demo and does not access real tax records or provide tax filing services.
+For demo version compatibility, contact the maintainer via **QQ: 2430239942**. This website has no app download link. This repository contains Chinese user guides and interface screenshots. The simulator is an independent, unofficial demo and does not access real tax records or provide tax filing services.
 
 ## 联系交流
 
 ### QQ：`2430239942`
 
-可联系获取个税模拟器安装包，交流演示资料设置、收入明细查询与录屏使用反馈。也可以通过本仓库 [Issues](https://github.com/Mou652/geshui-simulator/issues) 提交建议；请勿上传真实证件号码、账户资料或税务记录。
+可咨询演示版本适用设备，交流虚构示例配置、本机明细浏览与教学录屏使用反馈。也可以通过本仓库 [Issues](https://github.com/Mou652/geshui-simulator/issues) 提交建议；请勿上传真实证件号码、账户资料或税务记录。
 
 ## 项目说明
 
-项目由 [Mou652](https://github.com/Mou652) 维护，展示图片由维护者提供。本仓库收录项目介绍、使用教程与界面展示资料，不包含可构建的 App 源码；安装包通过联系维护者获取。
+项目由 [Mou652](https://github.com/Mou652) 维护，展示图片由维护者提供。本仓库收录项目介绍、使用教程与界面展示资料，不包含可构建的 App 源码；演示版本适用性与获取方式可向维护者咨询。
 
 项目仅用于学习、界面参考与演示交流。请勿将模拟画面作为真实收入、纳税或身份材料，也勿将其用于冒充官方服务或误导他人。
