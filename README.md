@@ -1,16 +1,16 @@
 <div align="center">
 
-# 个税模拟器｜iPhone 非官方界面教学演示
+# 个税模拟器｜安卓与 iPhone 非官方教学演示
 
 **非官方教学项目 · 本机虚构示例 · 完整中文教程**
 
 ## 演示版本与使用咨询：QQ `2430239942`
 
-咨询适用设备、虚构示例配置与教学录屏；联系时说明 iOS 版本和演示目标。
+咨询适用设备、虚构示例配置与教学录屏；联系时说明安卓或 iPhone、系统版本和演示目标。
 
-**Mou652 个税模拟器（Geshui Simulator）**是面向 **iPhone / iOS** 的非官方个人所得税界面教学演示工具。可向维护者咨询演示版本，配置虚构示例姓名、演示单位、年度和月份，再浏览本机演示记录，完成页面截图与连续屏幕录制。
+**Mou652 个税模拟器（Geshui Simulator）**是支持 **Android 安卓与 iPhone / iOS** 的非官方个人所得税界面教学演示工具。可向维护者咨询演示版本，配置虚构示例姓名、演示单位、年度和月份，再浏览本机演示记录，完成页面截图与连续屏幕录制。
 
-项目维护：[@Mou652](https://github.com/Mou652) · [中文项目页与教程](https://geshui.moujc.cn/) · [项目说明与使用边界](https://geshui.moujc.cn/about.html) · [功能资料](docs/project-overview.md)
+项目维护：[@Mou652](https://github.com/Mou652) · [官网：安卓 / iPhone 演示与教程](https://geshui.moujc.cn/) · [项目说明与使用边界](https://geshui.moujc.cn/about.html) · [功能资料](docs/project-overview.md)
 
 [界面预览](#界面预览) · [功能亮点](#功能亮点) · [快速开始](#快速开始) · [使用教程](#使用教程) · [常见问题](#常见问题) · [联系 QQ](#联系交流)
 
@@ -45,13 +45,20 @@
 | 个人中心界面 | 展示个人信息、任职受雇、家庭成员与银行卡数量等界面 |
 | 截图与视频素材 | 使用手机系统截图、屏幕录制功能，记录页面切换与操作过程 |
 
-当前教程和截图以苹果 iPhone / iOS 版本为准。本仓库公开完整使用指南与展示资料；演示版本的适用设备可向维护者咨询。
+项目支持 **Android 安卓与 iPhone / iOS** 演示版本；当前截图和分步教程以 iPhone 版为例，安卓入口及功能范围以对应版本说明为准。本仓库公开完整使用指南与展示资料；演示版本的适用设备可向维护者咨询。
 
 适合准备以下演示内容：
 
 - **个税 App 操作教学**：用虚构资料讲解“设置资料 → 选择年度 → 查询明细”的操作过程。
 - **收入纳税明细讲解**：展示年度汇总、月度工资薪金与演示任职单位之间的关系。
 - **截图与录屏素材制作**：保存单页画面，或连续录制查询、浏览与页面切换过程。
+
+## 支持平台
+
+- **Android 安卓**：联系维护者说明品牌、机型与 Android 版本，确认安卓演示版本和使用入口
+- **iPhone / iOS**：联系维护者说明机型与 iOS 版本，当前公开分步教程以 iPhone 版为例
+
+不同平台的具体功能与入口以对应版本说明为准。
 
 ## 快速开始
 
@@ -119,9 +126,9 @@
 
 支持设置演示姓名、任职单位、收入年度、月份范围和月收入等内容，并配置个人中心展示的家庭成员、银行卡数量。年度收入可按场景选择是否包含年终奖；保存后到明细页核对。具体入口见 [资料设置教程](https://geshui.moujc.cn/guides/configure-demo-data.html)。
 
-### 支持苹果 iPhone 和 iOS 吗？
+### 支持安卓和苹果手机吗？
 
-当前公开截图和操作教程均面向 iPhone / iOS。使用演示版本前可提供系统版本，确认适用版本与操作入口；其他平台适配情况请联系维护者确认。
+支持 Android 安卓与 iPhone / iOS 演示版本。联系维护者时说明手机品牌、机型与系统版本，确认适用版本与操作入口；现有截图和分步教程以 iPhone 为例。
 
 ### 个税模拟器可以截图和连续录屏吗？
 
@@ -141,7 +148,7 @@
 
 ## English overview
 
-**Geshui Simulator** is a personal income tax UI simulator for iPhone and iOS. Configure fictional sample profiles, demo employers, years and monthly records stored on the device, then demonstrate the interface with those samples. Use iPhone screenshots and screen recording to create walkthroughs and product demos.
+**Geshui Simulator** is an unofficial educational income-tax UI demo for Android and iPhone / iOS. Configure fictional sample profiles, demo employers, years and monthly records stored on the device, then demonstrate the interface with those samples. Use iPhone screenshots and screen recording to create walkthroughs and product demos.
 
 For demo version compatibility, contact the maintainer via **QQ: 2430239942**. This website has no app download link. This repository contains Chinese user guides and interface screenshots. The simulator is an independent, unofficial demo and does not access real tax records or provide tax filing services.
 
