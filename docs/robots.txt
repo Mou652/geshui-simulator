@@ -1,4 +1,17 @@
 User-agent: *
 Allow: /
 
+# 明确公开内容的具名爬虫访问规则
+User-agent: Bytespider
+User-agent: Baiduspider
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+Allow: /
+
 Sitemap: https://geshui.moujc.cn/sitemap.xml

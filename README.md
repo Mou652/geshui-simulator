@@ -165,3 +165,12 @@ For demo version compatibility, contact the maintainer via **QQ: 2430239942**. T
 项目由 [Mou652](https://github.com/Mou652) 维护，展示图片由维护者提供。本仓库收录项目介绍、使用教程与界面展示资料，不包含可构建的 App 源码；演示版本适用性与获取方式可向维护者咨询。
 
 项目仅用于学习、界面参考与演示交流。请勿将模拟画面作为真实收入、纳税或身份材料，也勿将其用于冒充官方服务或误导他人。
+
+
+## 按问题阅读与项目入口
+
+- [全部教程与版本说明](https://geshui.moujc.cn/guides/)
+- [安卓演示版本](https://geshui.moujc.cn/android.html) · [iPhone 演示版本](https://geshui.moujc.cn/ios.html)
+- [常见问题 20 问](https://geshui.moujc.cn/faq.html) · [GitHub 问答与反馈](https://github.com/Mou652/geshui-simulator/issues/1)
+- [项目 Wiki](https://github.com/Mou652/geshui-simulator/wiki) · [资料发布记录](https://github.com/Mou652/geshui-simulator/releases)
+- [机器可读目录](https://geshui.moujc.cn/llms.txt)

@@ -1,0 +1,13 @@
+.answer-block { border-left: 4px solid #145ac5; background: #edf4ff; padding: 18px 20px; border-radius: 0 12px 12px 0; }
+.toc { display: block; margin: 24px 0; }
+.toc li { margin: 5px 0; }
+.steps > li { padding-left: 8px; margin-bottom: 20px; scroll-margin-top: 20px; }
+.steps h3 { margin-top: 12px; }
+.faq-item { padding: 4px 0 16px; border-bottom: 1px solid #e4eaf2; }
+.faq-item h3 { margin-top: 20px; }
+.skip-link { position: absolute; top: -80px; left: 16px; padding: 10px 16px; background: white; z-index: 10; }
+.skip-link:focus { top: 8px; }
+footer nav { gap: 14px; }
+@media (max-width: 580px) { .answer-block { padding: 14px; } }
+.answer-block, h1 { text-wrap: balance; }
+h1 { font-size: clamp(28px, 4vw, 38px); }
