@@ -21,6 +21,8 @@
 | 如何配置虚构姓名、任职单位、年度收入和月份？ | [演示资料设置](docs/guides/configure-demo-data.md) |
 | 如何查询本机收入纳税明细、核对月度记录？ | [演示收入明细浏览](docs/guides/income-details-demo.md) |
 | iPhone 如何截图、连续录屏并配合旁白？ | [截图、录屏与演示分镜](docs/guides/screenshot-and-recording.md) |
+| 个税 App、个人所得税计算器和模拟器有什么区别？ | [个税工具与教学入口](docs/guides/tax-app-and-simulator.md) |
+| 找不到设置入口，或保存后仍没有明细怎么办？ | [个税模拟器常见问题排查](docs/guides/troubleshooting.md) |
 | 项目支持哪些功能，适合哪些演示场景？ | [项目资料与功能说明](docs/project-overview.md) |
 
 ## 界面预览

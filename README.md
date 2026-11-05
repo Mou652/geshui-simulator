@@ -1,5 +1,3 @@
-<div align="center">
-
 # 个税模拟器｜个人所得税 App 界面演示与截图录屏教程
 
 **非官方教学项目 · 本机虚构示例 · 完整中文教程**
@@ -12,9 +10,9 @@
 
 项目维护：[@Mou652](https://github.com/Mou652) · [官网：安卓 / iPhone 演示与教程](https://geshui.moujc.cn/) · [项目说明与使用边界](https://geshui.moujc.cn/about.html) · [功能资料](docs/project-overview.md)
 
-[界面预览](#界面预览) · [功能亮点](#功能亮点) · [快速开始](#快速开始) · [使用教程](#使用教程) · [常见问题](#常见问题) · [联系 QQ](#联系交流)
+[Gitee 国内公开仓库](https://gitee.com/MouJC/geshui-simulator) · [GitHub 主仓库](https://github.com/Mou652/geshui-simulator) · [国内阅读入口与教程索引](GITEE.md)
 
-</div>
+[界面预览](#界面预览) · [功能亮点](#功能亮点) · [快速开始](#快速开始) · [使用教程](#使用教程) · [常见问题](#常见问题) · [联系 QQ](#联系交流)
 
 > 本项目为个人维护的**个税模拟器**，与税务机关及官方 App 无关联。页面中的资料、收入和税额用于模拟演示，不代表真实申报记录或纳税凭证。
 
