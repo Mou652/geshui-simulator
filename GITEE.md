@@ -44,3 +44,10 @@
 可通过 [Gitee Issues](https://gitee.com/MouJC/geshui-simulator/issues) 或 [GitHub Issues](https://github.com/Mou652/geshui-simulator/issues) 反馈问题。请说明演示版本、设备、复现步骤，以及使用的虚构示例。
 
 本项目与税务机关及官方 App 无关联，不连接官方税务系统。对外展示时注明“个税模拟器 / 非官方模拟演示”，演示画面不作为真实收入、纳税或身份材料。
+
+## 资料版与许可证
+
+- [Gitee 资料版发行记录](https://gitee.com/MouJC/geshui-simulator/releases)：发布网站、教程与维护资料，标签不代表 App 版本号，不附 App 安装包。
+- [MIT License](LICENSE)：适用于维护者原创的文档、网站代码与维护脚本；第三方资料、标识及素材不在此授权范围内，也不涉及仓库外的 App 源码、安装包、激活服务或账号。
+
+Gitee Pages 已下线，当前仓库没有 Pages 部署入口；国内阅读可直接使用本页的仓库内教程链接。平台状态参考 [Gitee 官方反馈](https://gitee.com/oschina/git-osc/issues/I9QF16)。
