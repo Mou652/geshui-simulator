@@ -76,6 +76,7 @@ def main():
     expected_urls = {BASE + site_path(file) for file in files}
     titles = []
     links = 0
+    table_rows = 0
     navigation = {}
     for file, tree in trees.items():
         prefix = str(file.relative_to(ROOT))
@@ -83,6 +84,20 @@ def main():
         assert len(title) == 1 and title[0].text().strip(), prefix + ': title'
         titles.append(title[0].text())
         assert len(tree.find('h1')) == 1, prefix + ': h1'
+        fields = tree.find('div', **{'class': 'table-scroll field-table'})
+        assert len(fields) == 1, prefix + ': field reference table'
+        region = fields[0]
+        assert region.attrs.get('role') == 'region' and region.attrs.get('tabindex') == '0', prefix + ': keyboard table access'
+        assert region.find(id=region.attrs.get('aria-labelledby', '')), prefix + ': accessible table label'
+        table = region.find('table')[0]
+        assert table.find('caption')[0].text().strip(), prefix + ': table caption'
+        assert [cell.text() for cell in table.find('th', scope='col')] == ['字段', '含义', '常见误解'], prefix + ': field table columns'
+        rows = table.find('tbody')[0].find('tr')
+        assert len(rows) >= 4, prefix + ': too few field explanations'
+        for row in rows:
+            assert len(row.find('th', scope='row')) == 1 and len(row.find('td')) == 2, prefix + ': field table cell structure'
+            assert all(cell.text().strip() for cell in row.children if isinstance(cell, Node)), prefix + ': empty field cell'
+        table_rows += len(rows)
         contact = tree.find('aside', **{'class': 'qq-bar'})
         assert len(contact) == 1 and 'QQ：2430239942' in contact[0].text(), prefix + ': prominent QQ contact'
         assert len([node for node in contact[0].find('button') if 'data-copy-qq' in node.attrs]) == 1, prefix + ': QQ copy button'
@@ -118,6 +133,8 @@ def main():
         assert len(destinations) >= 3, prefix + ': fewer than three internal page links'
         navigation[address] = destinations
     assert len(titles) == len(set(titles)), 'Duplicate page titles'
+    field_tables = json.loads((ROOT / 'content/field-tables.json').read_text(encoding='utf-8'))
+    assert {BASE + path for path in field_tables} == expected_urls, 'Field table coverage differs from published pages'
     visited = set()
     pending = [BASE + '/']
     while pending:
@@ -163,7 +180,7 @@ def main():
     for agent in agents:
         for path in ['/', '/llms.txt', '/guides/income-detail-lookup.html', '/guides/income-detail-lookup.md']:
             assert robots.can_fetch(agent, BASE + path), (agent, path)
-    print(json.dumps({'html_pages':len(files),'prominent_qq_contacts':len(files),'qq_copy_buttons':len(files),'reachable_from_home':len(visited),'shared_project_footers':len(files),'matrix_entries':len(matrix),'new_articles':len(pages),'local_links':links,'matching_faq_answers':faq_count,'matching_howto_steps':howto_count,'sitemap_urls':len(urls),'crawler_agents_verified':len(agents),'result':'passed'},ensure_ascii=False,indent=2))
+    print(json.dumps({'html_pages':len(files),'field_tables':len(field_tables),'field_explanations':table_rows,'prominent_qq_contacts':len(files),'qq_copy_buttons':len(files),'reachable_from_home':len(visited),'shared_project_footers':len(files),'matrix_entries':len(matrix),'new_articles':len(pages),'local_links':links,'matching_faq_answers':faq_count,'matching_howto_steps':howto_count,'sitemap_urls':len(urls),'crawler_agents_verified':len(agents),'result':'passed'},ensure_ascii=False,indent=2))
 
 
 if __name__ == '__main__':

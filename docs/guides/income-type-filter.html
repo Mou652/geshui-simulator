@@ -133,7 +133,7 @@
 <p class="answer-block"><strong>收入纳税明细可以按页面提供的所得类型筛选。核对工资时选择工资薪金，核对其他报酬时按对应类型查看，避免把不同所得项目的记录混为一组。</strong></p>
 <p class="byline">维护者：Mou652 · 资料核对：<time datetime="2026-11-05">2026-11-05</time></p>
 <p class="note">本页整理官方渠道的公开操作信息。实际业务以当前官方系统和适用政策为准；本站不是税务机关网站，不接收真实税务账号，不在本站办理申报。</p>
-<nav class="toc" aria-label="本页目录"><strong>本页内容</strong><ol><li><a href="#steps">操作与核对步骤</a></li><li><a href="#section-1">先按收入性质核对</a></li><li><a href="#section-2">汇总会受筛选范围影响</a></li><li><a href="#section-3">模拟器筛选不等于新增数据</a></li><li><a href="#faq">常见问题</a></li><li><a href="#sources">资料来源</a></li><li><a href="#related">继续阅读</a></li></ol></nav>
+<nav class="toc" aria-label="本页目录"><strong>本页内容</strong><ol><li><a href="#steps">操作与核对步骤</a></li><li><a href="#section-1">先按收入性质核对</a></li><li><a href="#section-2">汇总会受筛选范围影响</a></li><li><a href="#section-3">模拟器筛选不等于新增数据</a></li><li><a href="#field-reference">字段与常见误解</a></li><li><a href="#faq">常见问题</a></li><li><a href="#sources">资料来源</a></li><li><a href="#related">继续阅读</a></li></ol></nav>
 <h2 id="steps">操作与核对步骤</h2><ol class="steps">
 <li id="step-1"><h3>选择目标年度</h3><p>先固定要核对的年度，便于比较结果。</p></li>
 <li id="step-2"><h3>选择所得类型</h3><p>依当前页面勾选目标类型，记录是否同时选了其他项目。</p></li>
@@ -142,6 +142,7 @@
 <h2 id="section-1">先按收入性质核对</h2><p>工资薪金、劳务报酬、稿酬和特许权使用费是不同的所得项目。遇到分类疑问，应向支付或扣缴单位核实具体业务，不凭到账金额判断类型。</p>
 <h2 id="section-2">汇总会受筛选范围影响</h2><p>阅读收入合计时同时记录所选年度和所得类型。单一类型的查询结果与包含其他类型的结果，不宜直接比较。</p>
 <h2 id="section-3">模拟器筛选不等于新增数据</h2><p>查询页存在某个选项，不代表演示版本支持配置该类型记录。先检查已保存资料和版本说明，不把空结果当作程序丢失数据。</p>
+<h2 id="field-reference">字段与常见误解</h2><div class="table-scroll field-table" role="region" aria-labelledby="field-table-caption" tabindex="0"><table><caption id="field-table-caption">所得类型筛选字段</caption><thead><tr><th scope="col">字段</th><th scope="col">含义</th><th scope="col">常见误解</th></tr></thead><tbody><tr><th scope="row">工资薪金</th><td>核对工资记录时使用的所得项目</td><td>到账金额相似不代表收入性质相同</td></tr><tr><th scope="row">劳务报酬等项目</th><td>按业务事实和扣缴记录确认的其他所得类型</td><td>不能仅凭转账备注自行认定所得分类</td></tr><tr><th scope="row">收入合计</th><td>当前年度和选中类型对应的记录汇总</td><td>单一类型汇总不代表全部所得合计</td></tr><tr><th scope="row">演示筛选选项</th><td>模拟器查询界面提供的条件</td><td>有选项不代表该版本已支持生成此类记录</td></tr></tbody></table></div>
 <h2 id="faq">常见问题</h2>
 <div class="faq-item"><h3>勾选劳务报酬就能生成劳务记录吗？</h3><p>不能。筛选只决定查询范围，不会生成官方记录或本机示例。</p></div>
 <div class="faq-item"><h3>为什么切换类型后合计变了？</h3><p>应先核对筛选范围是否变化，再比较同一范围内的明细。</p></div>

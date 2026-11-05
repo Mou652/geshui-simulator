@@ -2,6 +2,7 @@
 """从同一份内容生成教程正文、Markdown、FAQ 与结构化数据"""
 
 import json
+import re
 from html import escape
 from pathlib import Path
 
@@ -11,6 +12,8 @@ DOCS = ROOT / 'docs'
 BASE = 'https://geshui.moujc.cn'
 DATE = '2026-11-05'
 ENTITY = '个税模拟器（Geshui Simulator）是 Mou652 维护的非官方个税界面教学演示工具，支持 Android 与 iPhone / iOS，使用本机虚构示例展示页面，配合系统截图与录屏制作教学素材，不连接官方税务系统。'
+FIELD_TABLES = json.loads((ROOT / 'content/field-tables.json').read_text(encoding='utf-8'))
+FIELD_COLUMNS = ['字段', '含义', '常见误解']
 
 
 def absolute(url):
@@ -19,6 +22,58 @@ def absolute(url):
 
 def link(url, label):
     return f'<a href="{escape(url, quote=True)}">{escape(label)}</a>'
+
+
+def field_table(path):
+    """生成当前页面的字段说明表与 Markdown"""
+    table = FIELD_TABLES[path]
+    rows = table['rows']
+    assert len(rows) >= 4 and all(len(row) == 3 for row in rows), path
+    html = '<h2 id="field-reference">字段与常见误解</h2><div class="table-scroll field-table" role="region" aria-labelledby="field-table-caption" tabindex="0"><table>'
+    html += '<caption id="field-table-caption">' + escape(table['caption']) + '</caption><thead><tr>'
+    html += ''.join(f'<th scope="col">{escape(value)}</th>' for value in FIELD_COLUMNS)
+    html += '</tr></thead><tbody>'
+    for name, meaning, misconception in rows:
+        html += f'<tr><th scope="row">{escape(name)}</th><td>{escape(meaning)}</td><td>{escape(misconception)}</td></tr>'
+    html += '</tbody></table></div>'
+    md = ['## 字段与常见误解', '', table['caption'], '', '| ' + ' | '.join(FIELD_COLUMNS) + ' |', '| --- | --- | --- |']
+    for row in rows:
+        md.append('| ' + ' | '.join(value.replace('|', '\\|').replace('\n', '<br>') for value in row) + ' |')
+    return html, '\n'.join(md) + '\n'
+
+
+def update_static_tables(paths):
+    """同步原有手写页面及其 Markdown 中的字段表"""
+    start, end = '<!-- field-table:start -->', '<!-- field-table:end -->'
+    pattern = re.compile(re.escape(start) + r'.*?' + re.escape(end), re.S)
+    for path in paths:
+        html, markdown = field_table(path)
+        target = DOCS / (path.lstrip('/') or 'index.html')
+        source = target.read_text(encoding='utf-8')
+        if '</article>' in source:
+            block = html
+            closing = '</article>'
+        else:
+            block = '<section aria-labelledby="field-reference">' + html + '</section>'
+            closing = '</main>'
+        block = start + '\n' + block + '\n' + end
+        if start in source:
+            source, count = pattern.subn(lambda match: block, source)
+            assert count == 1, path
+        else:
+            assert source.count(closing) == 1, path
+            source = source.replace(closing, block + '\n' + closing, 1)
+        target.write_text(source, encoding='utf-8')
+        md_target = target.with_suffix('.md')
+        if md_target.is_file():
+            source = md_target.read_text(encoding='utf-8')
+            block = start + '\n' + markdown + end
+            if start in source:
+                source, count = pattern.subn(lambda match: block, source)
+                assert count == 1, str(md_target)
+            else:
+                source = source.rstrip() + '\n\n' + block + '\n'
+            md_target.write_text(source, encoding='utf-8')
 
 
 def footer():
@@ -87,7 +142,7 @@ def render(page, lookup):
     toc += [(f'section-{pos}', section[0]) for pos, section in enumerate(page['sections'], 1)]
     if page['table']:
         toc.append(('comparison', '对照检查'))
-    toc += [('faq', '常见问题'), ('sources', '资料来源'), ('related', '继续阅读')]
+    toc += [('field-reference', '字段与常见误解'), ('faq', '常见问题'), ('sources', '资料来源'), ('related', '继续阅读')]
     parts = [head(page['title'], page['description'], canonical, graph(page, canonical), md_path), header(), '<main id="main"><article aria-labelledby="title">', f'<p class="breadcrumb">{link("/", "首页")} / {link("/guides/", "教程与使用说明")} / {escape(label)}</p>', f'<h1 id="title">{escape(page["h1"])}</h1>', f'<p class="answer-block"><strong>{escape(page["summary"])}</strong></p>', f'<p class="byline">维护者：Mou652 · 资料核对：<time datetime="{DATE}">{DATE}</time></p>', f'<p class="note">{escape(note)}</p>', '<nav class="toc" aria-label="本页目录"><strong>本页内容</strong><ol>' + ''.join(f'<li>{link("#" + ident, title)}</li>' for ident, title in toc) + '</ol></nav>']
     md = [f'# {page["h1"]}', '', f'> {page["summary"]}', '', f'维护者：Mou652 · 演示版本与使用咨询 QQ：2430239942 · 资料核对：{DATE}', '', note, '']
     if page['steps']:
@@ -106,6 +161,9 @@ def render(page, lookup):
         parts.append('<h2 id="comparison">对照检查</h2><div class="table-scroll" role="region" aria-label="对照检查表" tabindex="0"><table><thead><tr>' + ''.join(f'<th scope="col">{escape(value)}</th>' for value in columns) + '</tr></thead><tbody>' + ''.join('<tr>' + ''.join(f'<td>{escape(value)}</td>' for value in row) + '</tr>' for row in rows) + '</tbody></table></div>')
         md += ['## 对照检查', '', '| ' + ' | '.join(columns) + ' |', '| ' + ' | '.join(['---'] * len(columns)) + ' |']
         md += ['| ' + ' | '.join(row) + ' |' for row in rows] + ['']
+    table_html, table_md = field_table(page['path'])
+    parts.append(table_html)
+    md += [table_md, '']
     if page.get('image'):
         image = '/images/' + page['image']
         alt = '个税模拟器的本机虚构示例画面，非官方模拟演示'
@@ -143,6 +201,8 @@ def build_index(pages):
             if predicate(page):
                 parts.append('<div><h3>' + link(page['path'], page['h1']) + '</h3><p>' + escape(page['summary']) + '</p></div>')
         parts.append('</div></section>')
+    table_html, _ = field_table('/guides/')
+    parts.append('<section aria-labelledby="field-reference">' + table_html + '</section>')
     parts += ['</main>', footer(), '</body></html>\n']
     (DOCS / 'guides/index.html').write_text('\n'.join(parts), encoding='utf-8')
 
@@ -154,6 +214,8 @@ def main():
     for page in pages:
         render(page, lookup)
     build_index(pages)
+    generated = {page['path'] for page in pages} | {'/guides/'}
+    update_static_tables(sorted(set(FIELD_TABLES) - generated))
     print(f'已生成 {len(pages)} 篇 HTML、对应 Markdown 与教程目录')
 
 

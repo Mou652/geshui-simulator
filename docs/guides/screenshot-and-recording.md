@@ -74,3 +74,16 @@
 截图和屏幕录制的系统操作参考 Apple 官方指南：[在 iPhone 上截屏](https://support.apple.com/zh-cn/guide/iphone/iphc872c0115/ios)、[在 iPhone 上录屏](https://support.apple.com/zh-cn/guide/iphone/iph52f6e1987/ios)。
 
 个税模拟器使用交流：**QQ：2430239942**。也可以通过 [Issues](https://github.com/Mou652/geshui-simulator/issues) 反馈使用问题。
+
+<!-- field-table:start -->
+## 字段与常见误解
+
+iPhone 截图与录屏检查字段
+
+| 字段 | 含义 | 常见误解 |
+| --- | --- | --- |
+| 系统截图 | 用当前机型的系统操作保存单页画面 | 不同 iPhone 机型的按键组合不能默认相同 |
+| 控制中心录屏 | 由 iPhone 系统录制连续操作的功能 | 模拟器不需要另外提供一个录制按钮 |
+| 麦克风 | 需要旁白时检查的录音选项 | 麦克风控制声音，不决定画面清晰度 |
+| 最终素材 | 回放并检查文字、身份信息和模拟标识的文件 | 教程中的示例时长不是所有视频的固定要求 |
+<!-- field-table:end -->

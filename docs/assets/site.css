@@ -37,6 +37,11 @@ article h2 { margin-top: 36px; scroll-margin-top: 20px; }
 article h3 { scroll-margin-top: 20px; }
 article ul, article ol { padding-left: 1.5em; }
 .table-scroll { overflow-x: auto; margin: 20px 0; }
+.table-scroll:focus-visible { outline: 3px solid #ec9d17; outline-offset: 4px; }
+.field-table table { min-width: 600px; }
+.field-table caption { text-align: left; font-weight: 700; padding-bottom: 10px; color: #172842; }
+.field-table th[scope="row"] { width: 20%; background: #f5f7fc; }
+.field-table td { width: 40%; overflow-wrap: anywhere; }
 table { width: 100%; border-collapse: collapse; font-size: 15px; }
 th, td { text-align: left; vertical-align: top; border: 1px solid #dce4ef; padding: 10px 12px; }
 th { background: #edf4ff; }
