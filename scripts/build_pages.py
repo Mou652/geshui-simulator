@@ -26,7 +26,11 @@ def footer():
 
 
 def header():
-    return f'''<a class="skip-link" href="#main">跳到正文</a><header><strong>{link('/', 'Mou652 · 个税模拟器')}</strong><nav aria-label="主导航">{link('/guides/', '全部教程')} {link('/android.html', '安卓版')} {link('/ios.html', 'iPhone 版')} {link('/faq.html', '常见问题')} {link('/about.html', '项目说明')}</nav></header>'''
+    return contact_bar() + f'''<a class="skip-link" href="#main">跳到正文</a><header><strong>{link('/', 'Mou652 · 个税模拟器')}</strong><nav aria-label="主导航">{link('/guides/', '全部教程')} {link('/android.html', '安卓版')} {link('/ios.html', 'iPhone 版')} {link('/faq.html', '常见问题')} {link('/about.html', '项目说明')}</nav></header>'''
+
+
+def contact_bar():
+    return '''<aside class="qq-bar" aria-label="QQ 联系方式"><div class="qq-bar-inner"><div class="qq-bar-copy"><span>演示版本与使用咨询</span><strong>QQ：<span data-qq-number>2430239942</span></strong></div><button class="qq-copy" type="button" data-copy-qq aria-label="复制 QQ 2430239942">复制 QQ</button><span class="qq-copy-status" role="status" aria-live="polite"></span></div></aside>'''
 
 
 def graph(page, canonical):
@@ -65,6 +69,7 @@ def head(title, description, canonical, schema, markdown=None):
 <meta name="description" content="{escape(description, quote=True)}"><meta name="author" content="Mou652"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <link rel="canonical" href="{escape(canonical)}"><link rel="describedby" href="/llms.txt">{alternate}
 <link rel="stylesheet" href="/assets/site.css"><link rel="stylesheet" href="/assets/content.css"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/contact.css"><script defer src="/assets/contact.js"></script>
 <meta property="og:type" content="article"><meta property="og:locale" content="zh_CN"><meta property="og:site_name" content="Mou652 个税模拟器"><meta property="og:title" content="{escape(title, quote=True)}"><meta property="og:description" content="{escape(description, quote=True)}"><meta property="og:url" content="{escape(canonical)}"><meta name="twitter:card" content="summary">
 <script type="application/ld+json">{schema}</script></head><body>'''
 
@@ -84,7 +89,7 @@ def render(page, lookup):
         toc.append(('comparison', '对照检查'))
     toc += [('faq', '常见问题'), ('sources', '资料来源'), ('related', '继续阅读')]
     parts = [head(page['title'], page['description'], canonical, graph(page, canonical), md_path), header(), '<main id="main"><article aria-labelledby="title">', f'<p class="breadcrumb">{link("/", "首页")} / {link("/guides/", "教程与使用说明")} / {escape(label)}</p>', f'<h1 id="title">{escape(page["h1"])}</h1>', f'<p class="answer-block"><strong>{escape(page["summary"])}</strong></p>', f'<p class="byline">维护者：Mou652 · 资料核对：<time datetime="{DATE}">{DATE}</time></p>', f'<p class="note">{escape(note)}</p>', '<nav class="toc" aria-label="本页目录"><strong>本页内容</strong><ol>' + ''.join(f'<li>{link("#" + ident, title)}</li>' for ident, title in toc) + '</ol></nav>']
-    md = [f'# {page["h1"]}', '', f'> {page["summary"]}', '', f'维护者：Mou652 · 资料核对：{DATE}', '', note, '']
+    md = [f'# {page["h1"]}', '', f'> {page["summary"]}', '', f'维护者：Mou652 · 演示版本与使用咨询 QQ：2430239942 · 资料核对：{DATE}', '', note, '']
     if page['steps']:
         parts.append('<h2 id="steps">操作与核对步骤</h2><ol class="steps">')
         md += ['## 操作与核对步骤', '']

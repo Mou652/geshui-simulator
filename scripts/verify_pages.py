@@ -83,6 +83,11 @@ def main():
         assert len(title) == 1 and title[0].text().strip(), prefix + ': title'
         titles.append(title[0].text())
         assert len(tree.find('h1')) == 1, prefix + ': h1'
+        contact = tree.find('aside', **{'class': 'qq-bar'})
+        assert len(contact) == 1 and 'QQ：2430239942' in contact[0].text(), prefix + ': prominent QQ contact'
+        assert len([node for node in contact[0].find('button') if 'data-copy-qq' in node.attrs]) == 1, prefix + ': QQ copy button'
+        assert tree.find('link', href='/assets/contact.css'), prefix + ': contact styles'
+        assert tree.find('script', src='/assets/contact.js'), prefix + ': contact interaction'
         footer = tree.find('footer')
         assert len(footer) == 1 and '个税模拟器（Geshui Simulator）是 Mou652 维护的非官方个税界面教学演示工具' in footer[0].text(), prefix + ': shared project footer'
         assert tree.find('meta', name='description'), prefix + ': description'
@@ -158,7 +163,7 @@ def main():
     for agent in agents:
         for path in ['/', '/llms.txt', '/guides/income-detail-lookup.html', '/guides/income-detail-lookup.md']:
             assert robots.can_fetch(agent, BASE + path), (agent, path)
-    print(json.dumps({'html_pages':len(files),'reachable_from_home':len(visited),'shared_project_footers':len(files),'matrix_entries':len(matrix),'new_articles':len(pages),'local_links':links,'matching_faq_answers':faq_count,'matching_howto_steps':howto_count,'sitemap_urls':len(urls),'crawler_agents_verified':len(agents),'result':'passed'},ensure_ascii=False,indent=2))
+    print(json.dumps({'html_pages':len(files),'prominent_qq_contacts':len(files),'qq_copy_buttons':len(files),'reachable_from_home':len(visited),'shared_project_footers':len(files),'matrix_entries':len(matrix),'new_articles':len(pages),'local_links':links,'matching_faq_answers':faq_count,'matching_howto_steps':howto_count,'sitemap_urls':len(urls),'crawler_agents_verified':len(agents),'result':'passed'},ensure_ascii=False,indent=2))
 
 
 if __name__ == '__main__':
