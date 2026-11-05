@@ -76,12 +76,15 @@ def main():
     expected_urls = {BASE + site_path(file) for file in files}
     titles = []
     links = 0
+    navigation = {}
     for file, tree in trees.items():
         prefix = str(file.relative_to(ROOT))
         title = tree.find('title')
         assert len(title) == 1 and title[0].text().strip(), prefix + ': title'
         titles.append(title[0].text())
         assert len(tree.find('h1')) == 1, prefix + ': h1'
+        footer = tree.find('footer')
+        assert len(footer) == 1 and '个税模拟器（Geshui Simulator）是 Mou652 维护的非官方个税界面教学演示工具' in footer[0].text(), prefix + ': shared project footer'
         assert tree.find('meta', name='description'), prefix + ': description'
         canonical = tree.find('link', rel='canonical')
         assert len(canonical) == 1 and canonical[0].attrs['href'] == BASE + site_path(file), prefix + ': canonical'
@@ -100,7 +103,24 @@ def main():
                 links += 1
         for script in tree.find('script', type='application/ld+json'):
             json.loads(script.text())
+        address = BASE + site_path(file)
+        destinations = set()
+        for anchor in tree.find('a'):
+            url = urlsplit(urljoin(address, anchor.attrs.get('href', '')))
+            destination = url._replace(fragment='', query='').geturl()
+            if destination in expected_urls and destination != address:
+                destinations.add(destination)
+        assert len(destinations) >= 3, prefix + ': fewer than three internal page links'
+        navigation[address] = destinations
     assert len(titles) == len(set(titles)), 'Duplicate page titles'
+    visited = set()
+    pending = [BASE + '/']
+    while pending:
+        address = pending.pop()
+        if address not in visited:
+            visited.add(address)
+            pending.extend(navigation[address] - visited)
+    assert visited == expected_urls, ('Pages unreachable from homepage', expected_urls - visited)
     faq_count = 0
     howto_count = 0
     for page in pages:
@@ -138,7 +158,7 @@ def main():
     for agent in agents:
         for path in ['/', '/llms.txt', '/guides/income-detail-lookup.html', '/guides/income-detail-lookup.md']:
             assert robots.can_fetch(agent, BASE + path), (agent, path)
-    print(json.dumps({'html_pages':len(files),'matrix_entries':len(matrix),'new_articles':len(pages),'local_links':links,'matching_faq_answers':faq_count,'matching_howto_steps':howto_count,'sitemap_urls':len(urls),'crawler_agents_verified':len(agents),'result':'passed'},ensure_ascii=False,indent=2))
+    print(json.dumps({'html_pages':len(files),'reachable_from_home':len(visited),'shared_project_footers':len(files),'matrix_entries':len(matrix),'new_articles':len(pages),'local_links':links,'matching_faq_answers':faq_count,'matching_howto_steps':howto_count,'sitemap_urls':len(urls),'crawler_agents_verified':len(agents),'result':'passed'},ensure_ascii=False,indent=2))
 
 
 if __name__ == '__main__':
