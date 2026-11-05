@@ -6,7 +6,7 @@
 
 咨询适用设备、虚构示例配置与教学录屏；联系时说明安卓或 iPhone、系统版本和演示目标。
 
-**Mou652 个税模拟器（Geshui Simulator，也称个人所得税模拟器、个税 App 模拟器）**支持 **Android 安卓与 iPhone / iOS**，用于非官方个税界面教学演示。配置虚构示例姓名、任职单位、收入年度和月份后，可以浏览本机收入纳税明细，制作个税演示截图和连续录屏。版本与使用问题可向维护者咨询。
+**Mou652 个税模拟器**（Geshui Simulator，也称个人所得税模拟器、个税 App 模拟器）支持 **Android 安卓与 iPhone / iOS**，用于非官方个税界面教学演示。配置虚构示例姓名、任职单位、收入年度和月份后，可以浏览本机收入纳税明细，制作个税演示截图和连续录屏。版本与使用问题可向维护者咨询。
 
 项目维护：[@Mou652](https://github.com/Mou652) · [官网：安卓 / iPhone 演示与教程](https://geshui.moujc.cn/) · [项目说明与使用边界](https://geshui.moujc.cn/about.html) · [功能资料](docs/project-overview.md)
 
