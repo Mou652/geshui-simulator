@@ -21,6 +21,9 @@
 - [本机演示收入明细](https://geshui.moujc.cn/guides/income-details-demo.md): 年度与所得类型筛选、汇总和月度记录浏览，以及查询不到示例时的排查
 - [iPhone 截图与录屏](https://geshui.moujc.cn/guides/screenshot-and-recording.md): 系统截图、连续屏幕录制、旁白设置与演示脚本
 
+- [个税工具怎么选](https://geshui.moujc.cn/guides/tax-app-and-simulator.md): 官方个人所得税 App、计算器与本机教学模拟器的用途和教程入口
+- [常见问题排查](https://geshui.moujc.cn/guides/troubleshooting.md): 资料设置入口、保存、年度与月份查询、个税截图和录屏准备
+
 ## Optional
 
 - [公开项目仓库](https://github.com/Mou652/geshui-simulator): 项目说明、界面截图与中文教程

@@ -1,6 +1,6 @@
 <div align="center">
 
-# 个税模拟器｜安卓与 iPhone 非官方教学演示
+# 个税模拟器｜个人所得税 App 界面演示与截图录屏教程
 
 **非官方教学项目 · 本机虚构示例 · 完整中文教程**
 
@@ -8,7 +8,7 @@
 
 咨询适用设备、虚构示例配置与教学录屏；联系时说明安卓或 iPhone、系统版本和演示目标。
 
-**Mou652 个税模拟器（Geshui Simulator）**是支持 **Android 安卓与 iPhone / iOS** 的非官方个人所得税界面教学演示工具。可向维护者咨询演示版本，配置虚构示例姓名、演示单位、年度和月份，再浏览本机演示记录，完成页面截图与连续屏幕录制。
+**Mou652 个税模拟器（Geshui Simulator，也称个人所得税模拟器、个税 App 模拟器）**支持 **Android 安卓与 iPhone / iOS**，用于非官方个税界面教学演示。配置虚构示例姓名、任职单位、收入年度和月份后，可以浏览本机收入纳税明细，制作个税演示截图和连续录屏。版本与使用问题可向维护者咨询。
 
 项目维护：[@Mou652](https://github.com/Mou652) · [官网：安卓 / iPhone 演示与教程](https://geshui.moujc.cn/) · [项目说明与使用边界](https://geshui.moujc.cn/about.html) · [功能资料](docs/project-overview.md)
 
@@ -35,7 +35,7 @@
 
 ## 功能亮点
 
-把资料配置、年度查询和月度明细串成一条演示路径，让讲解更连贯、画面更直观。
+准备一组虚构资料后，演示年度查询、工资薪金明细和个人中心，再用截图或录屏记录操作。
 
 | 你想展示什么 | 模拟器可以做什么 |
 | --- | --- |
@@ -75,6 +75,8 @@
 
 [首次使用与版本说明指南](https://geshui.moujc.cn/guides/getting-started.html) · [全部中文教程](https://geshui.moujc.cn/#guides)
 
+搜索“个税”“个人所得税”或“个税软件”时，先确认需要官方办税、税额估算，还是界面教学演示。[个税 App、计算器与模拟器的区别](https://geshui.moujc.cn/guides/tax-app-and-simulator.html) 说明各类工具的用途；本项目提供虚构数据的界面演示教程。
+
 第一次准备演示素材，可以先配置资料，再查询明细，最后录制操作过程。已经准备好资料时，可直接从截图与录屏教程开始。
 
 | 你遇到的问题 | 教程 | 可以完成什么 |
@@ -82,6 +84,8 @@
 | 个税模拟器怎么截图、怎么录屏？ | [个税模拟器截图与录屏教程：iPhone / iOS](https://geshui.moujc.cn/guides/screenshot-and-recording.html) | 完成系统截图、连续录屏，并参考约 60 秒的演示脚本 |
 | 收入纳税明细怎么查询？ | [个税模拟器演示收入明细浏览教程](https://geshui.moujc.cn/guides/income-details-demo.html) | 从首页选择年度与所得类型，核对收入汇总与月度工资薪金 |
 | 演示资料、年度收入和任职单位怎么设置？ | [个税模拟器资料设置教程](https://geshui.moujc.cn/guides/configure-demo-data.html) | 配置虚构资料与月份范围，预览、保存并核对演示数据 |
+| 个税 App、个人所得税计算器和模拟器怎么选？ | [个税工具与教学入口](https://geshui.moujc.cn/guides/tax-app-and-simulator.html) | 根据真实办税、估算或教学用途选择对应工具 |
+| 找不到设置入口，或保存后仍没有明细？ | [个税模拟器常见问题排查](https://geshui.moujc.cn/guides/troubleshooting.html) | 按入口、保存状态、年度、月份与单位逐项检查 |
 
 ## 首页与个人中心
 
@@ -136,7 +140,7 @@
 
 ### 收入纳税明细查询不到数据怎么办？
 
-先确认年度收入配置已经保存，再检查查询年度、所得类型、月份范围和关联单位是否一致。工资记录应选中“工资薪金”；修改后退出旧结果页并重新查询。逐项排查见 [演示收入明细浏览教程](https://geshui.moujc.cn/guides/income-details-demo.html)。
+先确认年度收入配置已经保存，再检查查询年度、所得类型、月份范围和关联单位是否一致。工资记录应选中“工资薪金”；修改后退出旧结果页并重新查询。逐项排查见 [常见问题排查](https://geshui.moujc.cn/guides/troubleshooting.html)，完整查询路径见 [演示收入明细浏览教程](https://geshui.moujc.cn/guides/income-details-demo.html)。
 
 ### 个人所得税模拟器和个税计算器有什么区别？
 

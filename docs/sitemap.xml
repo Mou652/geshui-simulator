@@ -2,26 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://geshui.moujc.cn/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
   </url>
   <url>
     <loc>https://geshui.moujc.cn/guides/getting-started.html</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
   </url>
   <url>
     <loc>https://geshui.moujc.cn/guides/configure-demo-data.html</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
   </url>
   <url>
     <loc>https://geshui.moujc.cn/guides/income-details-demo.html</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
   </url>
   <url>
     <loc>https://geshui.moujc.cn/guides/screenshot-and-recording.html</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
   </url>
   <url>
     <loc>https://geshui.moujc.cn/about.html</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://geshui.moujc.cn/guides/tax-app-and-simulator.html</loc>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://geshui.moujc.cn/guides/troubleshooting.html</loc>
+    <lastmod>2026-11-05</lastmod>
   </url>
 </urlset>
