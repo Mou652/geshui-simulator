@@ -21,7 +21,7 @@ jobs:
   notify:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 20
     steps:
       - name: Notify IndexNow after Pages deployment
         env:
@@ -52,7 +52,7 @@ jobs:
               pages = json.load(response)
           print(json.dumps({name: pages.get(name) for name in ('cname', 'https_enforced', 'https_certificate')}))
 
-          for attempt in range(20):
+          for attempt in range(40):
               builds_request = Request(
                   'https://api.github.com/repos/' + os.environ['GITHUB_REPOSITORY']
                   + '/actions/runs?head_sha=' + os.environ['GITHUB_SHA'] + '&per_page=30',
@@ -65,7 +65,7 @@ jobs:
                   if builds[0]['conclusion'] != 'success':
                       raise RuntimeError('Pages deployment did not succeed; URLs were not submitted')
                   break
-              if attempt == 19:
+              if attempt == 39:
                   raise RuntimeError('Pages deployment is still pending; URLs were not submitted')
               time.sleep(15)
 
