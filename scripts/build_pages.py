@@ -89,9 +89,10 @@ def contact_bar():
 
 
 def graph(page, canonical):
+    updated = page.get('updated', DATE)
     author = {'@type': 'Person', '@id': BASE + '/#maintainer', 'name': 'Mou652', 'url': 'https://github.com/Mou652'}
     website = {'@type': 'WebSite', '@id': BASE + '/#website', 'name': 'Mou652 个税模拟器', 'url': BASE + '/', 'inLanguage': 'zh-CN', 'publisher': {'@id': author['@id']}}
-    webpage = {'@type': 'WebPage', '@id': canonical + '#page', 'url': canonical, 'name': page['h1'], 'description': page['summary'], 'inLanguage': 'zh-CN', 'dateModified': DATE, 'isPartOf': {'@id': website['@id']}, 'author': {'@id': author['@id']}}
+    webpage = {'@type': 'WebPage', '@id': canonical + '#page', 'url': canonical, 'name': page['h1'], 'description': page['summary'], 'inLanguage': 'zh-CN', 'dateModified': updated, 'isPartOf': {'@id': website['@id']}, 'author': {'@id': author['@id']}}
     breadcrumb = {'@type': 'BreadcrumbList', '@id': canonical + '#breadcrumb', 'itemListElement': [
         {'@type': 'ListItem', 'position': 1, 'name': '个税模拟器', 'item': BASE + '/'},
         {'@type': 'ListItem', 'position': 2, 'name': '教程与使用说明', 'item': BASE + '/guides/'},
@@ -107,7 +108,7 @@ def graph(page, canonical):
             for pos, (name, text) in enumerate(page['steps'], 1)
         ]})
     elif page['kind'] != 'FAQPage':
-        result.append({'@type': 'Article', '@id': canonical + '#article', 'headline': page['h1'], 'description': page['summary'], 'url': canonical, 'inLanguage': 'zh-CN', 'dateModified': DATE, 'author': {'@id': author['@id']}, 'mainEntityOfPage': {'@id': webpage['@id']}})
+        result.append({'@type': 'Article', '@id': canonical + '#article', 'headline': page['h1'], 'description': page['summary'], 'url': canonical, 'inLanguage': 'zh-CN', 'dateModified': updated, 'author': {'@id': author['@id']}, 'mainEntityOfPage': {'@id': webpage['@id']}})
     if page['faq']:
         result.append({'@type': 'FAQPage', '@id': canonical + '#faq', 'url': canonical + '#faq', 'isPartOf': {'@id': webpage['@id']}, 'mainEntity': [
             {'@type': 'Question', 'name': question, 'acceptedAnswer': {'@type': 'Answer', 'text': answer}}
@@ -131,6 +132,7 @@ def head(title, description, canonical, schema, markdown=None):
 
 def render(page, lookup):
     canonical = BASE + page['path']
+    updated = page.get('updated', DATE)
     md_path = str(Path(page['path']).with_suffix('.md'))
     related = list(dict.fromkeys([item for item in page['related'] if item != page['id']] + [31, 34, 48]))
     label = {'official': '官方渠道指引', 'capture': '截图与录屏', 'demo': '本机演示与工具说明'}[page['audience']]
@@ -143,8 +145,8 @@ def render(page, lookup):
     if page['table']:
         toc.append(('comparison', '对照检查'))
     toc += [('field-reference', '字段与常见误解'), ('faq', '常见问题'), ('sources', '资料来源'), ('related', '继续阅读')]
-    parts = [head(page['title'], page['description'], canonical, graph(page, canonical), md_path), header(), '<main id="main"><article aria-labelledby="title">', f'<p class="breadcrumb">{link("/", "首页")} / {link("/guides/", "教程与使用说明")} / {escape(label)}</p>', f'<h1 id="title">{escape(page["h1"])}</h1>', f'<p class="answer-block"><strong>{escape(page["summary"])}</strong></p>', f'<p class="byline">维护者：Mou652 · 资料核对：<time datetime="{DATE}">{DATE}</time></p>', f'<p class="note">{escape(note)}</p>', '<nav class="toc" aria-label="本页目录"><strong>本页内容</strong><ol>' + ''.join(f'<li>{link("#" + ident, title)}</li>' for ident, title in toc) + '</ol></nav>']
-    md = [f'# {page["h1"]}', '', f'> {page["summary"]}', '', f'维护者：Mou652 · 演示版本与使用咨询 QQ：2430239942 · 资料核对：{DATE}', '', note, '']
+    parts = [head(page['title'], page['description'], canonical, graph(page, canonical), md_path), header(), '<main id="main"><article aria-labelledby="title">', f'<p class="breadcrumb">{link("/", "首页")} / {link("/guides/", "教程与使用说明")} / {escape(label)}</p>', f'<h1 id="title">{escape(page["h1"])}</h1>', f'<p class="answer-block"><strong>{escape(page["summary"])}</strong></p>', f'<p class="byline">维护者：Mou652 · 资料核对：<time datetime="{updated}">{updated}</time></p>', f'<p class="note">{escape(note)}</p>', '<nav class="toc" aria-label="本页目录"><strong>本页内容</strong><ol>' + ''.join(f'<li>{link("#" + ident, title)}</li>' for ident, title in toc) + '</ol></nav>']
+    md = [f'# {page["h1"]}', '', f'> {page["summary"]}', '', f'维护者：Mou652 · 演示版本与使用咨询 QQ：2430239942 · 资料核对：{updated}', '', note, '']
     if page['steps']:
         parts.append('<h2 id="steps">操作与核对步骤</h2><ol class="steps">')
         md += ['## 操作与核对步骤', '']
@@ -188,13 +190,18 @@ def render(page, lookup):
 
 def build_index(pages):
     canonical = BASE + '/guides/'
-    title = '个税教程与模拟演示：按问题查找使用说明'
-    summary = '按收入查询、官方渠道、截图录屏、设备版本与工具选择查找教程。真实办税与本机虚构示例分别说明，先确认要完成的事情，再进入对应页面。'
+    title = '个税模拟器使用教程：安卓、苹果、资料设置与录屏'
+    summary = '从安卓版或苹果版说明开始，按资料设置、收入明细演示和截图录屏的顺序使用个税模拟器。下方另列官方渠道参考，方便按实际任务查找资料。'
     schema = {'@context': 'https://schema.org', '@type': 'CollectionPage', 'name': title, 'url': canonical, 'inLanguage': 'zh-CN', 'mainEntity': {'@type': 'ItemList', 'itemListElement': [
         {'@type': 'ListItem', 'position': pos, 'name': page['h1'], 'url': BASE + page['path']} for pos, page in enumerate(pages, 1)
     ]}}
     parts = [head(title, summary, canonical, json.dumps(schema, ensure_ascii=False)), header(), '<main id="main"><section><h1>' + title + '</h1><p class="answer-block">' + summary + '</p><p>寻找具体问题，可使用浏览器的页面内查找。'+link('/llms.txt','阅读机器可读目录')+'。</p></section>']
-    groups = [('收入查询与官方渠道', lambda p: p['audience'] == 'official'), ('截图、隐私与录屏', lambda p: p['audience'] == 'capture'), ('模拟器与设备版本', lambda p: 32 <= p['id'] <= 40), ('工具选择与常见问题', lambda p: p['id'] >= 41)]
+    core = json.loads((ROOT / 'content/core-pages.json').read_text(encoding='utf-8'))['pages']
+    parts.append('<section aria-labelledby="core-guides"><h2 id="core-guides">版本与核心操作教程</h2><div class="guide-grid">')
+    for page in core:
+        parts.append('<div><h3>' + link(page['path'], page['keyword']) + '</h3><p>' + escape(page['intent']) + '</p></div>')
+    parts.append('</div></section>')
+    groups = [('模拟器与设备版本', lambda p: 32 <= p['id'] <= 40), ('截图、隐私与录屏', lambda p: p['audience'] == 'capture'), ('工具选择与常见问题', lambda p: p['id'] >= 41), ('官方渠道参考', lambda p: p['audience'] == 'official')]
     for name, predicate in groups:
         parts.append('<section><h2>' + name + '</h2><div class="guide-grid">')
         for page in pages:

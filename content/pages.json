@@ -2019,17 +2019,20 @@
     "group": "L2-工具",
     "path": "/android.html",
     "kind": "Product",
-    "h1": "个税模拟器安卓版：设备确认与使用说明",
-    "title": "个税模拟器安卓版：设备确认与使用说明",
-    "description": "个税模拟器提供 Android 安卓演示版本，用于配置本机虚构资料和浏览演示页面。",
+    "h1": "个税模拟器安卓版：Android 版本与使用说明",
+    "title": "个税模拟器安卓版｜Android 版本与使用说明 - Mou652",
+    "description": "了解 Mou652 个税模拟器安卓版的使用场景、设备确认和操作顺序。配置本机虚构资料、查看收入明细，再配合安卓系统截图录屏。版本咨询 QQ：2430239942。",
     "keyword": "个税模拟器安卓版",
-    "secondary": "安卓下载;android演示版",
+    "secondary": [
+      "Android个税模拟器",
+      "安卓个税界面演示"
+    ],
     "related": [
       31,
       34
     ],
     "priority": "P0",
-    "summary": "个税模拟器提供 Android 安卓演示版本，用于配置本机虚构资料和浏览演示页面。获取前说明手机品牌、机型及 Android 版本，向维护者确认适用范围与使用方式。",
+    "summary": "个税模拟器安卓版用于安卓手机上的个税界面教学，可配置本机虚构资料、浏览演示收入明细，并配合系统截图录屏。开始前确认手机品牌、机型和 Android 版本，再按资料设置与查询教程准备示例。",
     "sections": [
       [
         "先确认设备与版本",
@@ -2067,24 +2070,28 @@
     ],
     "table": null,
     "image": null,
-    "audience": "demo"
+    "audience": "demo",
+    "updated": "2026-11-06"
   },
   {
     "id": 33,
     "group": "L2-工具",
     "path": "/ios.html",
     "kind": "Product",
-    "h1": "个税模拟器 iPhone 版：设备确认与演示教程",
-    "title": "个税模拟器 iPhone 版：设备确认与演示教程",
-    "description": "个税模拟器提供 iPhone / iOS 演示版本，当前网站的分步教程以 iPhone 为例。",
-    "keyword": "个税模拟器ios版",
-    "secondary": "iphone版;苹果演示版",
+    "h1": "个税模拟器苹果版：iPhone 版本与操作教程",
+    "title": "个税模拟器苹果版｜iPhone 版本与操作教程 - Mou652",
+    "description": "了解 Mou652 个税模拟器苹果版（iPhone / iOS）的设备确认、资料配置、收入明细演示与系统截图录屏步骤。当前图文教程以 iPhone 为例，版本咨询 QQ：2430239942。",
+    "keyword": "个税模拟器苹果版",
+    "secondary": [
+      "个税模拟器iPhone版",
+      "个税模拟器iOS版"
+    ],
     "related": [
       31,
       34
     ],
     "priority": "P0",
-    "summary": "个税模拟器提供 iPhone / iOS 演示版本，当前网站的分步教程以 iPhone 为例。获取前请说明机型、iOS 版本及演示目标，再确认适用版本和安装说明。",
+    "summary": "个税模拟器苹果版是面向 iPhone / iOS 的非官方界面教学工具。本页介绍设备确认与使用顺序，并连接资料设置、收入明细演示和截图录屏教程；获取前说明 iPhone 机型、iOS 版本和演示目标。",
     "sections": [
       [
         "先核对当前设备",
@@ -2126,7 +2133,8 @@
     ],
     "table": null,
     "image": null,
-    "audience": "demo"
+    "audience": "demo",
+    "updated": "2026-11-06"
   },
   {
     "id": 34,

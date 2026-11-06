@@ -58,8 +58,8 @@
 ## 继续阅读
 
 - [个税模拟器首页](https://geshui.moujc.cn/)
-- [个税模拟器安卓版：设备确认与使用说明](https://geshui.moujc.cn/android.html)
-- [个税模拟器 iPhone 版：设备确认与演示教程](https://geshui.moujc.cn/ios.html)
+- [个税模拟器安卓版：Android 版本与使用说明](https://geshui.moujc.cn/android.html)
+- [个税模拟器苹果版：iPhone 版本与操作教程](https://geshui.moujc.cn/ios.html)
 - [个税模拟器怎么用？四步完整教程](https://geshui.moujc.cn/guides/how-to-use.html)
 - [个税模拟器常见问题：版本、配置与录屏 20 问](https://geshui.moujc.cn/faq.html)
 

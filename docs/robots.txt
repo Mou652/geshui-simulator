@@ -15,3 +15,4 @@ User-agent: Perplexity-User
 Allow: /
 
 Sitemap: https://geshui.moujc.cn/sitemap.xml
+Sitemap: https://geshui.moujc.cn/sitemap.txt

@@ -10,16 +10,16 @@
 
 ## 项目资料
 
-- [网站首页](https://geshui.moujc.cn/): 项目介绍、支持平台、界面预览和常见问题
+- [个税模拟器：安卓版、苹果版与使用教程](https://geshui.moujc.cn/): 项目介绍、支持平台、界面预览和常见问题
 - [项目资料与功能说明](https://geshui.moujc.cn/project-overview.md): 项目名称、维护者、功能范围、使用场景与资料来源
 - [项目说明与使用边界](https://geshui.moujc.cn/about.html): 非官方教学用途、本机虚构示例数据及反馈方式
 
 ## 使用教程
 
 - [首次使用与版本说明](https://geshui.moujc.cn/guides/getting-started.md): 确认设备与演示版本，准备虚构示例并了解基本操作流程
-- [虚构示例配置](https://geshui.moujc.cn/guides/configure-demo-data.md): 演示资料入口、任职单位、年度收入、月份范围以及预览和保存
-- [本机演示收入明细](https://geshui.moujc.cn/guides/income-details-demo.md): 年度与所得类型筛选、汇总和月度记录浏览，以及查询不到示例时的排查
-- [iPhone 截图与录屏](https://geshui.moujc.cn/guides/screenshot-and-recording.md): 系统截图、连续屏幕录制、旁白设置与演示脚本
+- [个税模拟器资料设置：姓名、单位与月份](https://geshui.moujc.cn/guides/configure-demo-data.md): 演示资料入口、任职单位、年度收入、月份范围以及预览和保存
+- [个税模拟器收入明细演示：年度查询与月度记录](https://geshui.moujc.cn/guides/income-details-demo.md): 年度与所得类型筛选、汇总和月度记录浏览，以及查询不到示例时的排查
+- [个税模拟器截图录屏教程：iPhone 操作步骤](https://geshui.moujc.cn/guides/screenshot-and-recording.md): 系统截图、连续屏幕录制、旁白设置与演示脚本
 
 - [个税工具怎么选](https://geshui.moujc.cn/guides/tax-app-and-simulator.md): 官方个人所得税 App、计算器与本机教学模拟器的用途和教程入口
 - [常见问题排查](https://geshui.moujc.cn/guides/troubleshooting.md): 资料设置入口、保存、年度与月份查询、个税截图和录屏准备
@@ -66,8 +66,8 @@
 
 ## 模拟器与平台说明
 
-- [个税模拟器安卓版：设备确认与使用说明](https://geshui.moujc.cn/android.md): 个税模拟器提供 Android 安卓演示版本，用于配置本机虚构资料和浏览演示页面。获取前说明手机品牌、机型及 Android 版本，向维护者确认适用范围与使用方式。
-- [个税模拟器 iPhone 版：设备确认与演示教程](https://geshui.moujc.cn/ios.md): 个税模拟器提供 iPhone / iOS 演示版本，当前网站的分步教程以 iPhone 为例。获取前请说明机型、iOS 版本及演示目标，再确认适用版本和安装说明。
+- [个税模拟器安卓版：Android 版本与使用说明](https://geshui.moujc.cn/android.md): 个税模拟器提供 Android 安卓演示版本，用于配置本机虚构资料和浏览演示页面。获取前说明手机品牌、机型及 Android 版本，向维护者确认适用范围与使用方式。
+- [个税模拟器苹果版：iPhone 版本与操作教程](https://geshui.moujc.cn/ios.md): 个税模拟器提供 iPhone / iOS 演示版本，当前网站的分步教程以 iPhone 为例。获取前请说明机型、iOS 版本及演示目标，再确认适用版本和安装说明。
 - [个税模拟器怎么用？四步完整教程](https://geshui.moujc.cn/guides/how-to-use.md): 使用个税模拟器可按四步准备：确认设备版本、配置并保存虚构资料、查询本机演示明细、使用系统截图或录屏。每一步先检查结果，再进入下一步。
 - [个人所得税模拟器：项目名称、功能与适用场景](https://geshui.moujc.cn/personal-income-tax-simulator.md): 个人所得税模拟器与本项目所称“个税模拟器”是同一教学工具，用虚构示例展示页面和交互。它侧重资料、查询和截图录屏，不是查询真实税款的官方应用。
 - [个税界面演示工具：从讲解目标到教学素材](https://geshui.moujc.cn/ui-demo-tool.md): 个税界面演示工具适合制作页面讲解、交互说明和教学素材。先写明要展示的操作，再使用一组连贯的虚构资料，完成查询、浏览和截图录屏。
