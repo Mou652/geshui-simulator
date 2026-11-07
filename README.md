@@ -16,6 +16,16 @@
 
 > 本项目为个人维护的**个税模拟器**，与税务机关及官方 App 无关联。页面中的资料、收入和税额用于模拟演示，不代表真实申报记录或纳税凭证。
 
+## 离职证明演示工具
+
+同一维护者还提供**离职证明演示工具**，用于虚构资料的版式预览和技术交流学习。填写示例姓名、单位、任职日期后，可以调整公章外观与位置；输入本产品激活码，由服务端确认授权后导出无产品水印的单页 A4 中文 PDF。预览保留水印，离职证明与个税授权独立，激活码不能混用。
+
+[离职证明宣传页](https://geshui-apk.moujc.cn/leave-certificate/) · [直接打开编辑工具](https://geshui-apk.moujc.cn/leave-certificate/editor.html) · [GitHub 介绍](https://github.com/Mou652/leave-certificate-demo) · [Gitee 国内入口](https://gitee.com/MouJC/leave-certificate-demo)
+
+获取激活码与使用咨询：**QQ 2430239942**。下图为原始版式参考，使用虚构示例资料并保留预览提示，授权导出的 PDF 不叠加产品水印。
+
+<img src="https://raw.githubusercontent.com/Mou652/leave-certificate-demo/main/docs/images/leave-certificate-preview.png" width="420" alt="离职证明版式参考：虚构示例资料，保留原图预览水印">
+
 ## 界面预览
 
 收入纳税明细与年度查询的模拟演示画面，可用于页面截图、列表浏览与连续录屏。
