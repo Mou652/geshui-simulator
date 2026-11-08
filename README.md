@@ -18,13 +18,15 @@
 
 ## 离职证明演示工具
 
-同一维护者还提供**离职证明演示工具**，用于虚构资料的版式预览和技术交流学习。填写示例姓名、单位、任职日期后，可以调整公章外观与位置；输入本产品激活码，由服务端确认授权后导出无产品水印的单页 A4 中文 PDF。预览保留水印，离职证明与个税授权独立，激活码不能混用。
+同一维护者还提供**离职证明演示工具**，用于虚构资料的版式预览和技术交流学习。填写示例姓名、单位、任职日期后，可以调整公章外观与位置；服务端确认授权后，导出无产品水印的单页 A4 中文 PDF。
 
-[离职证明宣传页](https://geshui-apk.moujc.cn/leave-certificate/) · [直接打开编辑工具](https://geshui-apk.moujc.cn/leave-certificate/editor.html) · [GitHub 介绍](https://github.com/Mou652/leave-certificate-demo) · [Gitee 国内入口](https://gitee.com/MouJC/leave-certificate-demo)
+**一码一份证明，首次成功导出后24小时内最多3个版本。同一版本重复下载不扣次数；次数用尽后仍可在原期限内下载已有版本。** 姓名、证件号码、单位及公章名称首次导出后绑定，填写错误请联系维护者纠错。离职证明与个税授权独立，激活码不能混用。
+
+[离职证明宣传页](https://geshui.moujc.cn/leave-certificate/) · [直接打开编辑工具](https://geshui.moujc.cn/leave-certificate/editor.html) · [GitHub 介绍](https://github.com/Mou652/leave-certificate-demo) · [Gitee 国内入口](https://gitee.com/MouJC/leave-certificate-demo)
 
 获取激活码与使用咨询：**QQ 2430239942**。下图为原始版式参考，使用虚构示例资料并保留预览提示，授权导出的 PDF 不叠加产品水印。
 
-<img src="https://raw.githubusercontent.com/Mou652/leave-certificate-demo/main/docs/images/leave-certificate-preview.png" width="420" alt="离职证明版式参考：虚构示例资料，保留原图预览水印">
+<img src="docs/images/leave-certificate-preview.png" width="420" alt="离职证明版式参考：虚构示例资料，保留原图预览水印">
 
 ## 界面预览
 

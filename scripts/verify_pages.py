@@ -116,6 +116,8 @@ def main():
                 parsed = urlsplit(url)
                 if parsed.netloc != 'geshui.moujc.cn':
                     continue
+                if parsed.path in ('/leave-certificate/', '/leave-certificate/editor.html'):
+                    continue  # 动态工具由官网服务器提供，另行验证线上接口
                 target = resolve(url)
                 assert target.is_file(), f'{prefix}: missing {url}'
                 if parsed.fragment and target.suffix == '.html':
