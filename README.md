@@ -8,25 +8,9 @@
 
 **Mou652 个税模拟器**（Geshui Simulator，也称个人所得税模拟器、个税 App 模拟器）支持 **Android 安卓与 iPhone / iOS**，用于非官方个税界面教学演示。配置虚构示例姓名、任职单位、收入年度和月份后，可以浏览本机收入纳税明细，制作个税演示截图和连续录屏。版本与使用问题可向维护者咨询。
 
-项目维护：[@Mou652](https://github.com/Mou652) · [官网：安卓 / iPhone 演示与教程](https://geshui.moujc.cn/) · [项目说明与使用边界](https://geshui.moujc.cn/about.html) · [功能资料](docs/project-overview.md)
-
-[Gitee 国内公开仓库](https://gitee.com/MouJC/geshui-simulator) · [GitHub 主仓库](https://github.com/Mou652/geshui-simulator) · [国内阅读入口与教程索引](GITEE.md)
-
 [界面预览](#界面预览) · [功能亮点](#功能亮点) · [快速开始](#快速开始) · [使用教程](#使用教程) · [常见问题](#常见问题) · [联系 QQ](#联系交流)
 
 > 本项目为个人维护的**个税模拟器**，与税务机关及官方 App 无关联。页面中的资料、收入和税额用于模拟演示，不代表真实申报记录或纳税凭证。
-
-## 离职证明演示工具
-
-同一维护者还提供**离职证明演示工具**，用于虚构资料的版式预览和技术交流学习。填写示例姓名、单位、任职日期后，可以调整公章外观与位置；服务端确认授权后，导出无产品水印的单页 A4 中文 PDF。
-
-**一码一份证明，首次成功导出后24小时内最多3个版本。同一版本重复下载不扣次数；次数用尽后仍可在原期限内下载已有版本。** 姓名、证件号码、单位及公章名称首次导出后绑定，填写错误请联系维护者纠错。离职证明与个税授权独立，激活码不能混用。
-
-[离职证明宣传页](https://geshui.moujc.cn/leave-certificate/) · [直接打开编辑工具](https://geshui.moujc.cn/leave-certificate/editor.html) · [GitHub 介绍](https://github.com/Mou652/leave-certificate-demo) · [Gitee 国内入口](https://gitee.com/MouJC/leave-certificate-demo)
-
-获取激活码与使用咨询：**QQ 2430239942**。下图为原始版式参考，使用虚构示例资料并保留预览提示，授权导出的 PDF 不叠加产品水印。
-
-<img src="docs/images/leave-certificate-preview.png" width="420" alt="离职证明版式参考：虚构示例资料，保留原图预览水印">
 
 ## 界面预览
 
@@ -174,6 +158,10 @@ For demo version compatibility, contact the maintainer via **QQ: 2430239942**. T
 
 ## 项目说明
 
+项目维护：[@Mou652](https://github.com/Mou652) · [官网：安卓 / iPhone 演示与教程](https://geshui.moujc.cn/) · [项目说明与使用边界](https://geshui.moujc.cn/about.html) · [功能资料](docs/project-overview.md)
+
+[GitHub 主仓库](https://github.com/Mou652/geshui-simulator) · [Gitee 国内公开仓库](https://gitee.com/MouJC/geshui-simulator) · [国内阅读入口与教程索引](GITEE.md)
+
 项目由 [Mou652](https://github.com/Mou652) 维护，展示图片由维护者提供。本仓库收录项目介绍、使用教程与界面展示资料，不包含可构建的 App 源码；演示版本适用性与获取方式可向维护者咨询。
 
 项目仅用于学习、界面参考与演示交流。请勿将模拟画面作为真实收入、纳税或身份材料，也勿将其用于冒充官方服务或误导他人。
@@ -192,3 +180,15 @@ For demo version compatibility, contact the maintainer via **QQ: 2430239942**. T
 - [常见问题 20 问](https://geshui.moujc.cn/faq.html) · [GitHub 问答与反馈](https://github.com/Mou652/geshui-simulator/issues/1)
 - [项目 Wiki](https://github.com/Mou652/geshui-simulator/wiki) · [资料发布记录](https://github.com/Mou652/geshui-simulator/releases)
 - [机器可读目录](https://geshui.moujc.cn/llms.txt)
+
+## 离职证明演示工具
+
+同一维护者还提供**离职证明演示工具**，用于虚构资料的版式预览和技术交流学习。填写示例姓名、单位、任职日期后，可以调整公章外观与位置；服务端确认授权后，导出无产品水印的单页 A4 中文 PDF。
+
+**一码一份证明，首次成功导出后24小时内最多3个版本。同一版本重复下载不扣次数；次数用尽后仍可在原期限内下载已有版本。** 姓名、证件号码、单位及公章名称首次导出后绑定，填写错误请联系维护者纠错。离职证明与个税授权独立，激活码不能混用。
+
+[离职证明宣传页](https://geshui.moujc.cn/leave-certificate/) · [直接打开编辑工具](https://geshui.moujc.cn/leave-certificate/editor.html) · [GitHub 介绍](https://github.com/Mou652/leave-certificate-demo) · [Gitee 国内入口](https://gitee.com/MouJC/leave-certificate-demo)
+
+获取激活码与使用咨询：**QQ 2430239942**。下图为原始版式参考，使用虚构示例资料并保留预览提示，授权导出的 PDF 不叠加产品水印。
+
+<img src="docs/images/leave-certificate-preview.png" width="420" alt="离职证明版式参考：虚构示例资料，保留原图预览水印">
