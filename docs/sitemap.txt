@@ -1,4 +1,3 @@
-https://geshui.moujc.cn/
 https://geshui.moujc.cn/guides/getting-started.html
 https://geshui.moujc.cn/guides/configure-demo-data.html
 https://geshui.moujc.cn/guides/income-details-demo.html
@@ -55,4 +54,10 @@ https://geshui.moujc.cn/alternatives.html
 https://geshui.moujc.cn/how-to-choose.html
 https://geshui.moujc.cn/official.html
 https://geshui.moujc.cn/faq.html
+https://geshui.moujc.cn/
 https://geshui.moujc.cn/guides/
+https://geshui.moujc.cn/guides/leave-certificate-activation.html
+https://geshui.moujc.cn/guides/leave-certificate-faq.html
+https://geshui.moujc.cn/guides/leave-certificate-how-to-use.html
+https://geshui.moujc.cn/guides/leave-certificate-pdf-export.html
+https://geshui.moujc.cn/leave-certificate/

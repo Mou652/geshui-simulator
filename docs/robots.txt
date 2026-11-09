@@ -16,3 +16,4 @@ Allow: /
 
 Sitemap: https://geshui.moujc.cn/sitemap.xml
 Sitemap: https://geshui.moujc.cn/sitemap.txt
+Sitemap: https://geshui.moujc.cn/leave-certificate-sitemap.xml

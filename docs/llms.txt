@@ -8,6 +8,19 @@
 
 演示版本与使用咨询：QQ 2430239942。联系时说明安卓或 iPhone 机型、系统版本和演示目标，以确认适用版本与获取方式。
 
+<!-- leave-certificate:start -->
+## 离职证明演示工具
+
+离职证明是同一维护者提供的独立网页工具。用于虚构资料和版式演示，演示文件不作为真实人事证明。预览带提示水印，服务端授权 PDF 不叠加产品水印；一码一份，首次成功生成后24小时最多3个版本，同版重下不扣次数。授权与个税模拟器独立。获取条件咨询 QQ 2430239942。
+
+- [产品介绍与预览](https://geshui.moujc.cn/leave-certificate/): 在线演示工具、使用步骤与联系方式
+- [离职证明演示工具怎么用：在线填写、预览与 PDF 导出](https://geshui.moujc.cn/guides/leave-certificate-how-to-use.md): 对应 HTML 教程的纯文本阅读版
+- [离职证明演示 PDF 怎么导出：预览、水印与下载说明](https://geshui.moujc.cn/guides/leave-certificate-pdf-export.md): 对应 HTML 教程的纯文本阅读版
+- [离职证明演示工具激活码说明：一码一份、24小时与3个版本](https://geshui.moujc.cn/guides/leave-certificate-activation.md): 对应 HTML 教程的纯文本阅读版
+- [离职证明演示工具常见问题：手机使用、资料修改与隐私](https://geshui.moujc.cn/guides/leave-certificate-faq.md): 对应 HTML 教程的纯文本阅读版
+
+<!-- leave-certificate:end -->
+
 ## 项目资料
 
 - [个税模拟器：安卓版、苹果版与使用教程](https://geshui.moujc.cn/): 项目介绍、支持平台、界面预览和常见问题

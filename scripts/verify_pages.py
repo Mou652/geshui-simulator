@@ -173,8 +173,11 @@ def main():
     sitemap = ET.parse(DOCS / 'sitemap.xml')
     urls = [node.text for node in sitemap.findall('.//{*}loc')]
     assert len(urls) == len(set(urls))
-    assert set(urls) == expected_urls, ('Sitemap mismatch', expected_urls.symmetric_difference(urls))
+    routed_urls = {BASE + '/leave-certificate/'}
+    assert set(urls) == expected_urls | routed_urls, ('Sitemap mismatch', (expected_urls | routed_urls).symmetric_difference(urls))
     for url in re.findall(r'\]\((https://geshui\.moujc\.cn/[^)]*)\)', (DOCS / 'llms.txt').read_text()):
+        if url in routed_urls:
+            continue
         assert resolve(url).is_file(), 'llms: ' + url
     robots = RobotFileParser()
     robots.parse((DOCS / 'robots.txt').read_text().splitlines())

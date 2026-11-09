@@ -18,6 +18,8 @@ def main():
             raise ValueError('站点地图包含主站以外的网址')
         if parsed.query or parsed.fragment or any(ch.isspace() for ch in url):
             raise ValueError('站点地图包含非规范网址')
+        if parsed.path == '/leave-certificate/':
+            continue  # 离职证明入口由现有服务反代，发布时单独核对 HTTPS
         target = docs / parsed.path.lstrip('/')
         if not parsed.path or parsed.path.endswith('/'):
             target /= 'index.html'
