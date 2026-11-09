@@ -15,3 +15,7 @@
 `leave-certificate-pages.json` 维护四篇独立教程。先运行原有 `build_pages.py`，再运行 `python3 scripts/build_leave_certificate_pages.py`，同步教程、Markdown、首页入口、站点地图与 `llms.txt`。最后运行 `python3 scripts/sync_text_sitemap.py` 和 `python3 scripts/verify_pages.py`。
 
 `/leave-certificate/` 由已有服务反代，入口 HTML 与编辑器元信息单独部署；编辑器使用 `noindex,follow`，仅产品说明与教程进入站点地图。FAQ 标记与可见问答一致，不承诺富结果、收录或 AI 引用。
+
+## 双向产品入口
+
+个税官网和离职证明通过产品切换 Tab、首页推荐、正文后推荐和页脚互相跳转。新增曝光仅在这两个产品之间，geshui-apk 下载站不参与推广。`python3 scripts/sync_product_links.py` 同步静态页面入口，两个内容构建脚本结束时也会调用同步；指定 `--leave-web <离职证明web目录>` 可同步离职证明页与编辑器的切换入口。

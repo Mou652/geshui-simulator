@@ -116,6 +116,8 @@ def main():
     sitemap_line = 'Sitemap: ' + BASE + '/leave-certificate-sitemap.xml'
     if sitemap_line not in source:
         robots.write_text(source.rstrip() + '\n' + sitemap_line + '\n')
+    from sync_product_links import sync_docs
+    sync_docs()
     print('Generated', len(pages), 'guides, Markdown, 5 product sitemap URLs and AI directory')
 
 

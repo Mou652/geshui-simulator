@@ -223,6 +223,8 @@ def main():
     build_index(pages)
     generated = {page['path'] for page in pages} | {'/guides/'}
     update_static_tables(sorted(set(FIELD_TABLES) - generated))
+    from sync_product_links import sync_docs
+    sync_docs()
     print(f'已生成 {len(pages)} 篇 HTML、对应 Markdown 与教程目录')
 
 
