@@ -69,6 +69,28 @@ jobs:
                   raise RuntimeError('Pages deployment is still pending; URLs were not submitted')
               time.sleep(15)
 
+          # 等待正式站同步本次内容，避免提交旧版本站点地图
+          expected_files = {}
+          for path in ('sitemap.xml', 'index.html', 'assets/promo/config.js'):
+              source = 'https://raw.githubusercontent.com/' + os.environ['GITHUB_REPOSITORY'] + '/' + os.environ['GITHUB_SHA'] + '/docs/' + path
+              with urlopen(Request(source, headers=headers), timeout=30) as response:
+                  expected_files[path] = response.read()
+          for attempt in range(24):
+              try:
+                  ready = True
+                  for path, expected in expected_files.items():
+                      with urlopen(Request(site + path, headers=headers), timeout=20) as response:
+                          if response.read() != expected:
+                              ready = False
+                              break
+                  if ready:
+                      break
+              except URLError:
+                  pass
+              if attempt == 23:
+                  raise RuntimeError('Production site has not synced this commit; URLs were not submitted')
+              time.sleep(15)
+
           for attempt in range(10):
               try:
                   with urlopen(Request(key_location, headers=headers), timeout=20) as response:
