@@ -1,0 +1,57 @@
+.page-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0;
+  color: #354c65;
+  background: transparent;
+  border: 0;
+  border-radius: 5px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: .01em;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transition: color .18s ease;
+}
+.page-back-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #c7d2de;
+  border-radius: 50%;
+  color: #536c86;
+  transition: color .18s ease, border-color .18s ease;
+}
+.page-back-icon svg { display: block; width: 16px; height: 16px; }
+.page-back:hover { color: #164a8b; text-decoration: none; }
+.page-back:hover .page-back-icon { color: #164a8b; border-color: #8ca6c3; }
+.page-back:active { color: #0c376e; }
+.page-back:focus-visible { outline: 2px solid #4779b2; outline-offset: 5px; }
+.page-return { margin: 0 0 20px; }
+.secondary-navigation { padding-block: 24px 0; }
+.installation-page .guide-main { margin-top: 24px; }
+.installation-hero > .page-back { margin-bottom: 24px; }
+.cases-intro > .page-back { margin-bottom: 24px; }
+.detail-return { display: flex; align-items: center; gap: 16px; margin-bottom: 22px; }
+.detail-return-divider { width: 1px; height: 15px; background: #cbd6e1; }
+.detail-current { color: #687c91; font-size: 12px; line-height: 1.4; }
+@media (max-width: 600px) {
+  .secondary-navigation { padding-top: 18px; }
+  .installation-page .guide-main { margin-top: 18px; }
+  .installation-hero > .page-back, .cases-intro > .page-back { margin-bottom: 18px; }
+  .detail-return { margin-bottom: 20px; gap: 14px; }
+  .page-return { margin-bottom: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-back, .page-back-icon { transition: none; }
+}

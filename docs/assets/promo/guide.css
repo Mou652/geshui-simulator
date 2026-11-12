@@ -1,0 +1,380 @@
+.guide-main {
+  margin: 56px auto 0;
+}
+.installation-hero {
+  padding: 0 0 56px;
+}
+.installation-hero h1 {
+  margin: 14px 0 20px;
+  font-size: 44px;
+  letter-spacing: -.045em;
+}
+.installation-lead,
+.installation-heading > p:last-child,
+.device-card > p,
+.usage-copy > p,
+.leave-copy > p,
+.guide-contact p {
+  color: var(--muted);
+}
+.installation-lead {
+  font-size: 17px;
+}
+.device-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+.device-links a {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 11px 16px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  font-size: 13px;
+}
+.device-links a:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+.installation-section {
+  padding: 48px 0 54px;
+  border-top: 1px solid var(--line);
+}
+.installation-heading {
+  max-width: 720px;
+  margin-bottom: 30px;
+}
+.installation-heading h2,
+.leave-copy h2 {
+  margin: 12px 0 14px;
+  font-size: 32px;
+}
+.device-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.device-card {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background: #f5f8fd;
+  border: 1px solid #e8eef7;
+  border-radius: 4px;
+}
+.device-card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.device-symbol {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  background: #e7efff;
+  color: var(--blue);
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.device-label {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .14em;
+}
+.device-card h3,
+.usage-copy h3 {
+  margin-bottom: 12px;
+  font-size: 23px;
+}
+.device-card ol {
+  padding-left: 20px;
+  margin: 20px 0 26px;
+  color: #425474;
+  font-size: 13px;
+}
+.device-card li + li {
+  margin-top: 7px;
+}
+.guide-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: auto;
+}
+.guide-actions .button {
+  gap: 18px;
+  padding-inline: 18px;
+  font-size: 13px;
+}
+.guide-inline-link {
+  display: inline-block;
+  margin-top: 23px;
+  color: var(--blue);
+  font-size: 13px;
+}
+.guide-inline-link span {
+  margin-left: 8px;
+}
+.usage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.usage-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 155px;
+  gap: 22px;
+  align-items: center;
+  min-height: 330px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+.usage-number {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--blue);
+  font-size: 13px;
+}
+.usage-copy h3 {
+  font-size: 21px;
+}
+.usage-copy > p {
+  margin-bottom: 18px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.usage-copy .text-link {
+  gap: 10px;
+  font-size: 12px;
+}
+.usage-image {
+  margin: 0;
+}
+.usage-image img {
+  width: 132px;
+  height: auto;
+  object-fit: contain;
+  object-position: top;
+  margin-inline: auto;
+  border: 4px solid #10243c;
+  border-radius: 20px;
+  box-shadow: 0 9px 20px #10243c10;
+}
+.usage-image figcaption,
+.leave-preview figcaption {
+  margin-top: 12px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 10px;
+}
+.usage-recording {
+  grid-template-columns: 1fr;
+  background: #102c42 url("landscape.svg") center / cover;
+  color: #fff;
+}
+.usage-recording .usage-number,
+.usage-recording .text-link {
+  color: #8dbeff;
+}
+.usage-recording .usage-copy > p {
+  color: #c4d1df;
+}
+.recording-visual {
+  display: grid;
+  grid-template-columns: 12px 1fr;
+  align-items: center;
+  gap: 8px 10px;
+  padding-top: 10px;
+}
+.recording-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ff625c;
+}
+.recording-visual strong {
+  font-size: 24px;
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .05em;
+}
+.recording-visual > span:last-child {
+  grid-column: 2;
+  color: #c4d1df;
+  font-size: 11px;
+}
+.leave-guide {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 80px;
+  align-items: center;
+}
+.leave-steps {
+  list-style: none;
+  margin: 28px 0;
+  padding: 0;
+}
+.leave-steps li {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+.leave-steps li > span {
+  color: var(--blue);
+  font-size: 13px;
+}
+.leave-steps strong {
+  font-size: 14px;
+}
+.leave-steps p {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.leave-preview {
+  margin: 0;
+  padding: 28px;
+  background: #f3f6fb;
+  border-radius: 4px;
+}
+.leave-preview img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: contain;
+}
+.guide-contact {
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  align-items: center;
+  padding: 32px;
+  background: #f0f6fd;
+}
+.guide-contact h2 {
+  margin: 10px 0;
+  font-size: 26px;
+}
+.guide-contact-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  flex-shrink: 0;
+}
+.guide-contact-actions > strong {
+  font-size: 17px;
+}
+.guide-use-note {
+  margin: 26px 0 0;
+  padding-bottom: 28px;
+  color: var(--muted);
+  font-size: 11px;
+}
+@media (max-width: 1100px) {
+  .usage-card {
+    grid-template-columns: 1fr;
+  }
+  .usage-image img {
+    width: 145px;
+    height: auto;
+  }
+  .leave-guide {
+    gap: 40px;
+  }
+}
+@media (max-width: 760px) {
+  .installation-page .container {
+    width: calc(100% - 48px);
+  }
+  .guide-main {
+    margin-top: 32px;
+  }
+  .installation-hero {
+    padding-bottom: 32px;
+  }
+  .installation-hero h1 {
+    font-size: 32px;
+  }
+  .installation-lead {
+    font-size: 14px;
+  }
+  .device-links {
+    gap: 8px;
+    margin-top: 22px;
+  }
+  .device-links a {
+    gap: 14px;
+    padding: 9px 11px;
+    font-size: 11px;
+  }
+  .installation-section {
+    padding: 32px 0;
+  }
+  .installation-heading h2,
+  .leave-copy h2 {
+    font-size: 27px;
+  }
+  .installation-heading > p:last-child,
+  .device-card > p,
+  .leave-copy > p {
+    font-size: 13px;
+  }
+  .device-grid,
+  .usage-grid,
+  .leave-guide {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .device-card {
+    padding: 24px;
+  }
+  .device-card h3 {
+    font-size: 22px;
+  }
+  .guide-actions {
+    gap: 16px;
+  }
+  .usage-card {
+    grid-template-columns: 1fr;
+    padding: 24px;
+    gap: 20px;
+  }
+  .usage-copy h3 {
+    font-size: 22px;
+  }
+  .usage-image {
+    padding: 20px 0 4px;
+    background: #f4f7fc;
+  }
+  .usage-image img {
+    width: 154px;
+  }
+  .usage-recording {
+    min-height: 320px;
+  }
+  .leave-preview {
+    margin-top: 12px;
+    padding: 22px;
+  }
+  .guide-contact {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 20px;
+  }
+  .guide-contact p {
+    font-size: 13px;
+  }
+  .guide-contact-actions {
+    align-items: flex-start;
+  }
+}

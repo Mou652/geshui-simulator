@@ -1,0 +1,169 @@
+/* 雾蓝与暖白渐变衬托产品内容 */
+:root {
+  --page-gradient:
+    radial-gradient(ellipse 78% 720px at 88% 0%, #dce8ee 0%, transparent 74%),
+    radial-gradient(ellipse 65% 620px at 0% 520px, #e7e5db85 0%, transparent 72%),
+    linear-gradient(160deg, #fafbfa 0%, #eef3f6 38%, #f7f7f4 72%, #edf2f6 100%);
+  --surface-gradient: linear-gradient(145deg, #ffffffed 0%, #eaf1f5db 100%);
+  --muted: #5f7086;
+}
+html { scroll-padding-top: calc(var(--site-header-height, 82px) + 12px); }
+body, .detail-page { background-color: #f3f6f8; background-image: var(--page-gradient); background-repeat: no-repeat; }
+.site-header { background: linear-gradient(110deg, #ffffffed, #eef4f8ed); border-bottom-color: #dce4eb; }
+.brand-logo { width: 39px; height: 39px; }
+.brand { max-width: 260px; }
+.brand strong { font-size: 23px; letter-spacing: .025em; }
+.nav-inner { gap: 24px; }
+.nav-inner nav, .detail-header .nav-inner nav { gap: 20px; font-size: 13px; }
+.nav-inner nav > a { white-space: nowrap; }
+.nav-contact { margin-left: 0; padding-inline: 14px; gap: 12px; }
+.nav-external { color: #778da9; font-size: 12px; }
+.nav-purchase {
+  min-height: 44px; padding-inline: 16px; gap: 12px; color: #fff; font-size: 13px;
+  background: linear-gradient(110deg, #174dc9, #087b91, #2863df, #174dc9);
+  background-size: 260% 100%; box-shadow: 0 4px 16px #0759ff24;
+  animation: price-gradient-slide 7s ease-in-out infinite;
+}
+@keyframes price-gradient-slide { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+.hero-description { color: var(--muted); }
+.contact-banner {
+  background-image: radial-gradient(ellipse at 85% 15%, #729aa743, transparent 62%), linear-gradient(115deg, #0c1e2c8a, #2f4d5d1f), url("landscape.svg");
+}
+.guide-section { background: linear-gradient(110deg, #e5eef3eb, #f2f4f0db); }
+.screenshot-tile, .device-card, .leave-preview, .guide-contact { background: var(--surface-gradient); box-shadow: inset 0 0 0 1px #ffffffb3; }
+.detail-hero { background: linear-gradient(115deg, #f8faf9a6, #e0ebf1d9 58%, #d0e1e7b3); }
+.detail-visual { background: transparent; }
+.detail-tabs { background: #ffffffed; top: var(--site-header-height, 82px); }
+.detail-toc { top: calc(var(--site-header-height, 82px) + 90px); }
+.detail-feature-section { background: var(--surface-gradient); }
+
+/* 品类共用真实界面与同款手机动效 */
+.product-grid, .product-grid.is-filtered { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.product-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-top: 19px; }
+.product-card .product-heading h3 { margin: 0; }
+.product-price { color: #0753d4; font-size: 27px; font-weight: 650; white-space: nowrap; }
+.product-price small { font-size: 13px; font-weight: 500; margin-inline: 3px; }
+.product-platform { display: block; margin-top: 2px; color: #59728e; font-size: 12px; }
+.product-cover { width: 100%; height: 100%; object-fit: contain; }
+.product-cover.is-document { width: 250px; max-width: 76%; height: auto; align-self: flex-start; margin: 0 auto; transform: rotate(5deg); filter: drop-shadow(0 10px 14px #193c631a); }
+.product-visual:has(.is-document) { padding: 18px; }
+.product-visual .phone { width: 190px; }
+.product-actions .purchase-link { min-height: 38px; padding: 5px 10px; border: 1px solid #c3d5f3; border-radius: 3px; gap: 8px; font-size: 13px; white-space: nowrap; }
+.product-actions .purchase-link:hover { background: #eef5ff; border-color: var(--blue); }
+.screenshot-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.detail-price { margin-top: 12px; font-size: 29px; font-weight: 650; color: #0753d4; }
+.faq-points { padding-left: 20px; margin: 16px 0 0; font-size: 13px; color: var(--muted); line-height: 1.85; }
+.faq-points li + li { margin-top: 9px; }
+.faq-notice summary { color: #164f9b; }
+.faq-notice .faq-points li:first-child { font-weight: 600; color: #314f73; }
+
+/* 付款弹窗使用一个清晰的纵向阅读顺序 */
+.mou-dialog { border: 0; border-radius: 18px; padding: 0; width: min(500px, calc(100% - 32px)); max-height: calc(100dvh - 32px); color: var(--ink); background: #fff; box-shadow: 0 24px 100px #09162f40; overscroll-behavior: contain; }
+.mou-dialog::backdrop { background: #071831a8; backdrop-filter: blur(5px); }
+.mou-dialog:focus { outline: none; }
+.mou-dialog .dialog-shell { padding: 34px 32px 26px; }
+.mou-dialog h2 { font-size: 25px; letter-spacing: -.035em; }
+.mou-dialog .dialog-close { color: var(--muted); z-index: 1; width: 44px; height: 44px; top: 8px; right: 8px; }
+.mou-dialog .dialog-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.mou-dialog .contact-value { user-select: all; }
+.mou-dialog .activation-description { line-height: 1.8; }
+.activation-case-note { margin-top: 12px; color: var(--muted); font-size: 14px; line-height: 1.8; }
+.activation-case-link { color: #0753d4; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+.activation-case-link:hover { color: #0348df; }
+.payment-content { text-align: center; }
+.payment-content .eyebrow { margin-bottom: 6px; color: #6280a0; font-size: 10px; letter-spacing: .12em; }
+.payment-choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 21px; }
+.payment-choices button { min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 9px 12px; border: 1px solid #e0e7ef; border-radius: 8px; font-size: 12px; color: #53657c; background: #f9fbfd; }
+.payment-choices strong { font-size: 13px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.payment-choices button[aria-pressed=true] { background: #edf4ff; border-color: #8eb5f5; color: #0753d4; box-shadow: inset 0 0 0 1px #8eb5f530; }
+.payment-summary { display: flex; justify-content: center; align-items: baseline; gap: 14px; margin-top: 18px; }
+.payment-summary > span { font-size: 15px; font-weight: 600; }
+.payment-summary > strong { font-size: 37px; line-height: 1.15; color: #0753d4; font-variant-numeric: tabular-nums; }
+.payment-summary small { font-size: 15px; margin-inline: 3px; font-weight: 500; }
+.payment-methods { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 7px; color: #517194; font-size: 12px; }
+.payment-methods i { width: 1px; height: 12px; background: #c5d3e2; }
+.payment-code { margin: 8px 0 0; }
+.payment-qr { display: block; width: min(100%, 230px); height: auto; aspect-ratio: 1; margin: 0 auto; image-rendering: pixelated; -webkit-touch-callout: default; user-select: auto; }
+.payment-code figcaption { font-size: 12px; color: #6c7e92; margin-top: -3px; }
+.payment-followup { margin-top: 16px; padding: 11px 12px; background: #fff3f2; border: 1px solid #f5dbd8; border-radius: 8px; color: #bc302b; font-size: 15px; line-height: 1.65; }
+.payment-followup strong { font-weight: 750; }
+.payment-product-note { margin-top: 13px; text-align: left; color: var(--muted); font-size: 12px; line-height: 1.75; }
+.payment-product-note.is-platform-note, .platform-notice { padding: 10px 12px; color: #34597f; background: #f0f5fb; border-radius: 7px; font-size: 12px; }
+.platform-notice { margin-top: 18px; }
+.payment-actions { display: flex; justify-content: center; gap: 10px; margin-top: 17px; }
+.payment-actions .button { flex: 1; padding-inline: 12px; font-size: 13px; gap: 10px; border-radius: 6px; }
+.payment-note { color: #78889b; font-size: 11px; margin-top: 12px; }
+.mou-dialog.image-dialog { width: min(1060px, calc(100% - 32px)); }
+.mou-dialog.image-dialog .dialog-image { width: auto; max-width: 100%; max-height: 75dvh; object-fit: contain; margin: 20px auto 0; border-radius: 8px; }
+.payment-page { min-height: 70vh; display: grid; place-items: center; padding: 48px 20px; }
+.payment-page #paymentPageContent { width: min(100%, 480px); }
+.payment-page .payment-content { width: 100%; padding: 32px; border: 1px solid var(--line); border-radius: 18px; background: #fff; }
+.payment-page h1 { font-size: 26px; }
+
+@media (max-width: 1150px) {
+  .nav-inner { gap: 16px; }
+  .nav-inner nav, .detail-header .nav-inner nav { gap: 13px; font-size: 12px; }
+  .nav-contact { padding-inline: 11px; gap: 8px; }
+  .nav-purchase { padding-inline: 12px; font-size: 12px; }
+  .brand strong { font-size: 21px; }
+}
+@media (min-width: 801px) and (max-width: 1050px) {
+  .nav-inner.container { width: calc(100% - 40px); }
+  .brand-logo { width: 32px; height: 32px; }
+  .brand strong { font-size: 19px; }
+  .nav-inner nav, .detail-header .nav-inner nav { gap: 11px; }
+  .nav-contact { display: none; }
+}
+@media (max-width: 800px) {
+  .brand-logo { width: 34px; height: 34px; }
+  .brand { max-width: 230px; }
+  .brand strong { font-size: 21px; }
+  .nav-inner nav, .detail-header .nav-inner nav { gap: 0; top: 100%; align-items: stretch; text-align: left; font-size: 14px; max-height: calc(100dvh - var(--site-header-height, 72px)); overflow-y: auto; }
+  .nav-inner nav.is-open { z-index: 12; }
+  .nav-inner nav > a { min-height: 46px; }
+  .nav-inner nav .nav-purchase { margin-top: 16px; align-self: stretch; }
+  .nav-inner nav .nav-contact { margin: 10px 0 0; align-self: stretch; }
+  .hero-intro { flex-wrap: wrap; }
+  .hero-actions { flex-wrap: wrap; }
+}
+@media (max-width: 600px) {
+  .product-grid, .product-grid.is-filtered { grid-template-columns: minmax(0, 1fr); }
+  .product-heading { gap: 12px; }
+  .product-price { font-size: 25px; }
+  .product-visual .phone { width: 170px; }
+  .product-actions { gap: 10px 16px; margin-top: 13px; }
+  .product-actions a, .product-actions button, .product-actions .purchase-link { min-height: 44px; }
+  .product-actions .purchase-link { padding-inline: 9px; font-size: 12px; gap: 6px; }
+  .filters { flex-wrap: wrap; }
+  .filters button { flex: 0 1 auto; min-height: 40px; padding: 7px 12px; }
+  .screenshot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mou-dialog { width: calc(100% - 24px); max-height: calc(100dvh - 24px); border-radius: 15px; }
+  .mou-dialog .dialog-shell { padding: 38px 20px 22px; }
+  .mou-dialog h2 { font-size: 23px; }
+  .payment-choices { margin-top: 17px; gap: 7px; }
+  .payment-choices button { padding: 9px 10px; font-size: 12px; }
+  .payment-summary { margin-top: 15px; }
+  .payment-summary > strong { font-size: 34px; }
+  .payment-qr { width: min(100%, 220px); }
+  .payment-followup { font-size: 14px; margin-top: 13px; }
+  .payment-actions .button { min-height: 46px; }
+  .payment-page { padding: 26px 12px; }
+  .payment-page .payment-content { padding: 28px 19px 22px; }
+  .payment-page .nav-inner { gap: 12px; }
+  .detail-header .nav-inner nav { top: 100%; }
+  .detail-mobile-actions .button { min-height: 44px; }
+  .faq-points { font-size: 13px; }
+}
+@media (max-width: 360px) {
+  .hero-actions { gap: 16px; }
+  .hero-actions .button { padding-inline: 14px; gap: 12px; }
+  .product-actions > i { display: none; }
+  .brand strong { font-size: 19px; }
+  .payment-choices button { font-size: 11px; padding-inline: 8px; }
+}
+@media (prefers-reduced-motion: reduce) { .nav-purchase { animation: none; } }
+.image-hint { margin: 8px 0 16px; color: var(--muted); font-size: 12px; }
+.image-stage { display: block; width: 100%; padding: 0; overflow: auto; max-height: 75dvh; cursor: zoom-in; overscroll-behavior: contain; border-radius: 8px; }
+.mou-dialog.image-dialog .image-stage .dialog-image { margin: 0 auto; }
+.image-stage.is-zoomed { cursor: zoom-out; }
+.mou-dialog.image-dialog .image-stage.is-zoomed .dialog-image { max-width: none; max-height: none; width: max(100%, 1000px); }

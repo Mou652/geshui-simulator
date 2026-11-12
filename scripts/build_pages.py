@@ -192,10 +192,15 @@ def build_index(pages):
     canonical = BASE + '/guides/'
     title = '个税模拟器使用教程：安卓、苹果、资料设置与录屏'
     summary = '从安卓版或苹果版说明开始，按资料设置、收入明细演示和截图录屏的顺序使用个税模拟器。下方另列官方渠道参考，方便按实际任务查找资料。'
-    schema = {'@context': 'https://schema.org', '@type': 'CollectionPage', 'name': title, 'url': canonical, 'inLanguage': 'zh-CN', 'mainEntity': {'@type': 'ItemList', 'itemListElement': [
+    collection = {'@type': 'CollectionPage', '@id': canonical + '#page', 'name': title, 'description': summary, 'url': canonical, 'inLanguage': 'zh-CN', 'isPartOf': {'@id': BASE + '/#website'}, 'breadcrumb': {'@id': canonical + '#breadcrumb'}, 'mainEntity': {'@type': 'ItemList', 'itemListElement': [
         {'@type': 'ListItem', 'position': pos, 'name': page['h1'], 'url': BASE + page['path']} for pos, page in enumerate(pages, 1)
     ]}}
-    parts = [head(title, summary, canonical, json.dumps(schema, ensure_ascii=False)), header(), '<main id="main"><section><h1>' + title + '</h1><p class="answer-block">' + summary + '</p><p>寻找具体问题，可使用浏览器的页面内查找。'+link('/llms.txt','阅读机器可读目录')+'。</p></section>']
+    breadcrumb = {'@type': 'BreadcrumbList', '@id': canonical + '#breadcrumb', 'itemListElement': [
+        {'@type': 'ListItem', 'position': 1, 'name': '个税模拟器', 'item': BASE + '/'},
+        {'@type': 'ListItem', 'position': 2, 'name': '教程与使用说明', 'item': canonical},
+    ]}
+    schema = {'@context': 'https://schema.org', '@graph': [collection, breadcrumb]}
+    parts = [head(title, summary, canonical, json.dumps(schema, ensure_ascii=False)), header(), '<main id="main"><section><p class="breadcrumb">' + link('/', '个税模拟器') + ' / 教程与使用说明</p><h1>' + title + '</h1><p class="answer-block">' + summary + '</p><p>寻找具体问题，可使用浏览器的页面内查找。'+link('/llms.txt','阅读机器可读目录')+'。</p></section>']
     core = json.loads((ROOT / 'content/core-pages.json').read_text(encoding='utf-8'))['pages']
     parts.append('<section aria-labelledby="core-guides"><h2 id="core-guides">版本与核心操作教程</h2><div class="guide-grid">')
     for page in core:
@@ -225,6 +230,8 @@ def main():
     update_static_tables(sorted(set(FIELD_TABLES) - generated))
     from sync_product_links import sync_docs
     sync_docs()
+    from sync_page_navigation import sync_docs as sync_page_navigation
+    sync_page_navigation()
     print(f'已生成 {len(pages)} 篇 HTML、对应 Markdown 与教程目录')
 
 
