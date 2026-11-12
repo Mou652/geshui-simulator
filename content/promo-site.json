@@ -5,7 +5,7 @@
     "brand_name": "灵活就业指导",
     "brand_tagline": "CAREER & TOOLS",
     "logo_url": "assets/promo/logo.svg",
-    "hero_title": "多款就业助力 App，\n供你选择。",
+    "hero_title": "个税模拟器与实用工具，按需选择。",
     "contact_title": "找到适合你的工具与服务。",
     "contact_description": "了解产品功能，或咨询安装、激活与素材需求。",
     "footer_note": "非官方演示工具 · QQ 2430239942",
@@ -306,7 +306,11 @@
               ]
             }
           ]
-        }
+        },
+        "seo_path": "product-tax.html",
+        "seo_title": "个税模拟器与个人所得税模拟 App｜安卓安装、收入明细、截图录屏 - 灵活就业指导",
+        "seo_h1": "个税模拟器与个人所得税 App 演示",
+        "seo_description": "个人所得税模拟与个税 App 界面演示：配置虚构姓名、单位和年度收入，浏览收入纳税明细、工资薪金、已申报税额与个人中心，支持截图和个税录屏。当前提供安卓版本，需激活码，非官方演示，不连接真实税务系统。"
       },
       {
         "id": "leave",
@@ -378,7 +382,11 @@
               ]
             }
           ]
-        }
+        },
+        "seo_path": "product-leave.html",
+        "seo_title": "离职证明演示工具｜在线填写、模板预览与 PDF 导出 - 灵活就业指导",
+        "seo_h1": "离职证明在线填写与模板演示",
+        "seo_description": "离职证明演示工具：在线填写虚构示例资料，预览单页 A4 模板并按授权导出 PDF。了解离职证明模板、填写方式、导出规则与使用说明，价格 79 元，咨询 QQ 2430239942。"
       },
       {
         "id": "recording",
@@ -413,7 +421,7 @@
               "content": [
                 {
                   "type": "text",
-                  "text": "录屏服务 89 元。可围绕产品界面、操作步骤与讲解流程准备录屏素材。请先联系 QQ 2430239942 沟通具体需求。"
+                  "text": "个税录屏与 App 演示视频服务 89 元。使用虚构资料录制个人所得税界面、年度查询、收入纳税明细与个人中心等操作流程。请先联系 QQ 2430239942 沟通页面、顺序和交付要求。"
                 }
               ]
             },
@@ -450,7 +458,11 @@
             }
           ]
         },
-        "detail_image_url": "images/demo-home.png"
+        "detail_image_url": "images/demo-home.png",
+        "seo_path": "service-recording.html",
+        "seo_title": "个税录屏与 App 演示视频制作｜个人所得税界面素材 - 灵活就业指导",
+        "seo_h1": "个税录屏与 App 演示视频制作",
+        "seo_description": "提供个税录屏、个人所得税界面演示视频与 App 操作流程录制服务，使用虚构资料制作收入纳税明细、年度查询、个人中心等教学素材。录屏服务 89 元，先联系 QQ 2430239942 确认内容与交付要求。"
       },
       {
         "id": "image-editing",
@@ -485,7 +497,7 @@
               "content": [
                 {
                   "type": "text",
-                  "text": "图片处理服务 59 元，支持清晰度优化、裁剪排版、色彩调整等素材美化需求。请先联系 QQ 2430239942 发送原图并说明修改要求。"
+                  "text": "图片处理服务 59 元，可沟通任意P图、社保P图、个税截图等虚构演示素材需求。支持清晰度优化、裁剪排版、隐私打码和色彩调整。请先联系 QQ 2430239942 发送原图并说明用途与修改要求。"
                 }
               ]
             },
@@ -522,7 +534,11 @@
             }
           ]
         },
-        "detail_image_url": "images/demo-query.png"
+        "detail_image_url": "images/demo-query.png",
+        "seo_path": "service-image-editing.html",
+        "seo_title": "任意P图、社保P图与个税截图处理｜演示素材美化 - 灵活就业指导",
+        "seo_h1": "任意P图与社保、个税演示截图处理",
+        "seo_description": "图片处理与演示素材美化服务，可沟通任意P图、社保P图、个税截图等虚构界面素材需求，包括清晰度优化、裁剪排版、隐私打码与色彩调整。服务 59 元，先联系 QQ 2430239942 发送原图和用途。"
       }
     ],
     "faqs": [

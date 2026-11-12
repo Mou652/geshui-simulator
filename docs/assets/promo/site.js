@@ -25,7 +25,7 @@
     filters.innerHTML = categories.map(item => '<button type="button" data-category="' + escape(item) + '" aria-pressed="' + (category === item) + '">' + escape(item || '全部品类') + '</button>').join('');
     grid.innerHTML = products.filter(product => !category || category === product.category).map(product => {
       const title = escape(product.title);
-      const detail = 'promo-detail.html?id=' + encodeURIComponent(product.id);
+      const detail = product.seo_path || 'promo-detail.html?id=' + encodeURIComponent(product.id);
       const description = product.description ? '<p>' + escape(product.description) + '</p>' : '';
       const anchor = product.id === 'leave' ? ' id="leave-certificate"' : '';
       return '<article class="product-card"' + anchor + ' data-product-id="' + escape(product.id) + '"><a class="product-visual" href="' + detail + '" aria-label="了解' + title + '"><span class="product-visual-label">' + (product.kind === 'service' ? 'CREATIVE SERVICE' : 'PRODUCT PREVIEW') + '</span>' + visual(product) + '</a><div class="product-heading"><h3>' + title + '</h3><strong class="product-price"><small>¥</small>' + product.price_cny + '<small>元</small></strong></div><span class="product-platform">' + escape(product.platform_label) + '</span>' + description + '<div class="product-actions"><a href="' + detail + '">查看详情 <span aria-hidden="true">→</span></a><i aria-hidden="true"></i>' + primaryAction(product) + '<button type="button" class="purchase-link" data-payment="' + escape(product.id) + '">' + product.price_cny + '元 · 扫码付款 <span aria-hidden="true">↗</span></button></div></article>';

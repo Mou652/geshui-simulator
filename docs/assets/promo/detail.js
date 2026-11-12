@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   const $ = selector => document.querySelector(selector);
-  const id = new URLSearchParams(location.search).get('id') || '';
+  const id = document.body.dataset.productId || new URLSearchParams(location.search).get('id') || '';
 
   function safeUrl(value) {
     const raw = typeof value === 'string' ? value.trim() : '';
@@ -223,15 +223,18 @@
     $('#brandTagline').textContent = String(content.brand_tagline || 'CAREER & TOOLS');
     const logo = assetUrl(content.logo_url, allowBlob) || 'assets/promo/logo.svg';
     document.querySelectorAll('.detail-page .brand-logo').forEach(image => { image.src = logo; });
-    $('#detailTitle').textContent = $('#crumbProduct').textContent = String(product.title || 'App 产品');
+    $('#detailTitle').textContent = product.seo_h1 || String(product.title || 'App 产品');
+    $('#crumbProduct').textContent = String(product.title || 'App 产品');
     $('#detailCategory').textContent = product.category + ' · ' + product.platform_label;
-    $('#detailDescription').textContent = String(product.description || '');
-    $('#detailDescription').hidden = !product.description;
+    $('#detailDescription').textContent = product.seo_description || String(product.description || '');
+    $('#detailDescription').hidden = !$('#detailDescription').textContent;
     $('#detailPrice').textContent = '¥ ' + product.price_cny + ' 元';
     $('#detailSummary').textContent = product.details_doc == null ? String(product.details || '') : '';
     $('#featureDescription').textContent = String(product.description || '');
     $('#featureDescription').hidden = !product.description;
-    document.title = String(content.brand_name || '灵活就业指导');
+    document.title = product.seo_title || String(content.brand_name || '灵活就业指导');
+    document.querySelector('meta[name="description"]').content = product.seo_description || String(product.description || '');
+    document.querySelector('link[rel="canonical"]').href = 'https://geshui.moujc.cn/' + product.seo_path;
     renderVisual(product, allowBlob);
     renderArticle(product, allowBlob);
     renderActions(product, config);

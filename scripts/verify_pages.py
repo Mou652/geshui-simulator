@@ -14,7 +14,8 @@ from urllib.robotparser import RobotFileParser
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / 'docs'
 BASE = 'https://geshui.moujc.cn'
-PROMO_PAGES = {'index.html', 'promo-detail.html', 'install_guide.html', 'pay.html', 'customer-cases.html'}
+PROMO_PAGES = {'index.html', 'promo-detail.html', 'install_guide.html', 'pay.html', 'customer-cases.html', 'product-tax.html', 'product-leave.html', 'service-recording.html', 'service-image-editing.html'}
+NOINDEX_PAGES = {'pay.html', 'promo-detail.html'}
 
 
 class Node:
@@ -101,9 +102,8 @@ def main():
         title = tree.find('title')
         assert len(title) == 1 and title[0].text().strip(), prefix + ': title'
         if str(file.relative_to(DOCS)) in PROMO_PAGES:
-            assert title[0].text() == '灵活就业指导', prefix + ': site title'
-        else:
-            titles.append(title[0].text())
+            assert '灵活就业指导' in title[0].text(), prefix + ': site brand'
+        titles.append(title[0].text())
         assert len(tree.find('h1')) == 1, prefix + ': h1'
         if file != DOCS / 'index.html':
             back_links = [node for node in tree.find('a') if 'data-page-back' in node.attrs]
@@ -133,8 +133,9 @@ def main():
             assert len(footer) == 1 and '个税模拟器（Geshui Simulator）是 Mou652 维护的非官方个税界面教学演示工具' in footer[0].text(), prefix + ': shared project footer'
         assert tree.find('meta', name='description'), prefix + ': description'
         canonical = tree.find('link', rel='canonical')
-        if str(file.relative_to(DOCS)) not in PROMO_PAGES or file.name == 'index.html':
-            assert len(canonical) == 1 and canonical[0].attrs['href'] == BASE + site_path(file), prefix + ': canonical'
+        assert len(canonical) == 1 and canonical[0].attrs['href'] == BASE + site_path(file), prefix + ': canonical'
+        if file.name in NOINDEX_PAGES:
+            assert any('noindex' in node.attrs.get('content', '') for node in tree.find('meta', name='robots')), prefix + ': utility indexing'
         for node in tree.find():
             for attr in ['href', 'src']:
                 if not node.attrs.get(attr):
@@ -175,7 +176,8 @@ def main():
         if address not in visited:
             visited.add(address)
             pending.extend(navigation[address] - visited)
-    assert visited == expected_urls, ('Pages unreachable from homepage', expected_urls - visited)
+    indexable_urls = expected_urls - {BASE + '/' + path for path in NOINDEX_PAGES}
+    assert indexable_urls <= visited, ('Pages unreachable from homepage', indexable_urls - visited)
     faq_count = 0
     howto_count = 0
     for page in pages:
@@ -252,7 +254,7 @@ def main():
     urls = [node.text for node in sitemap.findall('.//{*}loc')]
     assert len(urls) == len(set(urls))
     routed_urls = {BASE + '/leave-certificate/'}
-    assert set(urls) == expected_urls | routed_urls, ('Sitemap mismatch', (expected_urls | routed_urls).symmetric_difference(urls))
+    assert set(urls) == indexable_urls | routed_urls, ('Sitemap mismatch', (indexable_urls | routed_urls).symmetric_difference(urls))
     for url in re.findall(r'\]\((https://geshui\.moujc\.cn/[^)]*)\)', (DOCS / 'llms.txt').read_text()):
         if url in routed_urls:
             continue

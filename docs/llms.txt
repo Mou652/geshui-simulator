@@ -1,6 +1,6 @@
 # Mou652 个税模拟器（Geshui Simulator）
 
-> 个税模拟器，也称个人所得税模拟器，是支持 Android 安卓与 iPhone / iOS 的非官方界面教学演示工具。可配置本机虚构示例数据、浏览演示收入明细，并配合手机系统截图和录屏制作教学素材。
+> 个税模拟器与个人所得税界面演示工具，使用虚构资料浏览收入纳税明细、年度查询与个人中心，支持截图和个税录屏。当前安卓可用，需激活码，不支持试用；iOS 待更新。另有离职证明演示与图片处理服务。
 
 项目由 Mou652 维护，与税务机关及官方 App 无关联。示例资料保存在本机，不连接官方税务系统，不查询或修改真实税务记录，不办理申报、退税或证明开具。演示金额和画面不作为真实报税计算、收入证明或纳税凭证。
 
@@ -26,6 +26,14 @@
 - [个税模拟器：安卓版、苹果版与使用教程](https://geshui.moujc.cn/): 项目介绍、支持平台、界面预览和常见问题
 - [项目资料与功能说明](https://geshui.moujc.cn/project-overview.md): 项目名称、维护者、功能范围、使用场景与资料来源
 - [项目说明与使用边界](https://geshui.moujc.cn/about.html): 非官方教学用途、本机虚构示例数据及反馈方式
+
+## 当前产品与服务
+
+- [个税模拟器与个人所得税 App 演示](https://geshui.moujc.cn/product-tax.html)：安卓个税界面、虚构资料配置、收入纳税明细与年度查询
+- [安卓安装与激活码说明](https://geshui.moujc.cn/install_guide.html)：确认设备、覆盖更新和激活方式
+- [个税录屏与 App 演示视频](https://geshui.moujc.cn/service-recording.html)：录制虚构界面教学素材，服务内容先沟通
+- [离职证明在线填写与模板演示](https://geshui.moujc.cn/product-leave.html)：示例资料、A4 版式预览与授权 PDF 导出
+- [任意P图、社保P图与个税演示截图处理](https://geshui.moujc.cn/service-image-editing.html)：虚构素材的清晰度、裁剪排版、隐私打码与色彩调整
 
 ## 使用教程
 

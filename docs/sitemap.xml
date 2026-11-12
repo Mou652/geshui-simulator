@@ -226,7 +226,7 @@
   </url>
   <url>
     <loc>https://geshui.moujc.cn/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-13</lastmod>
   </url>
   <url>
     <loc>https://geshui.moujc.cn/guides/</loc>
@@ -252,8 +252,28 @@
     <loc>https://geshui.moujc.cn/leave-certificate/</loc>
     <lastmod>2026-11-09</lastmod>
   </url>
-<url><loc>https://geshui.moujc.cn/customer-cases.html</loc><lastmod>2026-11-12</lastmod></url>
-<url><loc>https://geshui.moujc.cn/install_guide.html</loc><lastmod>2026-11-12</lastmod></url>
-<url><loc>https://geshui.moujc.cn/pay.html</loc><lastmod>2026-11-12</lastmod></url>
-<url><loc>https://geshui.moujc.cn/promo-detail.html</loc><lastmod>2026-11-12</lastmod></url>
+  <url>
+    <loc>https://geshui.moujc.cn/customer-cases.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://geshui.moujc.cn/install_guide.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://geshui.moujc.cn/product-leave.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://geshui.moujc.cn/product-tax.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://geshui.moujc.cn/service-image-editing.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
+  <url>
+    <loc>https://geshui.moujc.cn/service-recording.html</loc>
+    <lastmod>2026-11-13</lastmod>
+  </url>
 </urlset>
