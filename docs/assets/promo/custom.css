@@ -174,7 +174,7 @@ body, .detail-page { background-color: #f3f6f8; background-image: var(--page-gra
   .home-header #mainNav .nav-external { display: none; }
   .home-header #mainNav > a:nth-child(n+3) { grid-column: span 3; }
   .home-header #mainNav > .nav-faq-links { grid-column: 1 / -1; justify-content: center; gap: 12px; }
-  .home-header .nav-faq-links > a:first-child { display: inline-flex; align-items: center; min-height: 44px; }
+  .home-header .nav-faq-links > a:first-child { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 8px 18px; border: 1px solid #dce5f0; border-radius: 7px; background: #ffffffb3; font-size: 13px; font-weight: 600; }
   .home-header .nav-faq-links .repo-link { width: 44px; }
   .hero-intro { flex-wrap: wrap; }
   .hero-actions { flex-wrap: wrap; }
