@@ -82,8 +82,9 @@ body, .detail-page { background-color: #f3f6f8; background-image: var(--page-gra
 .detail-price { margin-top: 12px; font-size: 29px; font-weight: 650; color: #0753d4; }
 .faq-points { padding-left: 20px; margin: 16px 0 0; font-size: 13px; color: var(--muted); line-height: 1.85; }
 .faq-points li + li { margin-top: 9px; }
-.faq-notice summary { color: #164f9b; }
-.faq-notice .faq-points li:first-child { font-weight: 600; color: #314f73; }
+.faq-notice summary { color: #b42c30; font-size: 16px; font-weight: 650; }
+.faq-notice .faq-points { color: #b42c30; font-size: 15px; line-height: 1.9; }
+.faq-notice .faq-points li:first-child { font-weight: 650; }
 
 /* 付款弹窗使用一个清晰的纵向阅读顺序 */
 .mou-dialog { border: 0; border-radius: 18px; padding: 0; width: min(500px, calc(100% - 32px)); max-height: calc(100dvh - 32px); color: var(--ink); background: #fff; box-shadow: 0 24px 100px #09162f40; overscroll-behavior: contain; }
@@ -181,6 +182,7 @@ body, .detail-page { background-color: #f3f6f8; background-image: var(--page-gra
   .detail-header .nav-inner nav { top: 100%; }
   .detail-mobile-actions .button { min-height: 44px; }
   .faq-points { font-size: 13px; }
+  .faq-notice .faq-points { font-size: 14px; }
 }
 @media (max-width: 360px) {
   .hero-actions { gap: 16px; }

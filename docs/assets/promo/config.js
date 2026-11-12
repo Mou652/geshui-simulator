@@ -21,7 +21,7 @@ window.MOU_PROMO_CONFIG = {
         "payment_note": "目前仅支持安卓，暂不支持 iOS；iOS 版本近日即将更新。",
         "image_url": "images/demo-income.png",
         "action_type": "activation_notice",
-        "action_label": "激活与使用",
+        "action_label": "下载安卓",
         "enabled": true,
         "details_doc": {
           "type": "doc",
@@ -407,6 +407,7 @@ window.MOU_PROMO_CONFIG = {
       {
         "question": "注意事项",
         "points": [
+          "更新时请重新下载 APK 并覆盖安装。不要卸载已安装的个税模拟器，否则会丢失本地数据。",
           "必须联网运行，否则激活无效。请勿让手机管家关闭应用的联网权限。",
           "若出现输入激活码无效的情况，请仔细检查应用是否被隔离，以及是否断网。",
           "如遇手机风险提示，请先确认安装包来源和具体提示内容，联系 QQ 核实后再操作。"
@@ -421,7 +422,7 @@ window.MOU_PROMO_CONFIG = {
         "answer": "目前仅支持安卓，暂不支持 iOS；iOS 版本近日即将更新。 当前请使用安卓设备；iOS 开放情况可联系 QQ 2430239942 咨询。"
       },
       {
-        "question": "个税 App 如何激活与使用？",
+        "question": "点击下载安卓后如何使用？",
         "answer": "本应用需激活码激活后使用，不支持试用。请联系 QQ 2430239942 获取激活码及安装说明。担心上当受骗，可先查看购买客户案例，再决定是否购买。"
       },
       {

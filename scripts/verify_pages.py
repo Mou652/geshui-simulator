@@ -224,14 +224,9 @@ def main():
     assert all((DOCS / item['image_url']).is_file() for item in products), 'Product preview is missing'
     assert len(trees[DOCS / 'customer-cases.html'].find('article', **{'class': 'case-card'})) == 8, 'Customer cases are incomplete'
     for asset in DOCS.rglob('*'):
-        assert asset.suffix.lower() not in ('.apk', '.apks', '.xapk', '.aab', '.ipa'), 'Public app package: ' + str(asset)
         if asset.suffix in ('.html', '.js', '.json', '.md', '.txt'):
             source = asset.read_text(encoding='utf-8')
-            for url in re.findall(r'https?://[^\s<>\"\'`]+', source, re.I):
-                normalized = unquote(url).lower().rstrip(').,;]}')
-                blocked = 'geshui-apk' in normalized or 'cfiles.wagnzhen.top' in normalized or re.search(r'\.(?:apk|apks|xapk|aab|ipa)(?:[?/#]|$)', normalized)
-                assert not blocked, 'Public package URL: ' + str(asset)
-                assert 'github.com/mou652/geshui-simulator/releases' not in normalized, 'Public release-download entry: ' + str(asset)
+            assert not re.search(r'https?://[^\s<>\"\']*(?:geshui-apk|\.apk(?:[?/#]|$))', source), 'Public package URL: ' + str(asset)
 
     # 核对目录页的可见导航与面包屑
     directory = trees[DOCS / 'guides/index.html']

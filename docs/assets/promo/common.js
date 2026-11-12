@@ -46,7 +46,7 @@
     open('<p class="eyebrow">LET’S TALK</p><h2 id="mouDialogTitle">联系灵活就业指导</h2><p class="dialog-description">产品、激活码、录屏与图片处理需求，都可以联系我。</p><p class="contact-value">' + QQ + '</p><div class="dialog-actions"><button class="button button-primary" type="button" data-copy-qq>复制 QQ 号码 <span aria-hidden="true">→</span></button><a class="button button-outline" href="https://wpa.qq.com/msgrd?v=3&amp;uin=' + QQ + '&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener noreferrer">打开 QQ ↗</a></div>');
   }
 
-  function openActivationNotice() {
+  function openDownloadNotice() {
     open('<p class="eyebrow">ACTIVATION</p><h2 id="mouDialogTitle">本应用需激活码使用</h2><p class="dialog-description activation-description">本应用需激活码激活后使用，<strong>不支持试用</strong>。激活码及安装说明请联系 QQ 获取。</p><p class="activation-case-note">担心上当受骗，可先<a class="activation-case-link" href="customer-cases.html" target="_blank" rel="noopener noreferrer">查看客户案例 <span aria-hidden="true">↗</span></a>，再决定是否购买。</p><p class="platform-notice">目前仅支持安卓，暂不支持 iOS；iOS 版本近日即将更新。</p><p class="contact-value">' + QQ + '</p><div class="dialog-actions"><button class="button button-primary" type="button" data-copy-qq>复制 QQ 号码</button><button class="button button-outline" type="button" data-contact>联系 QQ</button></div>');
   }
 
@@ -118,7 +118,7 @@
     if (!target) return;
     if (target.matches('[data-contact]')) { event.preventDefault(); openContact(); }
     else if (target.matches('[data-payment]')) { event.preventDefault(); openPayment(target.dataset.payment); }
-    else if (target.matches('[data-activation-notice]')) { event.preventDefault(); openActivationNotice(); }
+    else if (target.matches('[data-download-notice]')) { event.preventDefault(); openDownloadNotice(); }
     else if (target.matches('[data-payment-choice]')) {
       const product = selectedProduct(target.dataset.paymentChoice);
       const page = target.closest('#paymentPageContent');
@@ -152,5 +152,5 @@
   setupHeader();
   const paymentPage = document.querySelector('#paymentPageContent');
   if (paymentPage && products.length) paymentPage.innerHTML = paymentMarkup(selectedProduct(new URLSearchParams(location.search).get('product')), true);
-  window.MouSite = { openPayment, openContact, openImage, openActivationNotice };
+  window.MouSite = { openPayment, openContact, openImage, openDownloadNotice };
 }());

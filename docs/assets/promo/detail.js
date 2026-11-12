@@ -47,7 +47,7 @@
       if (product.action_type === 'link') action.href = assetUrl(product.action_url);
       else {
         action.type = 'button';
-        if (product.action_type === 'activation_notice') action.dataset.activationNotice = '';
+        if (product.action_type === 'activation_notice') action.dataset.downloadNotice = '';
         else action.dataset.contact = '';
       }
       box.append(action);

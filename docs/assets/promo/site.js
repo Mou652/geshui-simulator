@@ -15,7 +15,7 @@
   }
 
   function primaryAction(product) {
-    if (product.action_type === 'activation_notice') return '<button type="button" data-activation-notice>' + escape(product.action_label) + ' <span aria-hidden="true">↗</span></button>';
+    if (product.action_type === 'activation_notice') return '<button type="button" data-download-notice>' + escape(product.action_label) + ' <span aria-hidden="true">↗</span></button>';
     if (product.action_type === 'link') return '<a href="' + escape(product.action_url) + '">' + escape(product.action_label) + ' <span aria-hidden="true">↗</span></a>';
     return '<button type="button" data-contact>' + escape(product.action_label) + ' <span aria-hidden="true">↗</span></button>';
   }
