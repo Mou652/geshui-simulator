@@ -21,7 +21,7 @@ window.MOU_PROMO_CONFIG = {
         "payment_note": "目前仅支持安卓，暂不支持 iOS；iOS 版本近日即将更新。",
         "image_url": "images/demo-income.png",
         "action_type": "activation_notice",
-        "action_label": "下载安卓",
+        "action_label": "激活与使用",
         "enabled": true,
         "details_doc": {
           "type": "doc",
@@ -421,7 +421,7 @@ window.MOU_PROMO_CONFIG = {
         "answer": "目前仅支持安卓，暂不支持 iOS；iOS 版本近日即将更新。 当前请使用安卓设备；iOS 开放情况可联系 QQ 2430239942 咨询。"
       },
       {
-        "question": "点击下载安卓后如何使用？",
+        "question": "个税 App 如何激活与使用？",
         "answer": "本应用需激活码激活后使用，不支持试用。请联系 QQ 2430239942 获取激活码及安装说明。担心上当受骗，可先查看购买客户案例，再决定是否购买。"
       },
       {
@@ -437,18 +437,15 @@ window.MOU_PROMO_CONFIG = {
   "phone_images": [
     {
       "image_url": "images/demo-income.png",
-      "title": "收入纳税明细",
-      "description": "GitHub 高清原图 · 虚构演示资料"
+      "title": "收入纳税明细"
     },
     {
       "image_url": "images/demo-query.png",
-      "title": "年度查询",
-      "description": "年度与所得类型筛选"
+      "title": "年度查询"
     },
     {
       "image_url": "images/leave-certificate-preview.png",
-      "title": "离职证明展示",
-      "description": "GitHub 高清原图 · 预览版式"
+      "title": "离职证明展示"
     }
   ]
 };

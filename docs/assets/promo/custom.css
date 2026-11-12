@@ -37,6 +37,34 @@ body, .detail-page { background-color: #f3f6f8; background-image: var(--page-gra
 .detail-toc { top: calc(var(--site-header-height, 82px) + 90px); }
 .detail-feature-section { background: var(--surface-gradient); }
 
+/* 页脚按内容自然展开，为手机底栏保留空间 */
+.home-footer {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 24px 36px;
+  padding-top: 36px;
+  padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px));
+}
+.home-footer .brand { max-width: 100%; width: fit-content; }
+.home-footer .brand strong { overflow: visible; white-space: normal; text-overflow: clip; line-height: 1.3; }
+.home-footer .brand small { font-size: 8px; }
+.home-footer nav { min-width: 0; width: auto; justify-content: center; flex-wrap: wrap; gap: 0 22px; font-size: 12px; }
+.home-footer nav a, .home-footer nav button { display: inline-flex; align-items: center; min-height: 44px; }
+.home-footer .footer-meta { display: flex; flex-direction: column; gap: 4px; width: auto; max-width: none; font-size: 12px; line-height: 1.8; color: var(--muted); text-align: right; overflow-wrap: anywhere; }
+.home-footer .footer-meta small { margin: 0; font-size: 11px; line-height: 1.8; }
+@media (max-width: 900px) {
+  .home-footer { grid-template-columns: auto minmax(0, 1fr); gap: 18px 24px; }
+  .home-footer nav { justify-content: flex-end; }
+  .home-footer .footer-meta { grid-column: 1 / -1; text-align: left; }
+}
+@media (max-width: 600px) {
+  .home-footer { grid-template-columns: minmax(0, 1fr); align-items: start; gap: 14px; padding-top: 28px; padding-bottom: calc(48px + env(safe-area-inset-bottom, 0px)); }
+  .home-footer nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; justify-items: start; gap: 0 8px; font-size: 13px; }
+  .home-footer .footer-meta { grid-column: auto; align-items: flex-start; }
+  .home-footer .footer-meta small { font-size: 12px; }
+}
+
 /* 品类共用真实界面与同款手机动效 */
 .product-grid, .product-grid.is-filtered { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .product-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-top: 19px; }

@@ -15,7 +15,7 @@
   }
 
   function primaryAction(product) {
-    if (product.action_type === 'activation_notice') return '<button type="button" data-download-notice>' + escape(product.action_label) + ' <span aria-hidden="true">↗</span></button>';
+    if (product.action_type === 'activation_notice') return '<button type="button" data-activation-notice>' + escape(product.action_label) + ' <span aria-hidden="true">↗</span></button>';
     if (product.action_type === 'link') return '<a href="' + escape(product.action_url) + '">' + escape(product.action_label) + ' <span aria-hidden="true">↗</span></a>';
     return '<button type="button" data-contact>' + escape(product.action_label) + ' <span aria-hidden="true">↗</span></button>';
   }
@@ -39,7 +39,7 @@
   document.querySelector('#year').textContent = new Date().getFullYear();
   document.querySelector('#contactLabel').textContent = '联系咨询';
   document.querySelector('#screenshots').hidden = false;
-  document.querySelector('#screenshotGrid').innerHTML = config.phone_images.map((shot, index) => '<button type="button" class="screenshot-tile" data-image="' + index + '" aria-label="放大' + escape(shot.title) + '"><img src="' + escape(shot.image_url) + '" alt="' + escape(shot.title) + '" loading="lazy"><strong>' + escape(shot.title) + '</strong><p>' + escape(shot.description) + '</p></button>').join('');
+  document.querySelector('#screenshotGrid').innerHTML = config.phone_images.map((shot, index) => '<button type="button" class="screenshot-tile" data-image="' + index + '" aria-label="放大' + escape(shot.title) + '"><img src="' + escape(shot.image_url) + '" alt="' + escape(shot.title) + '" loading="lazy"><strong>' + escape(shot.title) + '</strong>' + (shot.description ? '<p>' + escape(shot.description) + '</p>' : '') + '</button>').join('');
   document.querySelector('#faqList').innerHTML = content.faqs.map((item, index) => '<details' + (index === 0 ? ' open class="faq-notice"' : '') + '><summary>' + escape(item.question) + '</summary>' + (item.points ? '<ul class="faq-points">' + item.points.map(point => '<li>' + escape(point) + '</li>').join('') + '</ul>' : '<p>' + escape(item.answer) + '</p>') + '</details>').join('');
   renderProducts('');
 

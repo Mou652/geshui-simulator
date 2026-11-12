@@ -77,7 +77,7 @@ def update_static_tables(paths):
 
 
 def footer():
-    return f'''<footer><p>{escape(ENTITY)}</p><p>维护者：{link('https://github.com/Mou652', 'Mou652')} · 版本咨询 QQ：2430239942</p><nav aria-label="页脚导航">{link('/about.html', '项目说明')} {link('/scope.html', '使用范围')} {link('/faq.html', '常见问题')} {link('/sitemap.xml', '站点地图')} {link('/llms.txt', 'llms.txt')} {link('https://github.com/Mou652/geshui-simulator/wiki', 'Wiki')} {link('https://github.com/Mou652/geshui-simulator/issues/1', '问答与反馈')} {link('https://github.com/Mou652/geshui-simulator/releases', '发布记录')}</nav></footer>'''
+    return f'''<footer><p>{escape(ENTITY)}</p><p>维护者：{link('https://github.com/Mou652', 'Mou652')} · 版本咨询 QQ：2430239942</p><nav aria-label="页脚导航">{link('/about.html', '项目说明')} {link('/scope.html', '使用范围')} {link('/faq.html', '常见问题')} {link('/sitemap.xml', '站点地图')} {link('/llms.txt', 'llms.txt')} {link('https://github.com/Mou652/geshui-simulator/wiki', 'Wiki')} {link('https://github.com/Mou652/geshui-simulator/issues/1', '问答与反馈')}</nav></footer>'''
 
 
 def header():
