@@ -16,6 +16,11 @@ body, .detail-page { background-color: #f3f6f8; background-image: var(--page-gra
 .nav-inner { gap: 24px; }
 .nav-inner nav, .detail-header .nav-inner nav { gap: 20px; font-size: 13px; }
 .nav-inner nav > a { white-space: nowrap; }
+.nav-faq-links { display: flex; align-items: center; gap: 5px; white-space: nowrap; }
+.nav-faq-links .repo-link { display: inline-flex; align-items: center; justify-content: center; width: 32px; min-height: 44px; border-radius: 7px; }
+.nav-faq-links .repo-link img { display: block; }
+.nav-faq-links .repo-link:hover { background: var(--surface-gradient); }
+.nav-faq-links a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
 .nav-contact { margin-left: 0; padding-inline: 14px; gap: 12px; }
 .home-header .header-actions { display: flex; align-items: center; gap: 20px; flex-shrink: 0; }
 .nav-external { color: #778da9; font-size: 12px; }
@@ -167,6 +172,10 @@ body, .detail-page { background-color: #f3f6f8; background-image: var(--page-gra
   .home-header #mainNav > a:nth-child(-n+2) { grid-column: span 3; }
   .home-header #mainNav > a:first-child { color: #0753d4; background: #e8f0ff; border-color: #bcd0f4; }
   .home-header #mainNav .nav-external { display: none; }
+  .home-header #mainNav > a:nth-child(n+3) { grid-column: span 3; }
+  .home-header #mainNav > .nav-faq-links { grid-column: 1 / -1; justify-content: center; gap: 12px; }
+  .home-header .nav-faq-links > a:first-child { display: inline-flex; align-items: center; min-height: 44px; }
+  .home-header .nav-faq-links .repo-link { width: 44px; }
   .hero-intro { flex-wrap: wrap; }
   .hero-actions { flex-wrap: wrap; }
 }

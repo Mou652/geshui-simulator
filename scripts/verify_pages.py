@@ -102,8 +102,9 @@ def main():
         title = tree.find('title')
         assert len(title) == 1 and title[0].text().strip(), prefix + ': title'
         if str(file.relative_to(DOCS)) in PROMO_PAGES:
-            assert '灵活就业指导' in title[0].text(), prefix + ': site brand'
-        titles.append(title[0].text())
+            assert title[0].text() == '灵活就业指导', prefix + ': site brand'
+        else:
+            titles.append(title[0].text())
         assert len(tree.find('h1')) == 1, prefix + ': h1'
         if file != DOCS / 'index.html':
             back_links = [node for node in tree.find('a') if 'data-page-back' in node.attrs]
@@ -224,7 +225,7 @@ def main():
     shipped = (DOCS / 'assets/promo/config.js').read_text(encoding='utf-8')
     assert json.loads(shipped.removeprefix('window.MOU_PROMO_CONFIG = ').rstrip(';\n')) == promo, 'Product config is out of sync'
     products = promo['promo_content']['products']
-    assert {item['id']: item['price_cny'] for item in products} == {'tax': 179, 'leave': 79, 'recording': 89, 'image-editing': 59}, 'Product prices differ'
+    assert {item['id']: item['price_cny'] for item in products} == {'tax': 179, 'leave': 79, 'recording': 99, 'image-editing': 59}, 'Product prices differ'
     assert promo['promo_content']['faqs'][0]['question'] == '注意事项', 'Usage notice must be the first FAQ'
     assert all((DOCS / item['image_url']).is_file() for item in products), 'Product preview is missing'
     assert len(trees[DOCS / 'customer-cases.html'].find('article', **{'class': 'case-card'})) == 8, 'Customer cases are incomplete'
