@@ -231,7 +231,7 @@
     $('#detailSummary').textContent = product.details_doc == null ? String(product.details || '') : '';
     $('#featureDescription').textContent = String(product.description || '');
     $('#featureDescription').hidden = !product.description;
-    document.title = String(product.title || '产品详情') + ' · ' + String(content.brand_name || '灵活就业指导');
+    document.title = String(content.brand_name || '灵活就业指导');
     renderVisual(product, allowBlob);
     renderArticle(product, allowBlob);
     renderActions(product, config);

@@ -165,6 +165,128 @@
             {
               "type": "heading",
               "attrs": {
+                "level": 2
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "安卓功能展示"
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "attrs": {
+                "level": 3
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "资料自定义"
+                }
+              ]
+            },
+            {
+              "type": "image",
+              "attrs": {
+                "src": "images/android-annual-income.png",
+                "alt": "个税模拟器安卓资料自定义原图",
+                "caption": "资料自定义",
+                "width": 60,
+                "textAlign": "center"
+              }
+            },
+            {
+              "type": "heading",
+              "attrs": {
+                "level": 3
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "我的页面"
+                }
+              ]
+            },
+            {
+              "type": "image",
+              "attrs": {
+                "src": "images/android-profile.png",
+                "alt": "个税模拟器安卓我的页面原图",
+                "caption": "我的页面",
+                "width": 60,
+                "textAlign": "center"
+              }
+            },
+            {
+              "type": "heading",
+              "attrs": {
+                "level": 3
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "纳税明细"
+                }
+              ]
+            },
+            {
+              "type": "image",
+              "attrs": {
+                "src": "images/android-income-list.png",
+                "alt": "个税模拟器安卓纳税明细原图",
+                "caption": "纳税明细",
+                "width": 60,
+                "textAlign": "center"
+              }
+            },
+            {
+              "type": "heading",
+              "attrs": {
+                "level": 3
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "资料设置总览"
+                }
+              ]
+            },
+            {
+              "type": "image",
+              "attrs": {
+                "src": "images/android-data-settings.png",
+                "alt": "个税模拟器安卓资料设置总览原图",
+                "caption": "资料设置总览",
+                "width": 60,
+                "textAlign": "center"
+              }
+            },
+            {
+              "type": "heading",
+              "attrs": {
+                "level": 3
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "纳税明细详情"
+                }
+              ]
+            },
+            {
+              "type": "image",
+              "attrs": {
+                "src": "images/android-income-detail.png",
+                "alt": "个税模拟器安卓纳税明细详情原图",
+                "caption": "纳税明细详情",
+                "width": 60,
+                "textAlign": "center"
+              }
+            },
+            {
+              "type": "heading",
+              "attrs": {
                 "level": 3
               },
               "content": [
@@ -447,6 +569,26 @@
     {
       "image_url": "images/leave-certificate-preview.png",
       "title": "离职证明展示"
+    },
+    {
+      "image_url": "images/android-annual-income.png",
+      "title": "资料自定义"
+    },
+    {
+      "image_url": "images/android-profile.png",
+      "title": "我的页面"
+    },
+    {
+      "image_url": "images/android-income-list.png",
+      "title": "纳税明细"
+    },
+    {
+      "image_url": "images/android-data-settings.png",
+      "title": "资料设置总览"
+    },
+    {
+      "image_url": "images/android-income-detail.png",
+      "title": "纳税明细详情"
     }
   ]
 }

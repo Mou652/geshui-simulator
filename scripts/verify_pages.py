@@ -100,7 +100,10 @@ def main():
         prefix = str(file.relative_to(ROOT))
         title = tree.find('title')
         assert len(title) == 1 and title[0].text().strip(), prefix + ': title'
-        titles.append(title[0].text())
+        if str(file.relative_to(DOCS)) in PROMO_PAGES:
+            assert title[0].text() == '灵活就业指导', prefix + ': site title'
+        else:
+            titles.append(title[0].text())
         assert len(tree.find('h1')) == 1, prefix + ': h1'
         if file != DOCS / 'index.html':
             back_links = [node for node in tree.find('a') if 'data-page-back' in node.attrs]
