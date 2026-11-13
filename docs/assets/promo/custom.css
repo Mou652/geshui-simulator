@@ -32,6 +32,16 @@ body, .detail-page { background-color: #f3f6f8; background-image: var(--page-gra
 }
 @keyframes price-gradient-slide { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
 .hero-description { color: var(--muted); }
+.home-disclaimer {
+  margin-top: 24px;
+  padding: 18px 22px;
+  border: 1px solid #cbdbea;
+  border-left: 3px solid #0753d4;
+  border-radius: 8px;
+  background: #eef5fb;
+}
+.home-disclaimer h2 { margin: 0; color: #24476d; font-size: 15px; line-height: 1.6; letter-spacing: 0; }
+.home-disclaimer p { margin: 7px 0 0; color: #52677e; font-size: 14px; line-height: 1.85; }
 .contact-banner {
   background-image: radial-gradient(ellipse at 85% 15%, #729aa743, transparent 62%), linear-gradient(115deg, #0c1e2c8a, #2f4d5d1f), url("landscape.svg");
 }
@@ -75,8 +85,6 @@ body, .detail-page { background-color: #f3f6f8; background-image: var(--page-gra
 .product-grid, .product-grid.is-filtered { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .product-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-top: 19px; }
 .product-card .product-heading h3 { margin: 0; }
-.product-price { color: #0753d4; font-size: 27px; font-weight: 650; white-space: nowrap; }
-.product-price small { font-size: 13px; font-weight: 500; margin-inline: 3px; }
 .product-platform { display: block; margin-top: 2px; color: #59728e; font-size: 12px; }
 .product-cover { width: 100%; height: 100%; object-fit: contain; }
 .product-cover.is-document { width: 250px; max-width: 76%; height: auto; align-self: flex-start; margin: 0 auto; transform: rotate(5deg); filter: drop-shadow(0 10px 14px #193c631a); }
@@ -180,9 +188,11 @@ body, .detail-page { background-color: #f3f6f8; background-image: var(--page-gra
   .hero-actions { flex-wrap: wrap; }
 }
 @media (max-width: 600px) {
+  .home-disclaimer { margin-top: 18px; padding: 15px 16px; }
+  .home-disclaimer h2 { font-size: 14px; }
+  .home-disclaimer p { font-size: 13px; line-height: 1.8; }
   .product-grid, .product-grid.is-filtered { grid-template-columns: minmax(0, 1fr); }
   .product-heading { gap: 12px; }
-  .product-price { font-size: 25px; }
   .product-visual .phone { width: 170px; }
   .product-actions { gap: 10px 16px; margin-top: 13px; }
   .product-actions a, .product-actions button, .product-actions .purchase-link { min-height: 44px; }
