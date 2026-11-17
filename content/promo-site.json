@@ -19,7 +19,7 @@
         "price_cny": 179,
         "platform_label": "当前仅支持安卓",
         "payment_note": "目前仅支持安卓，暂不支持 iOS；iOS 版本近日即将更新。",
-        "image_url": "images/demo-income.png",
+        "image_url": "images/demo-income.png?v=c2b1c65bb758",
         "action_type": "activation_notice",
         "action_label": "下载安卓",
         "enabled": true,
@@ -71,7 +71,7 @@
             {
               "type": "image",
               "attrs": {
-                "src": "images/demo-home.png",
+                "src": "images/demo-home.png?v=ffacd70dc6c0",
                 "alt": "个税模拟器首页，来自维护者 GitHub 的高清截图",
                 "caption": "首页功能入口 · 虚构资料示例",
                 "width": 60,
@@ -102,7 +102,7 @@
             {
               "type": "image",
               "attrs": {
-                "src": "images/demo-query.png",
+                "src": "images/demo-query.png?v=97bf367df303",
                 "alt": "年度与所得类型查询高清截图",
                 "caption": "年度查询 · GitHub 原图",
                 "width": 60,
@@ -133,7 +133,7 @@
             {
               "type": "image",
               "attrs": {
-                "src": "images/demo-income.png",
+                "src": "images/demo-income.png?v=c2b1c65bb758",
                 "alt": "收入纳税明细高清截图，均为虚构演示数据",
                 "caption": "收入纳税明细 · 虚构演示数据",
                 "width": 60,
@@ -233,7 +233,7 @@
             {
               "type": "image",
               "attrs": {
-                "src": "images/android-income-list.png",
+                "src": "images/android-income-list.png?v=c2b1c65bb758",
                 "alt": "个税模拟器安卓纳税明细原图",
                 "caption": "纳税明细",
                 "width": 60,
@@ -277,7 +277,7 @@
             {
               "type": "image",
               "attrs": {
-                "src": "images/android-income-detail.png",
+                "src": "images/android-income-detail.png?v=5ccd43504874",
                 "alt": "个税模拟器安卓纳税明细详情原图",
                 "caption": "纳税明细详情",
                 "width": 60,
@@ -397,7 +397,7 @@
         "price_cny": 99,
         "platform_label": "录屏服务",
         "payment_note": "请先联系 QQ 确认录制内容与演示流程，付款后发送需求及付款凭证。",
-        "image_url": "images/demo-income.png",
+        "image_url": "images/demo-income.png?v=c2b1c65bb758",
         "action_type": "contact",
         "action_label": "咨询录屏",
         "enabled": true,
@@ -428,7 +428,7 @@
             {
               "type": "image",
               "attrs": {
-                "src": "images/demo-home.png",
+                "src": "images/demo-home.png?v=ffacd70dc6c0",
                 "alt": "维护者 GitHub 高清演示素材",
                 "caption": "GitHub 演示素材参考 · 具体服务内容另行沟通",
                 "width": 60,
@@ -458,7 +458,7 @@
             }
           ]
         },
-        "detail_image_url": "images/demo-home.png",
+        "detail_image_url": "images/demo-home.png?v=ffacd70dc6c0",
         "seo_path": "service-recording.html",
         "seo_title": "灵活就业指导",
         "seo_h1": "个税录屏与 App 演示视频制作",
@@ -473,7 +473,7 @@
         "price_cny": 49,
         "platform_label": "材料图处理 · 收入明细 · 缴纳记录 · 资产证明 · 报表凭证",
         "payment_note": "请先联系 QQ 发送原图并确认修改需求，付款后发送付款凭证。",
-        "image_url": "images/demo-income.png",
+        "image_url": "images/demo-income.png?v=c2b1c65bb758",
         "action_type": "contact",
         "action_label": "咨询图片处理",
         "enabled": true,
@@ -504,7 +504,7 @@
             {
               "type": "image",
               "attrs": {
-                "src": "images/demo-query.png",
+                "src": "images/demo-query.png?v=97bf367df303",
                 "alt": "维护者 GitHub 高清演示素材",
                 "caption": "GitHub 演示素材参考 · 具体服务内容另行沟通",
                 "width": 60,
@@ -534,7 +534,7 @@
             }
           ]
         },
-        "detail_image_url": "images/demo-query.png",
+        "detail_image_url": "images/demo-query.png?v=97bf367df303",
         "seo_path": "service-image-editing.html",
         "seo_title": "灵活就业指导",
         "seo_h1": "图片处理",
@@ -575,11 +575,15 @@
   },
   "phone_images": [
     {
-      "image_url": "images/demo-income.png",
+      "image_url": "images/demo-home.png?v=ffacd70dc6c0",
+      "title": "安卓首页"
+    },
+    {
+      "image_url": "images/demo-income.png?v=c2b1c65bb758",
       "title": "收入纳税明细"
     },
     {
-      "image_url": "images/demo-query.png",
+      "image_url": "images/demo-query.png?v=97bf367df303",
       "title": "年度查询"
     },
     {
@@ -595,7 +599,7 @@
       "title": "我的页面"
     },
     {
-      "image_url": "images/android-income-list.png",
+      "image_url": "images/android-income-list.png?v=c2b1c65bb758",
       "title": "纳税明细"
     },
     {
@@ -603,7 +607,7 @@
       "title": "资料设置总览"
     },
     {
-      "image_url": "images/android-income-detail.png",
+      "image_url": "images/android-income-detail.png?v=5ccd43504874",
       "title": "纳税明细详情"
     }
   ]

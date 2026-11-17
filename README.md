@@ -24,10 +24,12 @@
   <tr>
     <th align="center">收入纳税明细 · 模拟演示</th>
     <th align="center">年度与所得类型 · 模拟演示</th>
+    <th align="center">明细详情 · 安卓虚构示例</th>
   </tr>
   <tr>
-    <td align="center"><img src="docs/images/demo-income.png" width="300" alt="个税模拟器：收入汇总与月度收入列表，数值为演示数据"></td>
-    <td align="center"><img src="docs/images/demo-query.png" width="300" alt="个税模拟器：年度选择与所得类型筛选"></td>
+    <td align="center"><img src="docs/images/demo-income.png?v=c2b1c65bb758" width="300" alt="个税模拟器：收入汇总与月度收入列表，数值为演示数据"></td>
+    <td align="center"><img src="docs/images/demo-query.png?v=97bf367df303" width="300" alt="个税模拟器：年度选择与所得类型筛选"></td>
+    <td align="center"><img src="docs/images/android-income-detail.png?v=5ccd43504874" width="300" alt="安卓个税模拟器：虚构收入纳税明细详情"></td>
   </tr>
 </table>
 
@@ -43,7 +45,7 @@
 | 个人中心界面 | 展示个人信息、任职受雇、家庭成员与银行卡数量等界面 |
 | 截图与视频素材 | 使用手机系统截图、屏幕录制功能，记录页面切换与操作过程 |
 
-项目支持 **Android 安卓与 iPhone / iOS** 演示版本；当前截图和分步教程以 iPhone 版为例，安卓入口及功能范围以对应版本说明为准。本仓库公开完整使用指南与展示资料；演示版本的适用设备可向维护者咨询。
+项目支持 **Android 安卓与 iPhone / iOS** 演示版本；首页、年度筛选、收入明细及详情截图为 Android 版，分步教程及个人中心示例保留 iPhone 版。本仓库公开完整使用指南与展示资料；演示版本的适用设备可向维护者咨询。
 
 适合准备以下演示内容：
 
@@ -95,7 +97,7 @@
     <th align="center">我的 · 模拟演示</th>
   </tr>
   <tr>
-    <td align="center"><img src="docs/images/demo-home.png" width="300" alt="个税模拟器：首页功能入口与底部导航"></td>
+    <td align="center"><img src="docs/images/demo-home.png?v=ffacd70dc6c0" width="300" alt="个税模拟器：首页功能入口与底部导航"></td>
     <td align="center"><img src="docs/images/demo-mine.png" width="300" alt="个税模拟器：个人中心及已遮罩的演示识别号"></td>
   </tr>
 </table>
@@ -130,7 +132,7 @@
 
 ### 支持安卓和苹果手机吗？
 
-支持 Android 安卓与 iPhone / iOS 演示版本。联系维护者时说明手机品牌、机型与系统版本，确认适用版本与操作入口；现有截图和分步教程以 iPhone 为例。
+支持 Android 安卓与 iPhone / iOS 演示版本。联系维护者时说明手机品牌、机型与系统版本，确认适用版本与操作入口；首页、年度筛选、收入明细及详情截图为 Android 版，分步教程以 iPhone 为例。
 
 ### 个税模拟器可以截图和连续录屏吗？
 

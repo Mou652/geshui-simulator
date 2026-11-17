@@ -30,12 +30,17 @@
 <table>
   <tr><th>收入纳税明细 · 虚构示例</th><th>年度查询 · 模拟演示</th></tr>
   <tr>
-    <td><img src="docs/images/demo-income.png" width="280" alt="个税模拟器：虚构收入汇总和月度明细"></td>
-    <td><img src="docs/images/demo-query.png" width="280" alt="个税模拟器：选择年度和所得类型"></td>
+    <td><img src="docs/images/demo-income.png?v=c2b1c65bb758" width="280" alt="个税模拟器：虚构收入汇总和月度明细"></td>
+    <td><img src="docs/images/demo-query.png?v=97bf367df303" width="280" alt="个税模拟器：选择年度和所得类型"></td>
+  </tr>
+  <tr><th>安卓首页 · 模拟演示</th><th>明细详情 · 虚构示例</th></tr>
+  <tr>
+    <td><img src="docs/images/demo-home.png?v=ffacd70dc6c0" width="280" alt="安卓个税模拟器：首页与年度汇算入口"></td>
+    <td><img src="docs/images/android-income-detail.png?v=5ccd43504874" width="280" alt="安卓个税模拟器：虚构收入纳税明细详情"></td>
   </tr>
 </table>
 
-当前截图和分步按钮路径以 iPhone 版为例。Android 的具体入口与功能范围以对应版本说明为准。
+以上截图为 Android 版虚构示例；分步教程保留 iPhone 版按钮路径。
 
 ## 版本与问题反馈
 
