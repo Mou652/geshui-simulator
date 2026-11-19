@@ -228,7 +228,7 @@ def main():
     assert {item['id']: item['price_cny'] for item in products} == {'tax': 179, 'leave': 79, 'recording': 99, 'image-editing': 59}, 'Product prices differ'
     assert promo['promo_content']['faqs'][0]['question'] == '注意事项', 'Usage notice must be the first FAQ'
     assert all((DOCS / item['image_url']).is_file() for item in products), 'Product preview is missing'
-    assert len(trees[DOCS / 'customer-cases.html'].find('article', **{'class': 'case-card'})) == 8, 'Customer cases are incomplete'
+    assert len(trees[DOCS / 'customer-cases.html'].find('article', **{'class': 'case-card'})) == 9, 'Customer cases are incomplete'
     for asset in DOCS.rglob('*'):
         if asset.suffix in ('.html', '.js', '.json', '.md', '.txt'):
             source = asset.read_text(encoding='utf-8')
