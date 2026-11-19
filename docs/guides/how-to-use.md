@@ -37,7 +37,7 @@
 | 截图与录屏 | 用系统功能记录已核对的教学画面 | 原始素材不能未经检查就作为对外版本 |
 
 
-![个税模拟器的本机虚构示例画面，非官方模拟演示](https://geshui.moujc.cn/images/demo-query.png)
+![个税模拟器的本机虚构示例画面，非官方模拟演示](https://geshui.moujc.cn/images/demo-query.png?v=bdfc8d061cb8)
 
 ## 常见问题
 

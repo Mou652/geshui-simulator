@@ -168,8 +168,9 @@ def render(page, lookup):
     md += [table_md, '']
     if page.get('image'):
         image = '/images/' + page['image']
+        width, height = page.get('image_size', (1320, 2868))
         alt = '个税模拟器的本机虚构示例画面，非官方模拟演示'
-        parts.append(f'<figure><img src="{image}" width="1320" height="2868" loading="lazy" decoding="async" alt="{alt}"><figcaption>{alt}</figcaption></figure>')
+        parts.append(f'<figure><img src="{image}" width="{width}" height="{height}" loading="lazy" decoding="async" alt="{alt}"><figcaption>{alt}</figcaption></figure>')
         md += [f'![{alt}]({BASE + image})', '']
     parts.append('<h2 id="faq">常见问题</h2>')
     md += ['## 常见问题', '']

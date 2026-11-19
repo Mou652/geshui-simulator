@@ -24,7 +24,7 @@
 
 查询页里勾选了某个类型，并不代表已经生成该类型的记录。列表能否显示内容，还取决于本机是否保存了相应的演示数据。
 
-<p align="center"><img src="../images/demo-query.png" width="320" alt="个税模拟器收入纳税明细查询页：选择纳税年度与所得类型，模拟演示画面"></p>
+<p align="center"><img src="../images/demo-query.png?v=bdfc8d061cb8" width="320" alt="个税模拟器收入纳税明细查询页：选择纳税年度与所得类型，模拟演示画面"></p>
 
 ## 第四步：查询并阅读汇总
 

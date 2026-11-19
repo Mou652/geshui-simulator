@@ -102,7 +102,7 @@
             {
               "type": "image",
               "attrs": {
-                "src": "images/demo-query.png?v=97bf367df303",
+                "src": "images/demo-query.png?v=bdfc8d061cb8",
                 "alt": "年度与所得类型查询高清截图",
                 "caption": "年度查询 · GitHub 原图",
                 "width": 60,
@@ -504,7 +504,7 @@
             {
               "type": "image",
               "attrs": {
-                "src": "images/demo-query.png?v=97bf367df303",
+                "src": "images/demo-query.png?v=bdfc8d061cb8",
                 "alt": "维护者 GitHub 高清演示素材",
                 "caption": "GitHub 演示素材参考 · 具体服务内容另行沟通",
                 "width": 60,
@@ -534,7 +534,7 @@
             }
           ]
         },
-        "detail_image_url": "images/demo-query.png?v=97bf367df303",
+        "detail_image_url": "images/demo-query.png?v=bdfc8d061cb8",
         "seo_path": "service-image-editing.html",
         "seo_title": "灵活就业指导",
         "seo_h1": "图片处理",
@@ -583,7 +583,7 @@
       "title": "收入纳税明细"
     },
     {
-      "image_url": "images/demo-query.png?v=97bf367df303",
+      "image_url": "images/demo-query.png?v=bdfc8d061cb8",
       "title": "年度查询"
     },
     {
