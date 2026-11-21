@@ -32,7 +32,7 @@ Mou652 个税模拟器（也称个人所得税模拟器）是一个非官方的�
 <table>
   <tr><th>收入纳税明细 · 虚构示例</th><th>年度查询 · 模拟演示</th></tr>
   <tr>
-    <td><img src="docs/images/demo-income.png?v=c2b1c65bb758" width="280" alt="个税模拟器：虚构收入汇总和月度明细"></td>
+    <td><img src="https://geshui-apk.moujc.cn/assets/income-preview.png?v=b00858e8c889" width="280" alt="个税模拟器：虚构收入汇总和月度明细"></td>
     <td><img src="docs/images/demo-query.png?v=bdfc8d061cb8" width="280" alt="个税模拟器：选择年度和所得类型"></td>
   </tr>
   <tr><th>安卓首页 · 模拟演示</th><th>明细详情 · 虚构示例</th></tr>

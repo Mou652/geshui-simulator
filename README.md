@@ -21,7 +21,7 @@
     <th align="center">明细详情 · 安卓虚构示例</th>
   </tr>
   <tr>
-    <td align="center"><img src="docs/images/demo-income.png?v=c2b1c65bb758" width="300" alt="个税模拟器：收入汇总与月度收入列表，数值为演示数据"></td>
+    <td align="center"><img src="https://geshui-apk.moujc.cn/assets/income-preview.png?v=b00858e8c889" width="300" alt="个税模拟器：收入汇总与月度收入列表，数值为演示数据"></td>
     <td align="center"><img src="docs/images/demo-query.png?v=bdfc8d061cb8" width="300" alt="个税模拟器：年度选择与所得类型筛选"></td>
     <td align="center"><img src="docs/images/android-income-detail.png?v=5ccd43504874" width="300" alt="安卓个税模拟器：虚构收入纳税明细详情"></td>
   </tr>
