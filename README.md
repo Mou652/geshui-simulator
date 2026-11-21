@@ -1,16 +1,10 @@
 # 个税模拟器｜个人所得税 App 界面演示与截图录屏教程
 
-**产品官网：[https://geshui.moujc.cn/](https://geshui.moujc.cn/)**
+**Mou652 个税模拟器**（也称个人所得税模拟器、Geshui Simulator）是一个非官方的个税 App 界面演示工具。用虚构资料演示年度查询、月度工资薪金和收入纳税明细，再用手机截图或录屏制作操作教程。
 
-查看个税模拟器、离职证明工具及录屏与图片处理服务的最新介绍、价格和使用说明。
+[产品介绍与界面截图](https://geshui.moujc.cn/product-tax.html) · [安卓安装与激活说明](https://geshui.moujc.cn/install_guide.html) · [演示资料设置](https://geshui.moujc.cn/guides/configure-demo-data.html) · [收入纳税明细演示](https://geshui.moujc.cn/guides/income-details-demo.html) · [截图与录屏教程](https://geshui.moujc.cn/guides/screen-record.html)
 
-**非官方教学项目 · 本机虚构示例 · 完整中文教程**
-
-## 演示版本与使用咨询：QQ `2430239942`
-
-咨询适用设备、虚构示例配置与教学录屏；联系时说明安卓或 iPhone、系统版本和演示目标。
-
-**Mou652 个税模拟器**（Geshui Simulator，也称个人所得税模拟器、个税 App 模拟器）支持 **Android 安卓与 iPhone / iOS**，用于非官方个税界面教学演示。配置虚构示例姓名、任职单位、收入年度和月份后，可以浏览本机收入纳税明细，制作个税演示截图和连续录屏。版本与使用问题可向维护者咨询。
+演示版本与使用咨询可联系 QQ **2430239942**，说明手机机型、系统版本和演示目标。
 
 [界面预览](#界面预览) · [功能亮点](#功能亮点) · [快速开始](#快速开始) · [使用教程](#使用教程) · [常见问题](#常见问题) · [联系 QQ](#联系交流)
 
@@ -45,7 +39,7 @@
 | 个人中心界面 | 展示个人信息、任职受雇、家庭成员与银行卡数量等界面 |
 | 截图与视频素材 | 使用手机系统截图、屏幕录制功能，记录页面切换与操作过程 |
 
-项目支持 **Android 安卓与 iPhone / iOS** 演示版本；首页、年度筛选、收入明细及详情截图为 Android 版，分步教程及个人中心示例保留 iPhone 版。本仓库公开完整使用指南与展示资料；演示版本的适用设备可向维护者咨询。
+首页、年度筛选和收入明细详情截图来自安卓版。部分分步教程使用 iPhone 界面举例，操作入口以手上的演示版本为准。
 
 适合准备以下演示内容：
 
@@ -55,19 +49,17 @@
 
 ## 支持平台
 
-- **Android 安卓**：联系维护者说明品牌、机型与 Android 版本，确认安卓演示版本和使用入口
-- **iPhone / iOS**：联系维护者说明机型与 iOS 版本，当前公开分步教程以 iPhone 版为例
-
-不同平台的具体功能与入口以对应版本说明为准。
+- [安卓设备与安装说明](https://geshui.moujc.cn/install_guide.html)
+- [iPhone 界面操作参考](https://geshui.moujc.cn/ios.html)
 
 ## 快速开始
 
 第一次使用个税模拟器，可以按“确认版本 → 配置虚构示例 → 浏览本机演示明细 → 录制教学素材”的顺序准备。
 
 1. **确认适用演示版本**：通过 QQ **2430239942** 说明使用设备与系统版本，确认对应版本的获取方式。
-2. **配置虚构示例数据**：进入“我的”，持续长按“帮助中心”约 2 秒，设置虚构姓名、任职单位、年度收入和月份范围，预览后保存。
+2. **配置虚构示例数据**：按演示版本的资料设置入口填写虚构姓名、任职单位、年度收入和月份范围，预览后保存。
 3. **浏览本机演示明细**：从首页或“办&查”进入收入纳税明细，选择已保存数据的年度与所得类型，再点击查询。
-4. **截图或连续录屏**：通过 iPhone 系统截图、控制中心的屏幕录制功能，记录查询条件、月度列表和页面切换。
+4. **截图或连续录屏**：通过手机系统截图与录屏，记录查询条件、月度列表和页面切换。
 
 资料入口与保存规则见 [演示资料设置教程](https://geshui.moujc.cn/guides/configure-demo-data.html)；录屏操作与分镜见 [iPhone 截图录屏教程](https://geshui.moujc.cn/guides/screenshot-and-recording.html)。
 
@@ -130,13 +122,13 @@
 
 支持设置演示姓名、任职单位、收入年度、月份范围和月收入等内容，并配置个人中心展示的家庭成员、银行卡数量。年度收入可按场景选择是否包含年终奖；保存后到明细页核对。具体入口见 [资料设置教程](https://geshui.moujc.cn/guides/configure-demo-data.html)。
 
-### 支持安卓和苹果手机吗？
+### 在哪里查看设备和操作说明？
 
-支持 Android 安卓与 iPhone / iOS 演示版本。联系维护者时说明手机品牌、机型与系统版本，确认适用版本与操作入口；首页、年度筛选、收入明细及详情截图为 Android 版，分步教程以 iPhone 为例。
+查看上面的设备和操作说明。需要确认适用版本时，向维护者提供手机型号与系统版本。
 
 ### 个税模拟器可以截图和连续录屏吗？
 
-可以。通过手机系统截图保存单个页面，通过屏幕录制记录年度筛选、明细浏览和页面切换。录屏使用 iPhone 控制中心的录制控件；操作步骤、旁白设置与约 60 秒的演示脚本见 [截图与录屏教程](https://geshui.moujc.cn/guides/screenshot-and-recording.html)。
+可以。通过手机系统截图保存单个页面，通过屏幕录制记录年度筛选、明细浏览和页面切换。录制前的准备和回放检查见 [手机录屏教程](https://geshui.moujc.cn/guides/screen-record.html)。
 
 ### 收入纳税明细查询不到数据怎么办？
 
@@ -152,9 +144,9 @@
 
 ## English overview
 
-**Geshui Simulator** is an unofficial educational income-tax UI demo for Android and iPhone / iOS. Configure fictional sample profiles, demo employers, years and monthly records stored on the device, then demonstrate the interface with those samples. Use iPhone screenshots and screen recording to create walkthroughs and product demos.
+**Geshui Simulator** is an unofficial Chinese personal income tax UI demo. Use fictional, local records to walk through annual filters, monthly income details and screen recordings.
 
-For demo version compatibility, contact the maintainer via **QQ: 2430239942**. This website has no app download link. This repository contains Chinese user guides and interface screenshots. The simulator is an independent, unofficial demo and does not access real tax records or provide tax filing services.
+This repository contains Chinese user guides and interface screenshots. For device compatibility, contact the maintainer via **QQ: 2430239942**.
 
 ## 联系交流
 
@@ -164,7 +156,7 @@ For demo version compatibility, contact the maintainer via **QQ: 2430239942**. T
 
 ## 项目说明
 
-项目维护：[@Mou652](https://github.com/Mou652) · [官网：安卓 / iPhone 演示与教程](https://geshui.moujc.cn/) · [项目说明与使用边界](https://geshui.moujc.cn/about.html) · [功能资料](docs/project-overview.md)
+项目维护 [@Mou652](https://github.com/Mou652) · [灵活就业指导官网](https://geshui.moujc.cn/) · [项目说明与使用边界](https://geshui.moujc.cn/about.html) · [功能资料](docs/project-overview.md)
 
 [GitHub 主仓库](https://github.com/Mou652/geshui-simulator) · [Gitee 国内公开仓库](https://gitee.com/MouJC/geshui-simulator) · [国内阅读入口与教程索引](GITEE.md)
 
@@ -182,7 +174,7 @@ For demo version compatibility, contact the maintainer via **QQ: 2430239942**. T
 ## 按问题阅读与项目入口
 
 - [全部教程与版本说明](https://geshui.moujc.cn/guides/)
-- [安卓演示版本](https://geshui.moujc.cn/android.html) · [iPhone 演示版本](https://geshui.moujc.cn/ios.html)
+- [安卓版使用说明](https://geshui.moujc.cn/android.html) · [iPhone 界面操作参考](https://geshui.moujc.cn/ios.html)
 - [常见问题 20 问](https://geshui.moujc.cn/faq.html) · [GitHub 问答与反馈](https://github.com/Mou652/geshui-simulator/issues/1)
 - [项目 Wiki](https://github.com/Mou652/geshui-simulator/wiki) · [资料发布记录](https://github.com/Mou652/geshui-simulator/releases)
 - [机器可读目录](https://geshui.moujc.cn/llms.txt)

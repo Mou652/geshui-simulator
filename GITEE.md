@@ -1,6 +1,8 @@
 # 个税模拟器：Gitee 国内阅读入口
 
-个税模拟器（个人所得税模拟器 / Geshui Simulator）支持 Android 安卓与 iPhone / iOS 的非官方界面教学演示。这里集中提供 Gitee 仓库里的截图和中文教程，方便在国内直接阅读。
+Mou652 个税模拟器（也称个人所得税模拟器）是一个非官方的个税 App 界面演示工具。这里可直接阅读中文教程，了解怎样用虚构资料演示年度查询、收入纳税明细和月度工资薪金，再用手机截图或录屏。
+
+[安卓安装与激活说明](https://geshui.moujc.cn/install_guide.html) · [演示资料设置](docs/guides/configure-demo-data.md) · [收入纳税明细演示](docs/guides/income-details-demo.md) · [手机录屏准备](docs/guides/screen-record.md)
 
 **演示版本与使用咨询：QQ `2430239942`**。联系时说明手机机型、系统版本和演示目标。
 
@@ -8,7 +10,7 @@
 
 - [Gitee 国内公开仓库](https://gitee.com/MouJC/geshui-simulator)
 - [GitHub 主仓库](https://github.com/Mou652/geshui-simulator)
-- [个税模拟器官网：安卓与 iPhone 教程](https://geshui.moujc.cn/?utm_source=gitee&utm_medium=repository&utm_campaign=geshui_demo&utm_content=domestic_guide)
+- [个税模拟器产品介绍](https://geshui.moujc.cn/product-tax.html?utm_source=gitee&utm_medium=repository&utm_campaign=geshui_demo&utm_content=domestic_guide)
 - [项目介绍与界面截图](README.md)
 
 ## 直接阅读教程
@@ -17,10 +19,10 @@
 
 | 需要解决的问题 | 中文教程 |
 | --- | --- |
-| 第一次使用，如何确认安卓或 iPhone 演示版本？ | [首次使用与版本说明](docs/guides/getting-started.md) |
+| 第一次使用，如何准备设备和虚构资料？ | [首次使用与版本说明](docs/guides/getting-started.md) |
 | 如何配置虚构姓名、任职单位、年度收入和月份？ | [演示资料设置](docs/guides/configure-demo-data.md) |
 | 如何查询本机收入纳税明细、核对月度记录？ | [演示收入明细浏览](docs/guides/income-details-demo.md) |
-| iPhone 如何截图、连续录屏并配合旁白？ | [截图、录屏与演示分镜](docs/guides/screenshot-and-recording.md) |
+| 如何连续录屏并检查画面和声音？ | [手机录屏准备与回放检查](docs/guides/screen-record.md) |
 | 个税 App、个人所得税计算器和模拟器有什么区别？ | [个税工具与教学入口](docs/guides/tax-app-and-simulator.md) |
 | 找不到设置入口，或保存后仍没有明细怎么办？ | [个税模拟器常见问题排查](docs/guides/troubleshooting.md) |
 | 项目支持哪些功能，适合哪些演示场景？ | [项目资料与功能说明](docs/project-overview.md) |
