@@ -153,7 +153,9 @@ def main():
                     assert trees[target].find(id=unquote(parsed.fragment)), f'{prefix}: missing anchor {url}'
                 links += 1
         for script in tree.find('script', type='application/ld+json'):
-            json.loads(script.text())
+            structured_data = script.text()
+            json.loads(structured_data)
+            assert BASE + '/#app' not in structured_data, prefix + ': legacy tax app reference'
         address = BASE + site_path(file)
         destinations = set()
         for anchor in tree.find('a'):

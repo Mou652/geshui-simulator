@@ -28,6 +28,7 @@ jobs:
           SITE_URL: https://geshui.moujc.cn/
           KEY_FILE: 390bb38ec7674351b4e40ea01642a953.txt
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_BEFORE: ${{ github.event.before }}
         run: |
           python3 - <<'PY'
           import json
@@ -110,6 +111,31 @@ jobs:
           assert 0 < len(urls) <= 10000, 'Unexpected sitemap size'
           assert len(urls) == len(set(urls)), 'Duplicate sitemap URLs'
           assert all(urlsplit(url).scheme == 'https' and urlsplit(url).netloc == host for url in urls)
+
+          # 根据推送前后的文件差异筛选规范页面
+          before = os.environ.get('GH_BEFORE', '')
+          if before and before != '0' * 40:
+              comparison = ('https://api.github.com/repos/' + os.environ['GITHUB_REPOSITORY']
+                            + '/compare/' + before + '...' + os.environ['GITHUB_SHA'] + '?per_page=1')
+              with urlopen(Request(comparison, headers=pages_request.headers), timeout=30) as response:
+                  changed_files = json.load(response)['files']
+              changed_urls = set()
+              for item in changed_files:
+                  filename = item['filename']
+                  if not filename.startswith('docs/') or not filename.endswith('.html') or item['status'] == 'removed':
+                      continue
+                  path = filename.removeprefix('docs/')
+                  if path == 'index.html' or path.endswith('/index.html'):
+                      path = path.removesuffix('index.html')
+                  changed_urls.add(site + path)
+              affected = [url for url in urls if url in changed_urls]
+              sitemap_changed = any(item['filename'] == 'docs/sitemap.xml' for item in changed_files)
+              if len(changed_files) < 300 and (affected or not sitemap_changed):
+                  urls = affected
+              if not urls:
+                  with Path(os.environ['GITHUB_STEP_SUMMARY']).open('a') as summary:
+                      summary.write('No changed URLs from the sitemap. IndexNow was not sent.\n')
+                  raise SystemExit(0)
 
           payload = {'host': host, 'key': key, 'keyLocation': key_location, 'urlList': urls}
           request = Request(
