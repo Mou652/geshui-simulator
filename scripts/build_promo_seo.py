@@ -21,7 +21,14 @@ def article_html(node):
     kind = node.get('type')
     attrs = node.get('attrs', {})
     if kind == 'text':
-        return escape(node.get('text', ''))
+        label = escape(node.get('text', ''))
+        for mark in node.get('marks', []):
+            if mark.get('type') != 'link':
+                continue
+            href = mark.get('attrs', {}).get('href', '')
+            if re.fullmatch(r'/(?:[a-z0-9_-]+/)*[a-z0-9_-]+\.html', href) and (DOCS / href[1:]).is_file():
+                return f'<a href="{escape(href, quote=True)}">{label}</a>'
+        return label
     children = ''.join(article_html(child) for child in node.get('content', []))
     if kind == 'heading':
         level = min(3, max(2, int(attrs.get('level', 2))))
@@ -67,8 +74,9 @@ def main():
         source = source.replace('请开启 JavaScript 查看产品介绍，或', '产品介绍可直接阅读；开启 JavaScript 可使用图片预览及咨询按钮，也可')
         entity = {'@type': 'SoftwareApplication' if product['id'] == 'tax' else 'Service', '@id': canonical + '#product', 'name': product['seo_h1'], 'description': product['seo_description'], 'url': canonical, 'image': BASE + product['image_url'], 'offers': {'@type': 'Offer', 'price': product['price_cny'], 'priceCurrency': 'CNY', 'url': canonical}}
         if product['id'] == 'tax':
-            entity.update(operatingSystem='Android', applicationCategory='EducationalApplication')
-        graph = {'@context': 'https://schema.org', '@graph': [entity, {'@type': 'WebPage', '@id': canonical + '#page', 'name': product['seo_title'], 'url': canonical, 'description': product['seo_description'], 'mainEntity': {'@id': entity['@id']}, 'isPartOf': {'@id': BASE + '#website'}}, {'@type': 'BreadcrumbList', 'itemListElement': [{'@type': 'ListItem', 'position': 1, 'name': '灵活就业指导', 'item': BASE}, {'@type': 'ListItem', 'position': 2, 'name': product['seo_h1'], 'item': canonical}]}]}
+            entity.update(operatingSystem='Android', applicationCategory='EducationalApplication', alternateName=['个人所得税模拟器', 'Geshui Simulator'])
+        page_name = product['seo_h1'] if product['id'] == 'tax' else product['seo_title']
+        graph = {'@context': 'https://schema.org', '@graph': [entity, {'@type': 'WebPage', '@id': canonical + '#page', 'name': page_name, 'url': canonical, 'description': product['seo_description'], 'mainEntity': {'@id': entity['@id']}, 'isPartOf': {'@id': BASE + '#website'}}, {'@type': 'BreadcrumbList', 'itemListElement': [{'@type': 'ListItem', 'position': 1, 'name': '灵活就业指导', 'item': BASE}, {'@type': 'ListItem', 'position': 2, 'name': product['seo_h1'], 'item': canonical}]}]}
         social = '<meta property="og:type" content="website"><meta property="og:title" content="' + escape(product['seo_title'], quote=True) + '"><meta property="og:description" content="' + escape(product['seo_description'], quote=True) + '"><meta property="og:url" content="' + canonical + '"><meta property="og:image" content="' + BASE + product['image_url'] + '">'
         source = source.replace('</head>', social + '\n<script type="application/ld+json">' + json.dumps(graph, ensure_ascii=False).replace('</', '<\\/') + '</script>\n</head>')
         target = DOCS / product['seo_path']

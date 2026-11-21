@@ -57,6 +57,42 @@
               ]
             },
             {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "第一次做演示时，先看"
+                },
+                {
+                  "type": "text",
+                  "text": "资料设置与保存教程",
+                  "marks": [{"type": "link", "attrs": {"href": "/guides/configure-demo-data.html"}}]
+                },
+                {
+                  "type": "text",
+                  "text": "，再按"
+                },
+                {
+                  "type": "text",
+                  "text": "收入纳税明细演示",
+                  "marks": [{"type": "link", "attrs": {"href": "/guides/income-details-demo.html"}}]
+                },
+                {
+                  "type": "text",
+                  "text": "核对年度、所得类型和单笔记录。需要分享操作过程时，可参考"
+                },
+                {
+                  "type": "text",
+                  "text": "个税界面录屏教程",
+                  "marks": [{"type": "link", "attrs": {"href": "/guides/screen-record.html"}}]
+                },
+                {
+                  "type": "text",
+                  "text": "。"
+                }
+              ]
+            },
+            {
               "type": "heading",
               "attrs": {
                 "level": 3
@@ -310,7 +346,7 @@
         "seo_path": "product-tax.html",
         "seo_title": "灵活就业指导",
         "seo_h1": "个税模拟器与个人所得税 App 演示",
-        "seo_description": "个人所得税模拟与个税 App 界面演示：配置虚构姓名、单位和年度收入，浏览收入纳税明细、工资薪金、已申报税额与个人中心，支持截图和个税录屏。当前提供安卓版本，需激活码，非官方演示，不连接真实税务系统。"
+        "seo_description": "Mou652 个税模拟器提供个人所得税 App 界面教学。用虚构资料演示年度查询、收入纳税明细和月度工资薪金，查看安卓安装、资料设置及手机截图录屏教程。"
       },
       {
         "id": "leave",

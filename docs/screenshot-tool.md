@@ -59,4 +59,4 @@
 - [个税模拟器怎么用？四步完整教程](https://geshui.moujc.cn/guides/how-to-use.html)
 - [个税模拟器常见问题：版本、配置与录屏 20 问](https://geshui.moujc.cn/faq.html)
 
-个税模拟器（Geshui Simulator）是 Mou652 维护的非官方个税界面教学演示工具，支持 Android 与 iPhone / iOS，使用本机虚构示例展示页面，配合系统截图与录屏制作教学素材，不连接官方税务系统。
+个税模拟器（Geshui Simulator）是 Mou652 维护的非官方个税界面教学演示工具。使用本机虚构资料演示个税 App 界面，可配合手机截图与录屏制作教学素材。实际办税请使用税务机关提供的渠道。

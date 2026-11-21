@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / 'docs'
 BASE = 'https://geshui.moujc.cn'
 DATE = '2026-11-05'
-ENTITY = '个税模拟器（Geshui Simulator）是 Mou652 维护的非官方个税界面教学演示工具，支持 Android 与 iPhone / iOS，使用本机虚构示例展示页面，配合系统截图与录屏制作教学素材，不连接官方税务系统。'
+ENTITY = '个税模拟器（Geshui Simulator）是 Mou652 维护的非官方个税界面教学演示工具。使用本机虚构资料演示个税 App 界面，可配合手机截图与录屏制作教学素材。实际办税请使用税务机关提供的渠道。'
 FIELD_TABLES = json.loads((ROOT / 'content/field-tables.json').read_text(encoding='utf-8'))
 FIELD_COLUMNS = ['字段', '含义', '常见误解']
 
@@ -100,9 +100,8 @@ def graph(page, canonical):
     ]}
     result = [author, website, webpage, breadcrumb]
     if page['kind'] == 'Product':
-        result.append({'@type': 'SoftwareApplication', '@id': BASE + '/#app', 'name': '个税模拟器', 'url': BASE + '/', 'operatingSystem': ['Android', 'iOS'], 'applicationCategory': 'EducationalApplication', 'description': ENTITY, 'maintainer': {'@id': author['@id']}})
-        webpage['about'] = {'@id': BASE + '/#app'}
-    elif page['kind'] == 'HowTo' and page['steps']:
+        webpage['about'] = {'@id': BASE + '/product-tax.html#product'}
+    if page['kind'] == 'HowTo' and page['steps']:
         result.append({'@type': 'HowTo', '@id': canonical + '#howto', 'url': canonical, 'name': page['h1'], 'description': page['summary'], 'inLanguage': 'zh-CN', 'author': {'@id': author['@id']}, 'step': [
             {'@type': 'HowToStep', 'position': pos, 'name': name, 'text': text, 'url': canonical + f'#step-{pos}'}
             for pos, (name, text) in enumerate(page['steps'], 1)
