@@ -11,7 +11,7 @@
 - [Gitee 国内公开仓库](https://gitee.com/MouJC/geshui-simulator)
 - [个税模拟器 GitHub 主仓库](https://github.com/Mou652/geshui-simulator)
 - [个税模拟器产品介绍](https://geshui.moujc.cn/product-tax.html?utm_source=gitee&utm_medium=repository&utm_campaign=geshui_demo&utm_content=domestic_guide)
-- [项目介绍与界面截图](README.md)
+- [项目介绍与界面截图](README.md) · [项目资料](repository/about.md) · [个税工具对比](repository/alternatives.md)
 
 ## 直接阅读教程
 
