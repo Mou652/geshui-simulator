@@ -1,6 +1,6 @@
 # 个人所得税模拟器（个税模拟器）使用指南
 
-这里是 Mou652 个税模拟器的 Gitee 国内阅读入口。这款非官方的个人所得税 App 模拟器用虚构资料演示个税查询。第一次使用，可以先设置一组月工资，再选择同一年度，查看各月明细和全年合计。
+这里是 Mou652 个税模拟器的 Gitee 国内阅读入口。这款非官方的个人所得税模拟器 App 用虚构资料演示个税查询。第一次使用，可以先设置一组月工资，再选择同一年度，查看各月明细和全年合计。
 
 [安卓安装与激活说明](https://geshui.moujc.cn/install_guide.html) · [演示资料设置](docs/guides/configure-demo-data.md) · [收入纳税明细演示](docs/guides/income-details-demo.md)
 
