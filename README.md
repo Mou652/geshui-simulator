@@ -1,8 +1,8 @@
-# 个税模拟器｜个人所得税 App 界面演示与截图录屏教程
+# 个税模拟器（个人所得税模拟器）
 
-**Mou652 个税模拟器**（也称个人所得税模拟器、Geshui Simulator）是一个非官方的个税 App 界面演示工具。用虚构资料演示年度查询、月度工资薪金和收入纳税明细，再用手机截图或录屏制作操作教程。
+Mou652 维护的这款**个税 App 模拟器**用于演示个人所得税 App 的查询流程。选好纳税年度和所得类型，就能用虚构资料查看收入合计、每月工资薪金和单笔纳税明细。模拟器在本机展示示例数据，与税务机关及官方 App 无关联。
 
-[产品介绍与界面截图](https://geshui.moujc.cn/product-tax.html) · [安卓安装与激活说明](https://geshui.moujc.cn/install_guide.html) · [演示资料设置](https://geshui.moujc.cn/guides/configure-demo-data.html) · [收入纳税明细演示](https://geshui.moujc.cn/guides/income-details-demo.html) · [截图与录屏教程](https://geshui.moujc.cn/guides/screen-record.html)
+[产品介绍与界面截图](https://geshui.moujc.cn/product-tax.html) · [安卓安装与激活说明](https://geshui.moujc.cn/install_guide.html) · [演示资料设置](https://geshui.moujc.cn/guides/configure-demo-data.html) · [收入纳税明细演示](https://geshui.moujc.cn/guides/income-details-demo.html)
 
 演示版本与使用咨询可联系 QQ **2430239942**，说明手机机型、系统版本和演示目标。
 
@@ -138,7 +138,7 @@
 
 这里的模拟器侧重个税 App 的界面、资料和查询流程演示；个税计算器通常侧重税额计算。本项目展示的收入与税额不作为真实报税计算或纳税判断的依据。
 
-### 会查询或修改真实税务记录吗？
+### 个人所得税 App 模拟器能查询真实的个税记录吗？
 
 不会。模拟器用于本地界面与数据演示，不连接官方税务系统，不办理申报、退税或证明开具等真实业务。
 

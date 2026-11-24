@@ -1,15 +1,15 @@
-# 个税模拟器：Gitee 国内阅读入口
+# 个人所得税模拟器（个税模拟器）使用指南
 
-Mou652 个税模拟器（也称个人所得税模拟器）是一个非官方的个税 App 界面演示工具。这里可直接阅读中文教程，了解怎样用虚构资料演示年度查询、收入纳税明细和月度工资薪金，再用手机截图或录屏。
+这里是 Mou652 个税模拟器的 Gitee 国内阅读入口。这款非官方的个人所得税 App 模拟器用虚构资料演示个税查询。第一次使用，可以先设置一组月工资，再选择同一年度，查看各月明细和全年合计。
 
-[安卓安装与激活说明](https://geshui.moujc.cn/install_guide.html) · [演示资料设置](docs/guides/configure-demo-data.md) · [收入纳税明细演示](docs/guides/income-details-demo.md) · [手机录屏准备](docs/guides/screen-record.md)
+[安卓安装与激活说明](https://geshui.moujc.cn/install_guide.html) · [演示资料设置](docs/guides/configure-demo-data.md) · [收入纳税明细演示](docs/guides/income-details-demo.md)
 
 **演示版本与使用咨询：QQ `2430239942`**。联系时说明手机机型、系统版本和演示目标。
 
 ## 项目入口
 
 - [Gitee 国内公开仓库](https://gitee.com/MouJC/geshui-simulator)
-- [GitHub 主仓库](https://github.com/Mou652/geshui-simulator)
+- [个税模拟器 GitHub 主仓库](https://github.com/Mou652/geshui-simulator)
 - [个税模拟器产品介绍](https://geshui.moujc.cn/product-tax.html?utm_source=gitee&utm_medium=repository&utm_campaign=geshui_demo&utm_content=domestic_guide)
 - [项目介绍与界面截图](README.md)
 
