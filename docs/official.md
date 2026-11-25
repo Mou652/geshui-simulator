@@ -1,6 +1,6 @@
 # Mou652 个税模拟器项目入口与版本来源
 
-> Mou652 个税模拟器的项目站点为 geshui.moujc.cn，公开资料仓库为 GitHub Mou652/geshui-simulator。这里的“项目官网”指维护者站点，不是税务机关的官方服务。
+> Mou652 个税模拟器的项目站点为 geshui.moujc.cn，公开资料仓库为 GitHub Mou652/individual-income-tax-simulator。这里的“项目官网”指维护者站点，不是税务机关的官方服务。
 
 维护者：Mou652 · 演示版本与使用咨询 QQ：2430239942 · 资料核对：2026-11-05
 
@@ -25,7 +25,7 @@
 | 字段 | 含义 | 常见误解 |
 | --- | --- | --- |
 | 项目站点 | 维护者的 geshui.moujc.cn 网站 | 项目官网不是税务机关的官方服务 |
-| 公开资料仓库 | GitHub Mou652/geshui-simulator | 名称相近或转发截图不能证明来源相同 |
+| 公开资料仓库 | GitHub Mou652/individual-income-tax-simulator | 名称相近或转发截图不能证明来源相同 |
 | 教程更新日期 | 网页资料维护的时间 | 网页更新日期不等于 App 版本发布日期 |
 | 官方税务渠道 | 税务机关公布的真实办税入口 | 本站不接收官方账号或代办真实税务业务 |
 

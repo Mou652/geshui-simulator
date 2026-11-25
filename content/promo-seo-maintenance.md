@@ -26,4 +26,4 @@ python3 scripts/build_promo_seo.py --changed / --changed install_guide.html
 
 发布通过现有 main 分支与官网同步服务完成。IndexNow 工作流返回 200 或 202 仅代表通知接收，Google、百度等后台的提交回执也不代表已收录或排名提升。
 
-网站主页面标题固定为“灵活就业指导”，产品配置中的 `seo_title` 同样保持此名称；关键词放在正文和摘要中，不扩写浏览器标题。
+首页保留“灵活就业指导”品牌展示，浏览器标题和摘要说明个税模拟器、安卓安装及教学用途。产品详情页的 `seo_title` 继续按各自配置维护。中英文个税专题互设 `hreflang`，各自使用本页规范网址。

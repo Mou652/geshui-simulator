@@ -14,7 +14,7 @@
 | 英文名称 | Geshui Simulator |
 | 维护者 | [Mou652](https://github.com/Mou652) |
 | 中文介绍页 | [geshui.moujc.cn](https://geshui.moujc.cn/) |
-| 公开项目地址 | [github.com/Mou652/geshui-simulator](https://github.com/Mou652/geshui-simulator) |
+| 公开项目地址 | [github.com/Mou652/individual-income-tax-simulator](https://github.com/Mou652/individual-income-tax-simulator) |
 | 支持平台 | Android 安卓与 iPhone / iOS；当前分步教程以 iPhone 版为例 |
 | 演示版本咨询 | 联系维护者 QQ：2430239942，说明设备与系统版本 |
 | 核心用途 | 个税界面演示、演示资料设置、收入纳税明细讲解、截图与连续录屏 |
@@ -67,6 +67,6 @@
 - [演示资料设置教程](guides/configure-demo-data.md)
 - [演示收入明细浏览教程](guides/income-details-demo.md)
 - [iPhone 截图与录屏教程](guides/screenshot-and-recording.md)
-- [问题反馈](https://github.com/Mou652/geshui-simulator/issues)
+- [问题反馈](https://github.com/Mou652/individual-income-tax-simulator/issues)
 
 对外展示时注明“个税模拟器 / 模拟演示”。请勿上传真实身份、账户或税务记录，也勿将模拟画面作为真实收入、纳税或身份材料。

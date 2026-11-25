@@ -9,7 +9,7 @@
 ## 项目入口
 
 - [Gitee 国内公开仓库](https://gitee.com/MouJC/geshui-simulator)
-- [个税模拟器 GitHub 主仓库](https://github.com/Mou652/geshui-simulator)
+- [个税模拟器 GitHub 主仓库](https://github.com/Mou652/individual-income-tax-simulator) · [英文介绍 / English overview](https://geshui.moujc.cn/en/personal-income-tax-simulator.html)
 - [个税模拟器产品介绍](https://geshui.moujc.cn/product-tax.html?utm_source=gitee&utm_medium=repository&utm_campaign=geshui_demo&utm_content=domestic_guide)
 - [项目介绍与界面截图](README.md) · [项目资料](repository/about.md) · [个税工具对比](repository/alternatives.md)
 
@@ -48,7 +48,7 @@
 
 公开仓库提供介绍、教程和截图，不包含可构建的 App 源码，也没有通用安装包下载链接。演示版本、适用设备与获取方式可通过 QQ **2430239942** 确认。
 
-可通过 [Gitee Issues](https://gitee.com/MouJC/geshui-simulator/issues) 或 [GitHub Issues](https://github.com/Mou652/geshui-simulator/issues) 反馈问题。请说明演示版本、设备、复现步骤，以及使用的虚构示例。
+可通过 [Gitee Issues](https://gitee.com/MouJC/geshui-simulator/issues) 或 [GitHub Issues](https://github.com/Mou652/individual-income-tax-simulator/issues) 反馈问题。请说明演示版本、设备、复现步骤，以及使用的虚构示例。
 
 本项目与税务机关及官方 App 无关联，不连接官方税务系统。对外展示时注明“个税模拟器 / 非官方模拟演示”，演示画面不作为真实收入、纳税或身份材料。
 

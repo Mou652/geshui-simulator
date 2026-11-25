@@ -16,6 +16,8 @@ DOCS = ROOT / 'docs'
 BASE = 'https://geshui.moujc.cn'
 PROMO_PAGES = {'index.html', 'promo-detail.html', 'install_guide.html', 'pay.html', 'customer-cases.html', 'product-tax.html', 'product-leave.html', 'service-recording.html', 'service-image-editing.html'}
 NOINDEX_PAGES = {'pay.html', 'promo-detail.html'}
+ENGLISH_PAGE = 'en/personal-income-tax-simulator.html'
+CHINESE_PROJECT_PAGE = 'personal-income-tax-simulator.html'
 
 
 class Node:
@@ -99,9 +101,10 @@ def main():
     navigation = {}
     for file, tree in trees.items():
         prefix = str(file.relative_to(ROOT))
+        relative_path = str(file.relative_to(DOCS))
         title = tree.find('title')
         assert len(title) == 1 and title[0].text().strip(), prefix + ': title'
-        if str(file.relative_to(DOCS)) in PROMO_PAGES:
+        if relative_path in PROMO_PAGES - {'index.html'}:
             assert title[0].text() == '灵活就业指导', prefix + ': site brand'
         else:
             titles.append(title[0].text())
@@ -110,7 +113,7 @@ def main():
             back_links = [node for node in tree.find('a') if 'data-page-back' in node.attrs]
             assert len(back_links) == 1 and back_links[0].attrs.get('href'), prefix + ': secondary page return link'
             assert any(node.attrs.get('href', '').endswith('assets/page-navigation.css') for node in tree.find('link', rel='stylesheet')), prefix + ': shared return styles'
-        if str(file.relative_to(DOCS)) not in PROMO_PAGES:
+        if relative_path not in PROMO_PAGES and relative_path != ENGLISH_PAGE:
             fields = tree.find('div', **{'class': 'table-scroll field-table'})
             assert len(fields) == 1, prefix + ': field reference table'
             region = fields[0]
@@ -169,8 +172,16 @@ def main():
         assert len(destinations) >= minimum_links, prefix + ': insufficient internal page links'
         navigation[address] = destinations
     assert len(titles) == len(set(titles)), 'Duplicate page titles'
+    alternate_urls = {'en': BASE + '/' + ENGLISH_PAGE, 'zh-CN': BASE + '/' + CHINESE_PROJECT_PAGE}
+    for language, url in alternate_urls.items():
+        tree = trees[resolve(url)]
+        assert tree.find('html', lang=language), url + ': document language'
+        alternatives = {node.attrs['hreflang']: node.attrs['href'] for node in tree.find('link', rel='alternate') if 'hreflang' in node.attrs}
+        assert alternatives == alternate_urls, url + ': language alternates'
+
     field_tables = json.loads((ROOT / 'content/field-tables.json').read_text(encoding='utf-8'))
     tutorial_urls = expected_urls - {BASE + '/' + path for path in PROMO_PAGES if path != 'index.html'}
+    tutorial_urls.remove(BASE + '/' + ENGLISH_PAGE)
     assert {BASE + path for path in field_tables} == tutorial_urls, 'Field table coverage differs from tutorial pages'
     visited = set()
     pending = [BASE + '/']
@@ -268,7 +279,7 @@ def main():
     for agent in agents:
         for path in ['/', '/llms.txt', '/guides/income-detail-lookup.html', '/guides/income-detail-lookup.md']:
             assert robots.can_fetch(agent, BASE + path), (agent, path)
-    print(json.dumps({'html_pages':len(files),'field_tables':len(field_tables),'field_explanations':table_rows,'prominent_qq_contacts':len(files)-len(PROMO_PAGES),'qq_copy_buttons':len(files)-len(PROMO_PAGES),'reachable_from_home':len(visited),'shared_project_footers':len(files)-len(PROMO_PAGES),'matrix_entries':len(matrix),'new_articles':len(pages),'local_links':links,'matching_faq_answers':faq_count,'matching_howto_steps':howto_count,'sitemap_urls':len(urls),'crawler_agents_verified':len(agents),'result':'passed'},ensure_ascii=False,indent=2))
+    print(json.dumps({'html_pages':len(files),'field_tables':len(field_tables),'field_explanations':table_rows,'prominent_qq_contacts':len(tutorial_urls),'qq_copy_buttons':len(tutorial_urls),'reachable_from_home':len(visited),'shared_project_footers':len(tutorial_urls),'matrix_entries':len(matrix),'new_articles':len(pages),'local_links':links,'matching_faq_answers':faq_count,'matching_howto_steps':howto_count,'sitemap_urls':len(urls),'crawler_agents_verified':len(agents),'result':'passed'},ensure_ascii=False,indent=2))
 
 
 if __name__ == '__main__':

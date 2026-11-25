@@ -48,7 +48,7 @@
 
 - [个税模拟器功能、界面图片与安装入口](https://geshui.moujc.cn/product-tax.html)
 - [收入纳税明细演示步骤](https://geshui.moujc.cn/guides/income-details-demo.html)
-- [Mou652 维护的项目仓库](https://github.com/Mou652/geshui-simulator)
+- [Mou652 维护的项目仓库](https://github.com/Mou652/individual-income-tax-simulator)
 
 ## 继续阅读
 

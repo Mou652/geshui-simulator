@@ -13,4 +13,4 @@
 
 这里比较的是用途和数据来源。Mou652 个税模拟器的设备情况见[安卓版说明](android.md)。实际办税可从[自然人电子税务局](https://etax.chinatax.gov.cn/)查看官方渠道。
 
-[项目说明](about.md) · [返回个税模拟器 GitHub 仓库](https://github.com/Mou652/geshui-simulator)
+[项目说明](about.md) · [返回个税模拟器 GitHub 仓库](https://github.com/Mou652/individual-income-tax-simulator)

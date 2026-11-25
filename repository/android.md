@@ -6,4 +6,4 @@
 2. 从首页或「办&查」进入收入纳税明细查询，选择与示例一致的年度和所得类型。
 3. 先看收入与预扣税额汇总，再打开相应月份核对单笔明细。[收入纳税明细教程](../docs/guides/income-details-demo.md)
 
-[项目说明](about.md) · [返回个税模拟器 GitHub 仓库](https://github.com/Mou652/geshui-simulator)
+[项目说明](about.md) · [返回个税模拟器 GitHub 仓库](https://github.com/Mou652/individual-income-tax-simulator)

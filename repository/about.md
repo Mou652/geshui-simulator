@@ -11,6 +11,6 @@
 
 实际办税、查询个人真实记录或取得正式税务材料，请使用税务机关提供的渠道。页面中的演示数据和图像仅用于说明操作。
 
-- [个税模拟器 GitHub 主仓库](https://github.com/Mou652/geshui-simulator)
+- [个税模拟器 GitHub 主仓库](https://github.com/Mou652/individual-income-tax-simulator)
 - [Gitee 中文阅读入口](https://gitee.com/MouJC/geshui-simulator)
 - [查看安卓版](android.md) · [按用途选工具](alternatives.md)

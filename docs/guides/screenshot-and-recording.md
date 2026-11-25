@@ -73,7 +73,7 @@
 
 截图和屏幕录制的系统操作参考 Apple 官方指南：[在 iPhone 上截屏](https://support.apple.com/zh-cn/guide/iphone/iphc872c0115/ios)、[在 iPhone 上录屏](https://support.apple.com/zh-cn/guide/iphone/iph52f6e1987/ios)。
 
-个税模拟器使用交流：**QQ：2430239942**。也可以通过 [Issues](https://github.com/Mou652/geshui-simulator/issues) 反馈使用问题。
+个税模拟器使用交流：**QQ：2430239942**。也可以通过 [Issues](https://github.com/Mou652/individual-income-tax-simulator/issues) 反馈使用问题。
 
 <!-- field-table:start -->
 ## 字段与常见误解

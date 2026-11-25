@@ -58,7 +58,7 @@
 | 实际结果 | 没有记录、月份不完整、单位不一致等 |
 | 已检查项目 | 保存状态、年度、所得类型、月份和单位 |
 
-项目反馈也可以通过 [GitHub Issues](https://github.com/Mou652/geshui-simulator/issues) 提交。附图只使用本机虚构示例，并保留“模拟演示”的说明。
+项目反馈也可以通过 [GitHub Issues](https://github.com/Mou652/individual-income-tax-simulator/issues) 提交。附图只使用本机虚构示例，并保留“模拟演示”的说明。
 
 [先了解个税工具的区别](tax-app-and-simulator.md) · [返回项目首页](../../README.md)
 
