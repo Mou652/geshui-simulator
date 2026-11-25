@@ -1,15 +1,15 @@
 # 个人所得税模拟器（个税模拟器）使用指南
 
-这里是 Mou652 个税模拟器的 Gitee 国内阅读入口。这款非官方的个人所得税模拟器 App 用虚构资料演示个税查询。第一次使用，可以先设置一组月工资，再选择同一年度，查看各月明细和全年合计。
+这里是 Mou652 个税模拟器的 Gitee 国内阅读入口。这款非官方的个人所得税模拟器 App 涵盖 Android（安卓）和 iPhone（iOS）演示版本。第一次使用，可以先设置一组虚构的月工资，再选择同一年度，查看各月明细和全年合计。
 
-[安卓安装与激活说明](https://geshui.moujc.cn/install_guide.html) · [演示资料设置](docs/guides/configure-demo-data.md) · [收入纳税明细演示](docs/guides/income-details-demo.md)
+[Android 安卓安装与激活说明](https://geshui.moujc.cn/install_guide.html) · [iPhone / iOS 版本与操作说明](docs/ios.md) · [演示资料设置](docs/guides/configure-demo-data.md) · [收入纳税明细演示](docs/guides/income-details-demo.md)
 
 **演示版本与使用咨询：QQ `2430239942`**。联系时说明手机机型、系统版本和演示目标。
 
 ## 项目入口
 
 - [Gitee 国内公开仓库](https://gitee.com/MouJC/geshui-simulator)
-- [个税模拟器 GitHub 主仓库](https://github.com/Mou652/individual-income-tax-simulator) · [英文介绍 / English overview](https://geshui.moujc.cn/en/personal-income-tax-simulator.html)
+- [个税模拟器 GitHub 主仓库](https://github.com/Mou652/individual-income-tax-simulator) · [个人所得税模拟器中文介绍](https://geshui.moujc.cn/personal-income-tax-simulator.html) · [英文介绍 / English overview](https://geshui.moujc.cn/en/personal-income-tax-simulator.html)
 - [个税模拟器产品介绍](https://geshui.moujc.cn/product-tax.html?utm_source=gitee&utm_medium=repository&utm_campaign=geshui_demo&utm_content=domestic_guide)
 - [项目介绍与界面截图](README.md) · [项目资料](repository/about.md) · [个税工具对比](repository/alternatives.md)
 
@@ -42,11 +42,11 @@
   </tr>
 </table>
 
-以上截图为 Android 版虚构示例；分步教程保留 iPhone 版按钮路径。
+预览图以 Android 版虚构示例为例。iPhone 版的按钮路径和操作见 [iPhone / iOS 版本说明](docs/ios.md)及仓库分步教程。
 
 ## 版本与问题反馈
 
-公开仓库提供介绍、教程和截图，不包含可构建的 App 源码，也没有通用安装包下载链接。演示版本、适用设备与获取方式可通过 QQ **2430239942** 确认。
+公开仓库提供介绍、教程和截图，不包含可构建的 App 源码。Android 用户可查看公开安装与激活说明，iPhone 用户可通过 QQ **2430239942** 确认适用版本及获取方式。
 
 可通过 [Gitee Issues](https://gitee.com/MouJC/geshui-simulator/issues) 或 [GitHub Issues](https://github.com/Mou652/individual-income-tax-simulator/issues) 反馈问题。请说明演示版本、设备、复现步骤，以及使用的虚构示例。
 

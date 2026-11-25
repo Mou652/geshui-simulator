@@ -11,6 +11,6 @@
 
 如果你要讲「选年度 → 看汇总 → 打开本月明细」，可以在个税模拟器中准备一组虚构数据，演示完整交互。如果只需要估算某月工资要扣多少税，可以用符合该年度口径的计算器。
 
-这里比较的是用途和数据来源。Mou652 个税模拟器的设备情况见[安卓版说明](android.md)。实际办税可从[自然人电子税务局](https://etax.chinatax.gov.cn/)查看官方渠道。
+Mou652 个税模拟器的设备与版本信息见 [Android 安卓说明](android.md)和 [iPhone / iOS 说明](../docs/ios.md)。实际办税可从[自然人电子税务局](https://etax.chinatax.gov.cn/)查看官方渠道。
 
 [项目说明](about.md) · [返回个税模拟器 GitHub 仓库](https://github.com/Mou652/individual-income-tax-simulator)

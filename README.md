@@ -1,12 +1,14 @@
 # 个人所得税模拟器 · 个税模拟器 · 个税 App 模拟器（Personal Income Tax Simulator）
 
-这款非官方个税 App 模拟器用虚构资料演示年度查询、工资薪金与收入纳税明细。当前公开安装说明适用于安卓，iPhone 教程可供界面操作参考。
+这款非官方个税 App 模拟器涵盖 Android（安卓）和 iPhone（iOS）演示版本，用虚构资料展示年度查询、工资薪金与收入纳税明细。
 
-**China Personal Income Tax App Simulator** is an independent UI demo with fictional data. Android installation guidance and iPhone UI references are available. The demo does not connect to tax accounts or file returns.
+**China Personal Income Tax App Simulator** is an independent UI demo for Android and iPhone (iOS). It uses fictional data to demonstrate annual queries and income details. The demo does not connect to tax accounts or file returns.
 
-[安卓安装与激活说明](https://geshui.moujc.cn/install_guide.html) · [英文介绍 / English overview](https://geshui.moujc.cn/en/personal-income-tax-simulator.html) · [Gitee 镜像](https://gitee.com/MouJC/geshui-simulator)
+[Android 安卓安装与激活说明](https://geshui.moujc.cn/install_guide.html) · [iPhone / iOS 版本与操作说明](docs/ios.md)
 
-演示版本与安装咨询请联系 QQ **2430239942**。
+[个人所得税模拟器中文介绍](https://geshui.moujc.cn/personal-income-tax-simulator.html) · [英文介绍 / English overview](https://geshui.moujc.cn/en/personal-income-tax-simulator.html) · [Gitee 镜像](https://gitee.com/MouJC/geshui-simulator)
+
+演示版本与安装咨询请联系 QQ **2430239942**，并注明 Android 或 iPhone 机型和系统版本。
 
 ## 功能亮点
 
@@ -47,7 +49,7 @@
 
 ## 快速开始
 
-1. **确认适用版本**。当前公开获取说明以安卓版为准。
+1. **确认适用版本**。Android 用户可查看安装与激活说明，iPhone 用户可查看 iOS 版本说明并向维护者确认获取方式。
 2. **准备一组虚构资料**。按[演示资料设置教程](docs/guides/configure-demo-data.md)填写年度、月份和工资，预览后保存。
 3. **查询并核对月度记录**。按[收入纳税明细教程](docs/guides/income-details-demo.md)选择已保存数据的年度与所得类型，再查看汇总和单笔明细。
 
@@ -55,7 +57,7 @@
 
 ### 个税模拟器 GitHub 仓库在哪里？
 
-Mou652 维护的个税模拟器 GitHub 仓库是 [Mou652/individual-income-tax-simulator](https://github.com/Mou652/individual-income-tax-simulator)。仓库提供项目介绍、界面示例和使用教程。完整功能与教程入口见 [项目资料](repository/about.md)，演示版本可通过 QQ **2430239942** 咨询。
+Mou652 维护的个税模拟器 GitHub 仓库是 [Mou652/individual-income-tax-simulator](https://github.com/Mou652/individual-income-tax-simulator)。仓库提供 Android 与 iPhone / iOS 的项目介绍、版本说明和操作教程。完整功能与教程入口见 [项目资料](repository/about.md)，演示版本可通过 QQ **2430239942** 咨询。
 
 ### 个人所得税模拟器 App 有什么功能？
 
@@ -73,7 +75,7 @@ Mou652 维护的个税模拟器 GitHub 仓库是 [Mou652/individual-income-tax-s
 
 ## 项目说明
 
-- [安卓版设备与版本说明](repository/android.md) · [个税工具对比与使用场景](repository/alternatives.md)
+- [安卓版设备与版本说明](repository/android.md) · [iPhone / iOS 版本与操作说明](docs/ios.md) · [个税工具对比与使用场景](repository/alternatives.md)
 - [国内阅读入口和中文教程](GITEE.md) · [使用问题排查](docs/guides/troubleshooting.md)
 - [产品官网](https://geshui.moujc.cn/) · [GitHub Issues](https://github.com/Mou652/individual-income-tax-simulator/issues) · [资料发布记录](https://github.com/Mou652/individual-income-tax-simulator/releases)
 - [离职证明演示工具](https://github.com/Mou652/leave-certificate-demo)是独立项目，用于虚构资料的版式预览。

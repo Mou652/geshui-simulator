@@ -5,7 +5,8 @@
 | 项目 | 说明 |
 | --- | --- |
 | 可以演示什么 | 设置虚构姓名、任职单位、年度和月份，浏览演示收入汇总及月度记录 |
-| 设备 | 当前公开获取说明适用于 Android。iPhone 教程提供页面操作参考，iOS 版本状态见安装说明 |
+| Android（安卓） | 查看[安卓版说明](android.md)及公开安装与激活指南 |
+| iPhone（iOS） | 查看[iPhone 版本与操作说明](../docs/ios.md)，向维护者确认适用版本和获取方式 |
 | 数据来源 | 本机配置的虚构示例 |
 | 仓库内容 | 项目说明、截图和教程。App 演示版本通过维护者提供的渠道获取 |
 
@@ -13,4 +14,4 @@
 
 - [个税模拟器 GitHub 主仓库](https://github.com/Mou652/individual-income-tax-simulator)
 - [Gitee 中文阅读入口](https://gitee.com/MouJC/geshui-simulator)
-- [查看安卓版](android.md) · [按用途选工具](alternatives.md)
+- [查看安卓版](android.md) · [查看 iPhone / iOS 版](../docs/ios.md) · [按用途选工具](alternatives.md)
