@@ -26,9 +26,10 @@
     grid.innerHTML = products.filter(product => !category || category === product.category).map(product => {
       const title = escape(product.title);
       const detail = product.seo_path || 'promo-detail.html?id=' + encodeURIComponent(product.id);
+      const detailLabel = product.id === 'tax' ? '查看演示' : '查看详情';
       const description = product.description ? '<p>' + escape(product.description) + '</p>' : '';
       const anchor = product.id === 'leave' ? ' id="leave-certificate"' : '';
-      return '<article class="product-card"' + anchor + ' data-product-id="' + escape(product.id) + '"><a class="product-visual" href="' + detail + '" aria-label="了解' + title + '"><span class="product-visual-label">' + (product.kind === 'service' ? 'CREATIVE SERVICE' : 'PRODUCT PREVIEW') + '</span>' + visual(product) + '</a><div class="product-heading"><h3>' + title + '</h3></div><span class="product-platform">' + escape(product.platform_label) + '</span>' + description + '<div class="product-actions"><a href="' + detail + '">查看详情 <span aria-hidden="true">→</span></a><i aria-hidden="true"></i>' + primaryAction(product) + '<button type="button" class="purchase-link" data-payment="' + escape(product.id) + '">' + product.price_cny + '元 · 扫码付款 <span aria-hidden="true">↗</span></button></div></article>';
+      return '<article class="product-card"' + anchor + ' data-product-id="' + escape(product.id) + '"><a class="product-visual" href="' + detail + '" aria-label="了解' + title + '"><span class="product-visual-label">' + (product.kind === 'service' ? 'CREATIVE SERVICE' : 'PRODUCT PREVIEW') + '</span>' + visual(product) + '</a><div class="product-heading"><h3>' + title + '</h3></div><span class="product-platform">' + escape(product.platform_label) + '</span>' + description + '<div class="product-actions"><a href="' + detail + '">' + detailLabel + ' <span aria-hidden="true">→</span></a><i aria-hidden="true"></i>' + primaryAction(product) + '<button type="button" class="purchase-link" data-payment="' + escape(product.id) + '">' + product.price_cny + '元 · 扫码付款 <span aria-hidden="true">↗</span></button></div></article>';
     }).join('');
     grid.classList.toggle('is-filtered', Boolean(category));
   }
@@ -38,7 +39,6 @@
   });
   document.querySelector('#year').textContent = new Date().getFullYear();
   document.querySelector('#contactLabel').textContent = '联系咨询';
-  document.querySelector('#screenshots').hidden = false;
   document.querySelector('#screenshotGrid').innerHTML = config.phone_images.map((shot, index) => '<button type="button" class="screenshot-tile" data-image="' + index + '" aria-label="放大' + escape(shot.title) + '"><img src="' + escape(shot.image_url) + '" alt="' + escape(shot.title) + '" loading="lazy"><strong>' + escape(shot.title) + '</strong>' + (shot.description ? '<p>' + escape(shot.description) + '</p>' : '') + '</button>').join('');
   document.querySelector('#faqList').innerHTML = content.faqs.map((item, index) => '<details' + (index === 0 ? ' open class="faq-notice"' : '') + '><summary>' + escape(item.question) + '</summary>' + (item.points ? '<ul class="faq-points">' + item.points.map(point => '<li>' + escape(point) + '</li>').join('') + '</ul>' : '<p>' + escape(item.answer) + '</p>') + '</details>').join('');
   renderProducts('');

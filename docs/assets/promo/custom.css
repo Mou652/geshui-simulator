@@ -47,11 +47,51 @@ body, .detail-page { background-color: #f3f6f8; background-image: var(--page-gra
 }
 .guide-section { background: linear-gradient(110deg, #e5eef3eb, #f2f4f0db); }
 .screenshot-tile, .device-card, .leave-preview, .guide-contact { background: var(--surface-gradient); box-shadow: inset 0 0 0 1px #ffffffb3; }
+.demo-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 284px) minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+.demo-video {
+  position: relative;
+  width: min(100%, 244px);
+  margin: 0 auto;
+}
+.demo-layout > .demo-video {
+  width: 100%;
+  padding: 16px 20px;
+  background: var(--surface-gradient);
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px #ffffffb3;
+}
+.demo-video figcaption { margin-bottom: 10px; font-weight: 700; }
+.demo-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 574 / 1280;
+  background: #101d36;
+  border-radius: 10px;
+}
 .detail-hero { background: linear-gradient(115deg, #f8faf9a6, #e0ebf1d9 58%, #d0e1e7b3); }
 .detail-visual { background: transparent; }
+.detail-visual.has-demo-video { padding: 24px 0; }
 .detail-tabs { background: #ffffffed; top: var(--site-header-height, 82px); }
 .detail-toc { top: calc(var(--site-header-height, 82px) + 90px); }
 .detail-feature-section { background: var(--surface-gradient); }
+
+@media (max-width: 740px) {
+  .demo-layout { grid-template-columns: minmax(0, 1fr); }
+  .demo-layout > .demo-video { width: min(100%, 284px); }
+}
+@media (max-width: 600px) {
+  .detail-visual.has-demo-video {
+    max-height: none;
+    margin: 0;
+    padding: 6px 0 24px;
+  }
+}
 
 /* 页脚按内容自然展开，为手机底栏保留空间 */
 .home-footer {

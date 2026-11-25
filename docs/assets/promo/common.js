@@ -43,7 +43,7 @@
   }
 
   function openContact() {
-    open('<p class="eyebrow">LET’S TALK</p><h2 id="mouDialogTitle">联系灵活就业指导</h2><p class="dialog-description">产品、激活码、录屏与图片处理需求，都可以联系我。</p><p class="contact-value">' + QQ + '</p><div class="dialog-actions"><button class="button button-primary" type="button" data-copy-qq>复制 QQ 号码 <span aria-hidden="true">→</span></button><a class="button button-outline" href="https://wpa.qq.com/msgrd?v=3&amp;uin=' + QQ + '&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener noreferrer">打开 QQ ↗</a></div>');
+    open('<p class="eyebrow">LET’S TALK</p><h2 id="mouDialogTitle">联系灵活就业指导</h2><p class="dialog-description">产品、激活码与图片处理需求，都可以联系我。</p><p class="contact-value">' + QQ + '</p><div class="dialog-actions"><button class="button button-primary" type="button" data-copy-qq>复制 QQ 号码 <span aria-hidden="true">→</span></button><a class="button button-outline" href="https://wpa.qq.com/msgrd?v=3&amp;uin=' + QQ + '&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener noreferrer">打开 QQ ↗</a></div>');
   }
 
   function openDownloadNotice() {
@@ -151,6 +151,12 @@
   });
   setupHeader();
   const paymentPage = document.querySelector('#paymentPageContent');
-  if (paymentPage && products.length) paymentPage.innerHTML = paymentMarkup(selectedProduct(new URLSearchParams(location.search).get('product')), true);
+  if (paymentPage && products.length) {
+    const requestedId = new URLSearchParams(location.search).get('product');
+    const product = requestedId ? products.find(item => item.id === requestedId) : products[0];
+    paymentPage.innerHTML = product
+      ? paymentMarkup(product, true)
+      : '<div class="payment-content"><h1>该品类已无法付款</h1><a class="button button-outline" href="pay.html">查看可付款品类</a></div>';
+  }
   window.MouSite = { openPayment, openContact, openImage, openDownloadNotice };
 }());

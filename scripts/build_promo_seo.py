@@ -60,6 +60,11 @@ def main():
     config = json.loads((ROOT / 'content/promo-site.json').read_text(encoding='utf-8'))
     products = config['promo_content']['products']
     template = (DOCS / 'promo-detail.html').read_text(encoding='utf-8')
+    video_template = re.search(r'  <template id="androidDemoTemplate">\n(.*?)  </template>\n', template, flags=re.S)
+    if video_template is None:
+        raise ValueError('详情模板缺少安卓录屏演示')
+    demo_video = ''.join('        ' + line for line in video_template[1].splitlines(keepends=True))
+    template = template.replace(video_template[0], '')
     for product in products:
         canonical = BASE + product['seo_path']
         source = re.sub(r'<title>.*?</title>', '<title>' + escape(product['seo_title']) + '</title>', template)
@@ -71,6 +76,11 @@ def main():
         for field, value in [('detailTitle', product['seo_h1']), ('crumbProduct', product['title']), ('detailDescription', product['seo_description']), ('detailPrice', f"¥ {product['price_cny']} 元"), ('detailCategory', product['category'] + ' · ' + product['platform_label'])]:
             source = set_text(source, field, value)
         source = source.replace('<article id="detailArticle" class="rich-article"></article>', '<article id="detailArticle" class="rich-article">' + article_html(product['details_doc']) + '</article>')
+        if product['id'] == 'tax':
+            source = source.replace(
+                '<div class="detail-visual" id="detailVisual" aria-label="产品界面示意"></div>',
+                '<div class="detail-visual has-demo-video" id="detailVisual">\n' + demo_video + '          </div>',
+            )
         source = source.replace('请开启 JavaScript 查看产品介绍，或', '产品介绍可直接阅读；开启 JavaScript 可使用图片预览及咨询按钮，也可')
         entity = {'@type': 'SoftwareApplication' if product['id'] == 'tax' else 'Service', '@id': canonical + '#product', 'name': product['seo_h1'], 'description': product['seo_description'], 'url': canonical, 'image': BASE + product['image_url'], 'offers': {'@type': 'Offer', 'price': product['price_cny'], 'priceCurrency': 'CNY', 'url': canonical}}
         if product['id'] == 'tax':
@@ -105,7 +115,7 @@ def main():
         modified.text = datetime.now(ZoneInfo('Asia/Shanghai')).date().isoformat()
     ET.indent(sitemap, space='  ')
     sitemap.write(DOCS / 'sitemap.xml', encoding='utf-8', xml_declaration=True)
-    print('已生成 4 个静态产品详情页并同步站点地图')
+    print(f'已生成 {len(products)} 个静态产品详情页并同步站点地图')
 
 
 if __name__ == '__main__':

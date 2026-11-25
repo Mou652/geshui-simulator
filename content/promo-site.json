@@ -425,82 +425,6 @@
         "seo_description": "离职证明演示工具：在线填写虚构示例资料，预览单页 A4 模板并按授权导出 PDF。了解离职证明模板、填写方式、导出规则与使用说明，价格 79 元，咨询 QQ 2430239942。"
       },
       {
-        "id": "recording",
-        "kind": "service",
-        "title": "录屏",
-        "category": "录屏服务",
-        "description": "",
-        "price_cny": 99,
-        "platform_label": "录屏服务",
-        "payment_note": "请先联系 QQ 确认录制内容与演示流程，付款后发送需求及付款凭证。",
-        "image_url": "images/demo-income.png?v=c2b1c65bb758",
-        "action_type": "contact",
-        "action_label": "咨询录屏",
-        "enabled": true,
-        "details_doc": {
-          "type": "doc",
-          "content": [
-            {
-              "type": "heading",
-              "attrs": {
-                "level": 2
-              },
-              "content": [
-                {
-                  "type": "text",
-                  "text": "把演示流程录成清晰画面"
-                }
-              ]
-            },
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "个税录屏与 App 演示视频服务 99 元。使用虚构资料录制个人所得税界面、年度查询、收入纳税明细与个人中心等操作流程。请先联系 QQ 2430239942 沟通页面、顺序和交付要求。"
-                }
-              ]
-            },
-            {
-              "type": "image",
-              "attrs": {
-                "src": "images/demo-home.png?v=ffacd70dc6c0",
-                "alt": "维护者 GitHub 高清演示素材",
-                "caption": "GitHub 演示素材参考 · 具体服务内容另行沟通",
-                "width": 60,
-                "textAlign": "center"
-              }
-            },
-            {
-              "type": "heading",
-              "attrs": {
-                "level": 3
-              },
-              "content": [
-                {
-                  "type": "text",
-                  "text": "服务流程"
-                }
-              ]
-            },
-            {
-              "type": "paragraph",
-              "content": [
-                {
-                  "type": "text",
-                  "text": "先说明需要展示的页面与操作顺序，确认内容后扫码付款，再发送付款凭证与素材需求，按确认的流程制作。"
-                }
-              ]
-            }
-          ]
-        },
-        "detail_image_url": "images/demo-home.png?v=ffacd70dc6c0",
-        "seo_path": "service-recording.html",
-        "seo_title": "灵活就业指导",
-        "seo_h1": "个税录屏与 App 演示视频制作",
-        "seo_description": "提供个税录屏、个人所得税界面演示视频与 App 操作流程录制服务，使用虚构资料制作收入纳税明细、年度查询、个人中心等教学素材。录屏服务 99 元，先联系 QQ 2430239942 确认内容与交付要求。"
-      },
-      {
         "id": "image-editing",
         "kind": "service",
         "title": "图片处理",
@@ -589,7 +513,7 @@
       },
       {
         "question": "各品类的价格是多少？",
-        "answer": "个税 App 179 元，离职证明 79 元，录屏 99 元，图片处理 49 元。点击对应品类的扫码付款，核对品类与金额后付款。"
+        "answer": "个税 App 179 元，离职证明 79 元，图片处理 49 元。点击对应品类的扫码付款，核对品类与金额后付款。"
       },
       {
         "question": "个税 App 目前支持哪些设备？",
@@ -604,8 +528,8 @@
         "answer": "使用支付宝扫描收款码，支持信用卡、花呗付款，具体可用方式以支付宝收银台显示为准。付款后请联系 QQ 2430239942。"
       },
       {
-        "question": "录屏和P图如何确认需求？",
-        "answer": "先联系 QQ 2430239942 说明录制流程或发送原图与修改点，确认需求后按对应品类扫码付款。"
+        "question": "图片处理如何确认需求？",
+        "answer": "先联系 QQ 2430239942 发送原图并说明要修改的地方，确认后再扫码付款。"
       }
     ]
   },

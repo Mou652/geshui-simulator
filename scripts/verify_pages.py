@@ -14,7 +14,7 @@ from urllib.robotparser import RobotFileParser
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / 'docs'
 BASE = 'https://geshui.moujc.cn'
-PROMO_PAGES = {'index.html', 'promo-detail.html', 'install_guide.html', 'pay.html', 'customer-cases.html', 'product-tax.html', 'product-leave.html', 'service-recording.html', 'service-image-editing.html'}
+PROMO_PAGES = {'index.html', 'promo-detail.html', 'install_guide.html', 'pay.html', 'customer-cases.html', 'product-tax.html', 'product-leave.html', 'service-image-editing.html'}
 NOINDEX_PAGES = {'pay.html', 'promo-detail.html'}
 ENGLISH_PAGE = 'en/personal-income-tax-simulator.html'
 CHINESE_PROJECT_PAGE = 'personal-income-tax-simulator.html'
@@ -238,7 +238,7 @@ def main():
     shipped = (DOCS / 'assets/promo/config.js').read_text(encoding='utf-8')
     assert json.loads(shipped.removeprefix('window.MOU_PROMO_CONFIG = ').rstrip(';\n')) == promo, 'Product config is out of sync'
     products = promo['promo_content']['products']
-    assert {item['id']: item['price_cny'] for item in products} == {'tax': 179, 'leave': 79, 'recording': 99, 'image-editing': 49}, 'Product prices differ'
+    assert {item['id']: item['price_cny'] for item in products} == {'tax': 179, 'leave': 79, 'image-editing': 49}, 'Product prices differ'
     assert promo['promo_content']['faqs'][0]['question'] == '注意事项', 'Usage notice must be the first FAQ'
     assert all((DOCS / urlsplit(item['image_url']).path).is_file() for item in products), 'Product preview is missing'
     assert len(trees[DOCS / 'customer-cases.html'].find('article', **{'class': 'case-card'})) == 8, 'Customer cases are incomplete'

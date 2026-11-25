@@ -41,7 +41,6 @@
 
 - [个税模拟器与个人所得税 App 演示](https://geshui.moujc.cn/product-tax.html)：安卓个税界面、虚构资料配置、收入纳税明细与年度查询
 - [安卓安装与激活码说明](https://geshui.moujc.cn/install_guide.html)：确认设备、覆盖更新和激活方式
-- [个税录屏与 App 演示视频](https://geshui.moujc.cn/service-recording.html)：录制虚构界面教学素材，服务内容先沟通
 - [离职证明在线填写与模板演示](https://geshui.moujc.cn/product-leave.html)：示例资料、A4 版式预览与授权 PDF 导出
 - [任意P图、社保P图与个税演示截图处理](https://geshui.moujc.cn/service-image-editing.html)：虚构素材的清晰度、裁剪排版、隐私打码与色彩调整
 

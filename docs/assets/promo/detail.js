@@ -119,19 +119,27 @@
     const src = assetUrl(product.detail_image_url || product.image_url, allowBlob);
     const hero = $('#detailVisual');
     const feature = $('#featureVisual');
-    hero.replaceChildren(); feature.replaceChildren();
-    if (src) {
-      hero.append(renderImage(src, product.title, 'detail-hero-image'));
-      feature.append(renderImage(src, product.title, 'detail-feature-image'));
-    } else {
-      for (const box of [hero, feature]) {
-        const phone = element('div', 'detail-phone');
-        phone.append(element('span', 'detail-island'));
-        const screen = element('div', 'detail-phone-screen');
-        screen.append(element('small', '', '9:41'), element('h3', '', product.title || 'App'), element('p', '', product.description || '功能演示'));
-        for (const label of ['功能总览', '场景体验', '使用说明']) screen.append(element('div', 'detail-phone-row', label + '　›'));
-        phone.append(screen); box.append(phone);
+    const isTax = product.id === 'tax';
+    if (isTax && !hero.querySelector('video')) {
+      hero.replaceChildren($('#androidDemoTemplate').content.cloneNode(true));
+      hero.classList.add('has-demo-video');
+      hero.removeAttribute('aria-label');
+    }
+
+    const imageSlots = [[feature, 'detail-feature-image']];
+    if (!isTax) imageSlots.unshift([hero, 'detail-hero-image']);
+    for (const [box, imageClass] of imageSlots) {
+      if (src) {
+        box.replaceChildren(renderImage(src, product.title, imageClass));
+        continue;
       }
+      const phone = element('div', 'detail-phone');
+      phone.append(element('span', 'detail-island'));
+      const screen = element('div', 'detail-phone-screen');
+      screen.append(element('small', '', '9:41'), element('h3', '', product.title || 'App'), element('p', '', product.description || '功能演示'));
+      for (const label of ['功能总览', '场景体验', '使用说明']) screen.append(element('div', 'detail-phone-row', label + '　›'));
+      phone.append(screen);
+      box.replaceChildren(phone);
     }
   }
   function align(node, attrs) {
@@ -215,7 +223,7 @@
     if (imageTrigger) closeImage();
     const content = config && config.promo_content;
     const products = content && Array.isArray(content.products) ? content.products : [];
-    const product = ['tax', 'leave', 'recording', 'image-editing'].includes(id) ? products.find(item => item && String(item.id) === id) : null;
+    const product = ['tax', 'leave', 'image-editing'].includes(id) ? products.find(item => item && String(item.id) === id) : null;
     if (!product || product.enabled === false || product.enabled === 0) { state('未找到该产品，请返回产品列表选择。'); return; }
     $('#detailState').hidden = true;
     $('#detailContent').hidden = false;
