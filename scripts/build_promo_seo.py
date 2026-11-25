@@ -84,7 +84,7 @@ def main():
         source = source.replace('请开启 JavaScript 查看产品介绍，或', '产品介绍可直接阅读；开启 JavaScript 可使用图片预览及咨询按钮，也可')
         entity = {'@type': 'SoftwareApplication' if product['id'] == 'tax' else 'Service', '@id': canonical + '#product', 'name': product['seo_h1'], 'description': product['seo_description'], 'url': canonical, 'image': BASE + product['image_url'], 'offers': {'@type': 'Offer', 'price': product['price_cny'], 'priceCurrency': 'CNY', 'url': canonical}}
         if product['id'] == 'tax':
-            entity.update(operatingSystem='Android', applicationCategory='EducationalApplication', alternateName=['个人所得税模拟器', 'Geshui Simulator'])
+            entity.update(operatingSystem=['Android', 'iOS'], applicationCategory='EducationalApplication', alternateName=['个人所得税模拟器', 'Geshui Simulator'])
         page_name = product['seo_h1'] if product['id'] == 'tax' else product['seo_title']
         graph = {'@context': 'https://schema.org', '@graph': [entity, {'@type': 'WebPage', '@id': canonical + '#page', 'name': page_name, 'url': canonical, 'description': product['seo_description'], 'mainEntity': {'@id': entity['@id']}, 'isPartOf': {'@id': BASE + '#website'}}, {'@type': 'BreadcrumbList', 'itemListElement': [{'@type': 'ListItem', 'position': 1, 'name': '灵活就业指导', 'item': BASE}, {'@type': 'ListItem', 'position': 2, 'name': product['seo_h1'], 'item': canonical}]}]}
         social = '<meta property="og:type" content="website"><meta property="og:title" content="' + escape(product['seo_title'], quote=True) + '"><meta property="og:description" content="' + escape(product['seo_description'], quote=True) + '"><meta property="og:url" content="' + canonical + '"><meta property="og:image" content="' + BASE + product['image_url'] + '">'

@@ -17,11 +17,11 @@ window.MOU_PROMO_CONFIG = {
         "category": "个税场景",
         "description": "个税界面、年度查询与收入明细演示。",
         "price_cny": 179,
-        "platform_label": "当前仅支持安卓",
-        "payment_note": "目前仅支持安卓，暂不支持 iOS；iOS 版本近日即将更新。",
+        "platform_label": "支持安卓和 iOS",
+        "payment_note": "支持 Android 安卓和 iPhone（iOS），请按设备选择安装方式。",
         "image_url": "images/demo-income.png?v=c2b1c65bb758",
         "action_type": "activation_notice",
-        "action_label": "下载安卓",
+        "action_label": "下载",
         "enabled": true,
         "details_doc": {
           "type": "doc",
@@ -43,7 +43,7 @@ window.MOU_PROMO_CONFIG = {
               "content": [
                 {
                   "type": "text",
-                  "text": "使用虚构资料演示个税 App 的首页、年度查询、收入纳税明细与个人中心。当前提供安卓版本，应用需激活码使用。"
+                  "text": "使用虚构资料演示个税 App 的首页、年度查询、收入纳税明细与个人中心。应用需激活码使用。"
                 }
               ]
             },
@@ -52,7 +52,7 @@ window.MOU_PROMO_CONFIG = {
               "content": [
                 {
                   "type": "text",
-                  "text": "目前仅支持安卓，暂不支持 iOS；iOS 版本近日即将更新。"
+                  "text": "支持 Android 安卓和 iPhone（iOS），请按设备选择安装方式。"
                 }
               ]
             },
@@ -367,7 +367,7 @@ window.MOU_PROMO_CONFIG = {
         "seo_path": "product-tax.html",
         "seo_title": "灵活就业指导",
         "seo_h1": "个税模拟器与个人所得税 App 演示",
-        "seo_description": "Mou652 个税模拟器提供个人所得税 App 界面教学。用虚构资料演示年度查询、收入纳税明细和月度工资薪金，查看安卓安装、资料设置及手机截图录屏教程。"
+        "seo_description": "Mou652 个税模拟器提供个人所得税 App 界面教学。用虚构资料演示年度查询、收入纳税明细和月度工资薪金，查看安卓和 iPhone 安装指南、资料设置及手机录屏教程。"
       },
       {
         "id": "leave",
@@ -526,7 +526,7 @@ window.MOU_PROMO_CONFIG = {
       {
         "question": "注意事项",
         "points": [
-          "更新时请重新下载 APK 并覆盖安装。不要卸载已安装的个税模拟器，否则会丢失本地数据。",
+          "安卓更新时请下载新版 APK 覆盖安装，避免卸载导致本地资料丢失。iPhone 已安装的用户可从主屏幕重新打开获取更新。",
           "必须联网运行，否则激活无效。请勿让手机管家关闭应用的联网权限。",
           "若出现输入激活码无效的情况，请仔细检查应用是否被隔离，以及是否断网。",
           "如遇手机风险提示，请先确认安装包来源和具体提示内容，联系 QQ 核实后再操作。"
@@ -538,11 +538,11 @@ window.MOU_PROMO_CONFIG = {
       },
       {
         "question": "个税 App 目前支持哪些设备？",
-        "answer": "目前仅支持安卓，暂不支持 iOS；iOS 版本近日即将更新。 当前请使用安卓设备；iOS 开放情况可联系 QQ 2430239942 咨询。"
+        "answer": "支持 Android 安卓和 iPhone（iOS）。安卓下载安装包，iPhone 用 Safari 下载并安装描述文件。两端均需激活码。"
       },
       {
-        "question": "点击下载安卓后如何使用？",
-        "answer": "本应用需激活码激活后使用，不支持试用。请联系 QQ 2430239942 获取激活码及安装说明。担心上当受骗，可先查看购买客户案例，再决定是否购买。"
+        "question": "下载后如何安装和激活？",
+        "answer": "点击「下载」查看安装与激活说明。安卓使用 APK 安装包，iPhone 使用描述文件。两端均需激活码，不支持试用。请联系 QQ 2430239942 获取激活码及安装说明。"
       },
       {
         "question": "付款支持信用卡和花呗吗？",

@@ -47,7 +47,7 @@
   }
 
   function openDownloadNotice() {
-    open('<p class="eyebrow">ACTIVATION</p><h2 id="mouDialogTitle">本应用需激活码使用</h2><p class="dialog-description activation-description">本应用需激活码激活后使用，<strong>不支持试用</strong>。激活码及安装说明请联系 QQ 获取。</p><p class="activation-case-note">担心上当受骗，可先<a class="activation-case-link" href="customer-cases.html" target="_blank" rel="noopener noreferrer">查看客户案例 <span aria-hidden="true">↗</span></a>，再决定是否购买。</p><p class="platform-notice">目前仅支持安卓，暂不支持 iOS；iOS 版本近日即将更新。</p><p class="contact-value">' + QQ + '</p><div class="dialog-actions"><button class="button button-primary" type="button" data-copy-qq>复制 QQ 号码</button><button class="button button-outline" type="button" data-contact>联系 QQ</button></div>');
+    open('<p class="eyebrow">ACTIVATION</p><h2 id="mouDialogTitle">本应用需激活码使用</h2><p class="dialog-description activation-description">本应用需激活码激活后使用，<strong>不支持试用</strong>。激活码及安装说明请联系 QQ 获取。</p><p class="activation-case-note">担心上当受骗，可先<a class="activation-case-link" href="customer-cases.html" target="_blank" rel="noopener noreferrer">查看客户案例 <span aria-hidden="true">↗</span></a>，再决定是否购买。</p><p class="platform-notice">支持 Android 安卓和 iPhone（iOS），请按设备选择安装方式。</p><p class="contact-value">' + QQ + '</p><div class="dialog-actions"><button class="button button-primary" type="button" data-copy-qq>复制 QQ 号码</button><button class="button button-outline" type="button" data-contact>联系 QQ</button></div>');
   }
 
   function paymentMarkup(product, pageMode) {
