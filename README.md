@@ -2,6 +2,8 @@
 
 这款非官方个税 App 模拟器涵盖 Android（安卓）和 iPhone（iOS）演示版本，用虚构资料展示年度查询、工资薪金与收入纳税明细。
 
+想在手机上体验**仿个税 App 界面模拟器**，可以用这款**个税模拟软件**按年度查看示例收入，再点开某个月的工资明细。
+
 **China Personal Income Tax App Simulator** is an independent UI demo for Android and iPhone (iOS). It uses fictional data to demonstrate annual queries and income details. The demo does not connect to tax accounts or file returns.
 
 [Android 安卓安装与激活说明](https://geshui.moujc.cn/install_guide.html) · [iPhone / iOS 版本与操作说明](docs/ios.md)
